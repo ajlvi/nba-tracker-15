@@ -1,0 +1,16 @@
+<mat-form-field appearance="fill">
+    <mat-label>Choose a date</mat-label>
+    <input matInput [matDatepicker]="picker" [min]="calendarMin" [max]="calendarMax" [(ngModel)]="pickerDate" (dateChange)="onDateSelected()">
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+
+<div class="query-data" *ngIf="daygames">
+    <div class="game-wrapper" *ngFor="let game of daygames">
+        <span class="fav">{{game.fav}}</span>
+        <span class="line">{{game.line}}</span>
+        <span class="dog">{{game.dog}}</span>
+        <span class="score">{{game.score}}</span>
+    </div>
+</div>
