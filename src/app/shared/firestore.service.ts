@@ -13,6 +13,7 @@ export class FirestoreService {
 
     return this.http.get(url).pipe(
       map( response => {
+        console.log(response);
         if (!response["documents"]) {return []}
         let output = []
         for (let game of response["documents"]) {

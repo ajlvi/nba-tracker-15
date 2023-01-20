@@ -1,0 +1,18 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-default">
+            <ul class="nav navbar-nav">
+                <li><a routerLink="/auth">Sign in</a></li>
+                <li><a>Make picks</a></li>
+                <li><a>Pick history</a></li>
+                <li><a routerLink="/calendar">Past games</a></li>
+                <li><a>Day-by-day</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a style="cursor:pointer" *ngIf="isAuthenticated" (click)="onLogOut()">Sign out</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

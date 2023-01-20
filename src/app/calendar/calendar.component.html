@@ -14,3 +14,7 @@
         <span class="score">{{game.score}}</span>
     </div>
 </div>
+
+<div class="not-found-message" *ngIf="!daygames && pickerDate">
+    Data for the selected date has yet to be added.
+</div>
