@@ -23,6 +23,7 @@ export class CalendarComponent {
     this.onFetchDate(datecode);
   }
 
+  //we should store these as we load them?
   onFetchDate(date: string) {
     this.fire.fetchPicksByDate(date).subscribe(
       response => { this.daygames = response; },
