@@ -11,16 +11,21 @@ import { AppComponent } from './app.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { HeaderComponent } from './header/header.component';
 import { AuthComponent } from './auth/auth.component';
-import { AppRoutingModule } from './app-routes.module';
-import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routes.module'
 import { AuthInterceptorService } from './auth/auth-interceptor.service';
+import { MakePicksComponent } from './make-picks/make-picks.component';
+import { TimePipe } from './make-picks/time.pipe';
+import { PickHistoryComponent } from './pick-history/pick-history.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CalendarComponent,
     HeaderComponent,
-    AuthComponent
+    AuthComponent,
+    MakePicksComponent,
+    TimePipe,
+    PickHistoryComponent
   ],
   imports: [
     AppRoutingModule,

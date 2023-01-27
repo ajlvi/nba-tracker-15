@@ -1,0 +1,15 @@
+.selected { background : rgb(150, 150, 255) }
+.on-server { font-weight: bold; }
+
+.team-name-container:hover {
+    background: #ddd;
+}
+
+.selected:hover {
+    background: #ccf 
+}
+
+.team-name-container, .line-container, .time-container {
+    padding: 4px 0px ;
+    text-align: center ;
+}
