@@ -43,3 +43,5 @@ Thumbs.db
 src/environments/environment.development.ts
 .gitignore
 src/environments/environment.ts
+src/python/nba_fire_credentials.py
+src/python/nba_fire_config.py
