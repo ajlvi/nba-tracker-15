@@ -39,6 +39,9 @@ export class AuthComponent {
     authObs.subscribe(
       respData => {
         console.log(respData);
+        if (!this.isLoginMode) {
+          this.authService.makePlayerDocument()
+        }
         this.isLoading = false;
         this.router.navigate(['/calendar']);
       },

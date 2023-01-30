@@ -1,6 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { exhaustMap, map, mergeMap, switchMap, take } from "rxjs";
+import { map, switchMap, take } from "rxjs";
 import { environment } from "src/environments/environment.development";
 import { AuthService } from "../auth/auth.service";
 import { Game } from "./game.model";
@@ -47,20 +47,15 @@ export class FirestoreService {
   }
 
   fetchUserPicks(date: string) {
-    return this.auth.user.pipe(
-      take(1),
-      switchMap( user => {
-        const username = user.email;
-        const url = "https://firestore.googleapis.com/v1/projects/nba-8bb05/databases/(default)/documents/users/"
-        + username + "/" 
-        + environment.season + "/"
-        + "day_" + date + "/"
-        + "picks";
-        return this.http.get(url).pipe(
-          map( response => {
-            return this.pruneFetchedPicks(response)
-          })
-        )
+    const username = this.auth.currentEmail;
+    const url = "https://firestore.googleapis.com/v1/projects/nba-8bb05/databases/(default)/documents/users/"
+      + username + "/" 
+      + environment.season + "/"
+      + "day_" + date + "/"
+      + "picks";
+    return this.http.get(url).pipe(
+      map( response => {
+        return this.pruneFetchedPicks(response)
       })
     )
   }
@@ -77,30 +72,23 @@ export class FirestoreService {
     return output;
   }
 
-
   make_picks(picks: any, date: string) {
-    return this.auth.user.pipe(
-      take(1),
-      exhaustMap( user => {
-        const username = user.email;
-        const write_suffix = "/projects/nba-8bb05/databases/(default)/documents:commit"
-        const picks_url = "https://firestore.googleapis.com/v1" + write_suffix;
-        return this.http.post(picks_url, this.make_payload(picks, date, username));
-      } )
-    );
+    const username = this.auth.currentEmail
+    const write_suffix = "/projects/nba-8bb05/databases/(default)/documents:commit"
+    const api_url = "https://firestore.googleapis.com/v1" + write_suffix;
+    return this.http.post(api_url, this.make_payload(picks, date, username))
   }
 
   make_payload(picks: any, date: string, username: string) {
     //picks includes #: PICK as well as total: #
     let outputObj = {}
-    outputObj["writes"] = [];
+    const basepath = "projects/nba-8bb05/databases/(default)/documents/users/" +
+      username + 
+      "/" + environment.season +
+      "/day_" + date
+    outputObj["writes"] = [{"update": {"name": basepath, "fields": {}}}];
     for (let i=0; i < picks["total"]; i++) {
-      let docpath = 
-          "projects/nba-8bb05/databases/(default)/documents/users/" +
-          username + 
-          "/" + environment.season +
-          "/day_" + date +
-          "/picks/" + i.toString()
+      let docpath = basepath + "/picks/" + i.toString()
       if (picks[i]) {
         let document = {
           "name": docpath,
@@ -117,9 +105,5 @@ export class FirestoreService {
       }
     } 
     return outputObj;
-  }
-
-  create_user(user) {
-    //
   }
 }

@@ -20,6 +20,7 @@ export class AuthService{
     //eventually will go in interceptor
     private tokenExpirationTimer: any;
     user = new BehaviorSubject<User>(null)
+    currentEmail: string = ''
 
     constructor(private http: HttpClient, private router: Router) {}
 
@@ -41,7 +42,7 @@ export class AuthService{
                     +responseData.expiresIn
                 )
             })
-        );
+        )
     }
 
     login(email: string, password: string) {
@@ -67,8 +68,9 @@ export class AuthService{
 
     logout() {
         this.user.next(null);
+        this.currentEmail = '';
         this.router.navigate(['/auth']);
-        // localStorage.removeItem('userdata');
+        localStorage.removeItem('userdata');
         // if (this.tokenExpirationTimer) {
         //     clearTimeout(this.tokenExpirationTimer)
         // }
@@ -93,6 +95,7 @@ export class AuthService{
         if (loadedUser.token) {
             const expirationDuration = new Date(userData._tokenExpirationDate).getTime() - new Date().getTime();
             // this.autoLogout(expirationDuration);
+            this.currentEmail = userData.email;
             this.user.next(loadedUser);
         }
     }
@@ -115,6 +118,7 @@ export class AuthService{
             expirationDate
         );
         this.user.next(user);
+        this.currentEmail = email;
         // this.autoLogout(expiresIn*1000)
         localStorage.setItem('userdata', JSON.stringify(user))
     }
@@ -135,5 +139,19 @@ export class AuthService{
                 errorMessage = "Your password was incorrect."; break;
         }
         return throwError(errorMessage);
+    }
+
+    makePlayerDocument() {
+        const write_suffix = "/projects/nba-8bb05/databases/(default)/documents:commit"; 
+        const api_url = "https://firestore.googleapis.com/v1" + write_suffix;
+
+        let docpath = "projects/nba-8bb05/databases/(default)/documents/users/" + this.currentEmail; 
+
+        this.http.post(
+            api_url, 
+            {
+                writes: [{"update": {"name": docpath, "fields": {}}}]
+            }
+        ).subscribe(() => undefined)
     }
 }
