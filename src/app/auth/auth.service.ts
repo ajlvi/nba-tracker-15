@@ -19,8 +19,8 @@ export interface AuthResponseData {
 export class AuthService{
     //eventually will go in interceptor
     private tokenExpirationTimer: any;
-    user = new BehaviorSubject<User>(null)
-    currentEmail: string = ''
+    public user = new BehaviorSubject<User>(null)
+    public currentEmail: string = '' //is there a reason for a getter here?
 
     constructor(private http: HttpClient, private router: Router) {}
 
@@ -71,10 +71,10 @@ export class AuthService{
         this.currentEmail = '';
         this.router.navigate(['/auth']);
         localStorage.removeItem('userdata');
-        // if (this.tokenExpirationTimer) {
-        //     clearTimeout(this.tokenExpirationTimer)
-        // }
-        // this.tokenExpirationTimer = null;
+        if (this.tokenExpirationTimer) {
+            clearTimeout(this.tokenExpirationTimer)
+        }
+        this.tokenExpirationTimer = null;
     }
 
     autoLogin() {
@@ -100,7 +100,11 @@ export class AuthService{
         }
     }
 
-    //autoLogout()
+    autoLogout(expirationDuration: number) {
+        this.tokenExpirationTimer = setTimeout( () => {
+            this.logout()
+        }, expirationDuration);
+    } 
 
     private handleAuthentication(
         email: string,
@@ -119,7 +123,7 @@ export class AuthService{
         );
         this.user.next(user);
         this.currentEmail = email;
-        // this.autoLogout(expiresIn*1000)
+        this.autoLogout(expiresIn*1000)
         localStorage.setItem('userdata', JSON.stringify(user))
     }
 

@@ -1,9 +1,9 @@
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpErrorResponse } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { map, switchMap, take } from "rxjs";
+import { catchError, map, Observable, throwError } from "rxjs";
 import { environment } from "src/environments/environment.development";
 import { AuthService } from "../auth/auth.service";
-import { Game } from "./game.model";
+import { Game, RecordData } from "./game.model";
 
 @Injectable({providedIn: 'root'})
 export class FirestoreService {
@@ -27,12 +27,12 @@ export class FirestoreService {
     if (!response["documents"]) {return []}
     let output = []
     for (let game of response["documents"]) {
-      output.push(this.process(game["fields"]));
+      output.push(this.process_date_response(game["fields"]));
     }
     return output;
   }
 
-  process(respObj): Game {
+  process_date_response(respObj): Game {
     let respFav = respObj.fav.stringValue;
     let respLine = respObj.line.stringValue;
     let respDog = respObj.dog.stringValue;
@@ -106,4 +106,43 @@ export class FirestoreService {
     } 
     return outputObj;
   }
+
+  getUserStats() {
+    const username = this.auth.currentEmail;
+    const baseurl = "https://firestore.googleapis.com/v1/projects/nba-8bb05/databases/(default)/documents/users/"
+    let stats_suffix = username + "/" + environment.season + "/" + "stats"
+    return this.http.get(baseurl + stats_suffix).pipe(
+      catchError(this.handleError),
+      map( response => {
+        return this.process_stats_response(response)
+      })
+    )
+  }
+
+  process_stats_response(response) {
+    const respWins = parseInt(response["fields"]["wins"]["integerValue"])
+    const respLosses = parseInt(response["fields"]["losses"]["integerValue"])
+    const respTies = parseInt(response["fields"]["ties"]["integerValue"])
+    return new RecordData(respWins, respLosses, respTies);
+  }
+
+  private handleError(errorResponse: HttpErrorResponse) {
+    let errorMessage = "Unknown error occurred :("
+    if (!errorResponse.error || !errorResponse.error.error) {
+        return throwError(errorMessage);
+    }
+    switch (errorResponse.error.error.status) {
+        case 'NOT_FOUND':
+            return new Observable( subscriber => {
+              subscriber.next(new RecordData(-1, -1, -1));
+            });
+        case 'TOO_MANY_ATTEMPTS_TRY_LATER':
+            errorMessage = "You have tried logging in too many times; try later."; break;
+        case 'EMAIL_NOT_FOUND':
+            errorMessage = "No account is associated with that e-mail address."; break;
+        case "INVALID_PASSWORD":
+            errorMessage = "Your password was incorrect."; break;
+    }
+    return throwError(errorMessage);
+}
 }

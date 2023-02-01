@@ -17,7 +17,7 @@ export class MakePicksComponent implements OnInit{
 
   ngOnInit(): void {
     this.isCommunicating = true;
-    this.todays_date = "1326"; //this will have to be more sophisticated
+    this.todays_date = "1331"; //this will have to be more sophisticated
     this.fire.fetchPicksByDate(this.todays_date).subscribe(
       response => { 
         this.today = response;

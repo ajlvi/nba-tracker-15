@@ -1,1 +1,10 @@
 <p>pick-history works!</p>
+
+<div class="row" *ngIf="recordData">
+    <div class="col-xs-12" *ngIf="recordData.wins >= 0">
+        {{recordData.wins}} - {{recordData.losses}} - {{recordData.ties}}
+    </div>
+    <div class="col-xs-12" *ngIf="recordData.wins < 0">
+        You don't seem to have any graded picks yet. Check this page tomorrow, or after the page refreshes next.
+    </div>
+</div>

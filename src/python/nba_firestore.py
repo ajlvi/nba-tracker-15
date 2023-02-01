@@ -5,7 +5,10 @@ from sys import argv
 import firebase_admin
 from firebase_admin import firestore
 from firebase_admin import credentials
-from nba_fire_config import CertificatePath, DataPath
+
+from nba_fire_config import CertificatePath, DataPath, CurrentSeason
+import nba_getlines as getlines
+
 cred = credentials.Certificate(CertificatePath)
 app = firebase_admin.initialize_app(cred)
 db = firestore.client()
@@ -26,6 +29,38 @@ def initial_batch_upload():
 			for game in json_data:
 				date_games.document(str(json_data.index(game))).set(game)
 
+def initialize_stats(username):
+	user_doc = db.collection("users").document(username)
+	if "groups" not in user_doc.get().to_dict():
+		user_doc.set({"groups": []})
+	stats_doc = user_doc.collection(CurrentSeason).document("stats")
+	if not stats_doc.get().exists:
+		blank_stats = {"wins": 0, "losses": 0, "ties": 0}
+		stats_doc.set(blank_stats)
+
+def process_user_wins(username, winners, date):
+	user_head = db.collection("users").document(username).collection(CurrentSeason)
+	user_picks = user_head.document(f"day_{date}")
+	if user_picks.get().exists:
+		wins, losses, ties = 0, 0, 0
+		picked_winners = []
+		for game in user_picks.collection("picks").stream():
+			pick = user_picks.collection("picks").document(game.id).get().to_dict()["pick"]
+			if pick in winners:
+				picked_winners.append(pick); wins += 1
+			elif pick == "push":
+				ties += 1
+			else: losses += 1
+		user_picks.set({"winners": picked_winners})
+		
+		user_stats = user_head.document("stats")
+		current_stats = user_stats.get().to_dict()
+		current_stats["wins"] += wins
+		current_stats["ties"] += ties
+		current_stats["losses"] += losses
+		user_stats.set(current_stats)
+		
+
 def post_date(day):
 	datefile = open(f"{DataPath}/2023/lines/{day}.txt", 'r')
 	lines = datefile.readlines()
@@ -41,6 +76,8 @@ def post_date(day):
 		date_doc.set({u'done': True})
 	else:
 		date_doc.set({u'done': False, u'updated': round(time.time() * 1000)})
+		
+	return json_data
 
 def process_game(game):
 	x = game.strip().split("\t")
@@ -60,6 +97,19 @@ def process_game(game):
 		return { "fav": fav, "dog": dog, "line": line, "score": score, "home": home, "ats_win": ats_win }
 	else:
 		return { "fav": fav, "dog": dog, "line": line, "home": home, "time": int(score)*1000 }
+
+def database_update(mm, dd):
+	#this is the function we run in mornings when the previous day's scores need adding
+	getlines.main(mm, dd, 'y')
+	datestring = "%02d%02d" %(mm, dd)
+	games = post_date(datestring)
+	winners = [game["ats_win"] for game in games]
+	user_col = db.collection("users")
+	all_users = [u.id for u in user_col.stream()]
+	for user in all_users:
+		initialize_stats(user)
+		process_user_wins(user, winners, datestring)
+	updateLastTen(games)
 
 if __name__ == '__main__':
 	if len(argv) == 3:

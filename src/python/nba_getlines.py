@@ -118,7 +118,7 @@ def makeTXTs(games, day, month, yesno):
 
 def main(mo, day, yesno):
 	global year; year = 2022
-	global month
+	global month; month = mo
 	if mo > 12:
 		month -= 12
 		year += 1
