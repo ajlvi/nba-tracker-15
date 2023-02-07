@@ -1,110 +1,153 @@
-import { HttpClient, HttpErrorResponse } from "@angular/common/http";
+import { HttpClient, HttpErrorResponse, HttpParams } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { catchError, map, Observable, throwError } from "rxjs";
+import { catchError, Observable, throwError } from "rxjs";
+import { map } from "rxjs/operators";
+
 import { environment } from "src/environments/environment.development";
 import { AuthService } from "../auth/auth.service";
+import { FirestoreQueryService } from "./firestore-query.service";
 import { Game, RecordData } from "./game.model";
+import { SinglePick, DayPicks } from "./pick.interface";
 
 @Injectable({providedIn: 'root'})
 export class FirestoreService {
-  constructor(private http: HttpClient, private auth: AuthService) {}
+  constructor(
+    private http: HttpClient, 
+    private auth: AuthService,
+    private queryService: FirestoreQueryService) {}
 
-  fetchPicksByDate(date: string) {
+  fetchGamesByDate(date: string) {
     const url = "https://firestore.googleapis.com/v1/projects/nba-8bb05/databases/(default)/documents/"
-      + environment.season 
-      + "/day_" + date 
-      + "/games";
-
+      + environment.season + "/day_" + date;
     return this.http.get(url).pipe(
       map( response => {
         return this.pruneFetchedDate(response)
-      }
-      )
+      })
     )
   }
 
-  pruneFetchedDate(response) {
-    if (!response["documents"]) {return []}
-    let output = []
-    for (let game of response["documents"]) {
-      output.push(this.process_date_response(game["fields"]));
-    }
-    return output;
+  fetchTeamsData() {
+    const url = "https://firestore.googleapis.com/v1/projects/nba-8bb05/databases/(default)/documents:runQuery";
+    return this.http.post(url, this.queryService.query_team_documents()).pipe(
+      map( response => {
+        console.log(response);
+        return {};
+        // return this.pruneFetchedGamesData(response)
+      })
+    )
   }
 
-  process_date_response(respObj): Game {
-    let respFav = respObj.fav.stringValue;
-    let respLine = respObj.line.stringValue;
-    let respDog = respObj.dog.stringValue;
-    let respHome = respObj.home.stringValue;
-    let respScore = '';
-    let respATS = ''; 
-    let respTime = ''; 
-    if (respObj.score) {respScore = respObj.score.stringValue;}
-    if (respObj.ats_win) {respATS = respObj.ats_win.stringValue;}
-    if (respObj.time) {respTime = respObj.time.integerValue;}
-    return new Game(respFav, respLine, respDog, respHome, respScore, respATS, respTime)
+  pruneFetchedDate(response): Game[] {
+    if (!response["fields"]) {return []}
+    const fields = response["fields"]
+    let output = [];
+    for (let i = 0; i < parseInt(fields["totg"]["integerValue"]); i++) {
+      const game_fav = fields["fav_" + i.toString()]["stringValue"];
+      const game_line = fields["line_" + i.toString()]["stringValue"];
+      const game_dog = fields["dog_" + i.toString()]["stringValue"];
+      const game_home = fields["home_" + i.toString()]["stringValue"];
+      let game_score = "";
+      let game_ats = "";
+      let game_time = 0;
+      if (fields["score_" + i.toString()]) {
+        game_score = fields["score_" + i.toString()]["stringValue"];
+      }
+      if (fields["ats_win_" + i.toString()]) {
+        game_ats = fields["ats_win_" + i.toString()]["stringValue"];
+      }
+      if (fields["time_" + i.toString()]) {
+        game_time = fields["time_" + i.toString()]["integerValue"];
+      }
+      output.push( new Game(game_fav, game_line, game_dog, game_home, game_score, game_ats, game_time))
+    }
+    return output;
   }
 
   fetchUserPicks(date: string) {
     const username = this.auth.currentEmail;
-    const url = "https://firestore.googleapis.com/v1/projects/nba-8bb05/databases/(default)/documents/users/"
-      + username + "/" 
-      + environment.season + "/"
-      + "day_" + date + "/"
-      + "picks";
-    return this.http.get(url).pipe(
+    const url = "https://firestore.googleapis.com/v1/projects/nba-8bb05/databases/(default)/documents:runQuery"
+    return this.http.post(url, this.queryService.query_player_picks_single(username, date)).pipe(
       map( response => {
-        return this.pruneFetchedPicks(response)
+        return this.pruneFetchedPicks(response, date)
       })
     )
   }
   
-  pruneFetchedPicks(response) {
-    if (!response["documents"]) { return {} }
-    let output = {};
-    for (let game of response["documents"]) {
-      const slashSplit = game["name"].split("/")
-      const gameNumber = parseInt(slashSplit[slashSplit.length - 1]);
-      const pickedTeam = game["fields"]["pick"]["stringValue"]
-      output[gameNumber] = pickedTeam;
+  pruneFetchedPicks(response, date) {
+    //we looked for picks on this day and found nothing. we return something to indicate we looked
+    if (!response[0]["document"]) { 
+      return {
+        "doc_id": '',
+        "user": this.auth.currentEmail,
+        "date": date
+      } 
+    }
+    const document = response[0]["document"]
+    let slashsplit = document["name"].split("/")
+    let output: DayPicks = {
+      "doc_id": slashsplit[slashsplit.length - 1],
+      "user": document["fields"]["user"]["stringValue"],
+      "date": document["fields"]["date"]["stringValue"]
+    };
+    for (let i=0; i <= 15; i++) {
+      if (document["fields"]["pick_" + i.toString()]) {
+        const pickedTeam = document["fields"]["pick_" + i.toString()]["stringValue"];
+        let pick_i: SinglePick = {"pick": pickedTeam, "gameno": i}
+        if (document["fields"]["result_" + i.toString()]) {
+          pick_i["result"] = document["fields"]["result_" + i.toString()]["integerValue"]
+        }
+        output[i] = pick_i
+      }
     }
     return output;
   }
 
-  make_picks(picks: any, date: string) {
-    const username = this.auth.currentEmail
-    const write_suffix = "/projects/nba-8bb05/databases/(default)/documents:commit"
-    const api_url = "https://firestore.googleapis.com/v1" + write_suffix;
-    return this.http.post(api_url, this.make_payload(picks, date, username))
+  make_picks(date: string, selections: DayPicks) {
+    const basepath = "https://firestore.googleapis.com/v1"
+    if (selections.doc_id) {
+      let write_suffix = "/projects/nba-8bb05/databases/(default)/documents:commit"
+      return this.http.post(basepath + write_suffix, this.update_picks_payload(selections))
+    }
+    else {
+      let write_suffix = "/projects/nba-8bb05/databases/(default)/documents/picks"
+      return this.http.post(basepath + write_suffix, this.new_picks_payload(date, selections))
+    }
   }
 
-  make_payload(picks: any, date: string, username: string) {
-    //picks includes #: PICK as well as total: #
-    let outputObj = {}
-    const basepath = "projects/nba-8bb05/databases/(default)/documents/users/" +
-      username + 
-      "/" + environment.season +
-      "/day_" + date
-    outputObj["writes"] = [{"update": {"name": basepath, "fields": {}}}];
-    for (let i=0; i < picks["total"]; i++) {
-      let docpath = basepath + "/picks/" + i.toString()
-      if (picks[i]) {
-        let document = {
-          "name": docpath,
-          "fields": {"pick": {'stringValue': picks[i]}}
-        }
-        outputObj["writes"].push({
-          "update": document
-        })
+  update_picks_payload(selections: DayPicks) {
+    const basepath = "projects/nba-8bb05/databases/(default)/documents/picks/"
+    let outputObj = {"writes": []}
+    let outputDoc = {
+      "name": basepath + selections.doc_id,
+      "fields": {
+        "season": {"stringValue": environment.season},
+        "user": {"stringValue": this.auth.currentEmail},
+        "date": {"stringValue": selections.date}
       }
-      else {
-        outputObj["writes"].push( {
-          "delete" : docpath
-        } )
+    }
+    for (let i=0; i <= 15; i++) {
+      if (selections[i]) {
+        outputDoc["fields"]["pick_" + i.toString()] = {"stringValue": selections[i]["pick"]}
       }
-    } 
+    }
+    outputObj["writes"].push({"update": outputDoc})
     return outputObj;
+  }
+
+  new_picks_payload(date: string, selections: DayPicks) {
+    let outputDoc = {
+      "fields": {
+        "season": {"stringValue": environment.season},
+        "user": {"stringValue": this.auth.currentEmail},
+        "date": {"stringValue": date}
+      }
+    }
+    for (let i=0; i <= 15; i++) {
+      if (selections[i]) {
+        outputDoc["fields"]["pick_" + i.toString()] = {"stringValue": selections[i]["pick"]}
+      }
+    }
+    return outputDoc;
   }
 
   getUserStats() {
