@@ -4,6 +4,7 @@ import { Router } from "@angular/router";
 import { BehaviorSubject, throwError } from "rxjs";
 import { catchError, tap } from "rxjs/operators";
 import { environment } from "src/environments/environment.development";
+import { TodayService } from "../shared/today.service";
 import { User } from "./user.model";
 
 export interface AuthResponseData {
@@ -22,7 +23,10 @@ export class AuthService{
     public user = new BehaviorSubject<User>(null)
     public currentEmail: string = '' //is there a reason for a getter here?
 
-    constructor(private http: HttpClient, private router: Router) {}
+    constructor(
+        private http: HttpClient, 
+        private router: Router,
+        private today: TodayService) {}
 
     signup(email: string, password: string) {
         return this.http.post<AuthResponseData>(
@@ -61,7 +65,8 @@ export class AuthService{
                     responseData.localId,
                     responseData.idToken,
                     +responseData.expiresIn
-                )
+                );
+                this.today.getTodaysDate();
             })
         )
     }
@@ -97,6 +102,7 @@ export class AuthService{
             // this.autoLogout(expirationDuration);
             this.currentEmail = userData.email;
             this.user.next(loadedUser);
+            this.today.getTodaysDate()
         }
     }
 

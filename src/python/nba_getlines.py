@@ -42,6 +42,7 @@ def getdata(span, lines, scores):
 	idx += 1
 	while "cmg_team_name" not in lines[span+idx-1]:
 		idx += 1
+		if "Postponed" in lines[span+idx]: return None
 		if "cmg_game_time" in lines[span+idx-1]:
 			time = setTime(lines[span+idx])
 		
@@ -98,7 +99,7 @@ def setTime(line):
 
 def makeTXTs(games, day, month, yesno):
 	mo = month + 12 if month < 10 else month
-	outfile = open(f'{DataPath}/2023/lines/%02d%02d.txt' %(mo, day), 'w')
+	outfile = open(f'{DataPath}/2223/lines/%02d%02d.txt' %(mo, day), 'w')
 	for game in games:
 		home, away = game[2], game[1]
 		odds = float(game[5])
@@ -116,9 +117,10 @@ def makeTXTs(games, day, month, yesno):
 		if game != games[-1]: outfile.write('\n')
 	outfile.close()
 
-def main(mo, day, yesno):
+def main(mo, da, yesno):
 	global year; year = 2022
 	global month; month = mo
+	global day; day = da
 	if mo > 12:
 		month -= 12
 		year += 1
@@ -133,6 +135,7 @@ def main(mo, day, yesno):
 		data = getdata(span, lines, yesno)
 		print(data)
 		games.append(data)
+	games = [g for g in games if g]
 	games.sort(key = lambda game: game[0])
 	makeTXTs(games, day, month, yesno)
 
@@ -141,6 +144,5 @@ if __name__ == '__main__':
 		if argv[1].isdigit() and int(argv[1]) in range(10, 17):
 			if argv[2].isdigit() and int(argv[2]) in range(1, 32):
 				if argv[3] in ["y", "n"]:
-					global month; global day
 					month, day = int(argv[1]), int(argv[2])
 					main(month, day, argv[3])

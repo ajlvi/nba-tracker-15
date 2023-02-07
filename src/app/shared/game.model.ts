@@ -6,7 +6,7 @@ export class Game {
         public home: string,
         public score: string,  
         public ats_win: string,
-        public time: string,
+        public time: number,
     ) {}
 }
 

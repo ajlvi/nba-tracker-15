@@ -8,6 +8,7 @@ from firebase_admin import credentials
 
 from nba_fire_config import CertificatePath, DataPath, CurrentSeason
 import nba_getlines as getlines
+import nba_teamdata as nbateam
 
 cred = credentials.Certificate(CertificatePath)
 app = firebase_admin.initialize_app(cred)
@@ -15,71 +16,69 @@ db = firestore.client()
 season = db.collection(u's2223')
 
 def initial_batch_upload():
-	dates = os.listdir(f"{DataPath}/2023/lines/")
-	for fname in dates[dates.index("1224.txt"):]:
-		print(fname);
-		date_doc = season.document(f"day_{fname[:-4]}")
-		date_doc.set({u'done': True})
-		
-		datefile = open(f"{DataPath}/2023/lines/{fname}", 'r')
-		lines = datefile.readlines()
-		if lines[0].strip() != "":
-			date_games = date_doc.collection(u'games')
-			json_data = [process_game(line) for line in lines]
-			for game in json_data:
-				date_games.document(str(json_data.index(game))).set(game)
-
+	dates = os.listdir(f"{DataPath}/2223/lines/")[2:]
+#	dates = [d for d in dates if d not in ["1224.txt", "1124.txt", "1108.txt"]]:
+	for fname in dates: post_date(fname[:4])
+			
 def initialize_stats(username):
 	user_doc = db.collection("users").document(username)
-	if "groups" not in user_doc.get().to_dict():
-		user_doc.set({"groups": []})
-	stats_doc = user_doc.collection(CurrentSeason).document("stats")
-	if not stats_doc.get().exists:
-		blank_stats = {"wins": 0, "losses": 0, "ties": 0}
-		stats_doc.set(blank_stats)
+	user_get = user_doc.get()
+	blank_stats = {f"{CurrentSeason}_w": 0, f"{CurrentSeason}_l": 0, f"{CurrentSeason}_t": 0, "user": username}
+	if not user_get.exists:
+		user_doc.set({"groups": []} | blank_stats)
+	elif f"{CurrentSeason}_w" not in user_get.to_dict():
+		user_doc.set(user_get.to_dict() | blank_stats)
 
-def process_user_wins(username, winners, date):
-	user_head = db.collection("users").document(username).collection(CurrentSeason)
-	user_picks = user_head.document(f"day_{date}")
-	if user_picks.get().exists:
-		wins, losses, ties = 0, 0, 0
-		picked_winners = []
-		for game in user_picks.collection("picks").stream():
-			pick = user_picks.collection("picks").document(game.id).get().to_dict()["pick"]
-			if pick in winners:
-				picked_winners.append(pick); wins += 1
-			elif pick == "push":
-				ties += 1
-			else: losses += 1
-		user_picks.set({"winners": picked_winners})
+def process_user_wins(username, date, winners):
+	user_picks = db.collection("picks").where("user", "==", username).where("date", "==", date)
+	wins, losses, ties = 0, 0, 0
+
+	for pick_doc in user_picks.stream():
+		pick_dict = pick_doc.to_dict()
+		for game_idx in range(15):
+			if f"pick_{game_idx}" in pick_dict:
+				user_pick = pick_dict[f"pick_{game_idx}"]
 		
-		user_stats = user_head.document("stats")
-		current_stats = user_stats.get().to_dict()
-		current_stats["wins"] += wins
-		current_stats["ties"] += ties
-		current_stats["losses"] += losses
-		user_stats.set(current_stats)
-		
+				if winners[game_idx] == user_pick:
+					wins += 1
+					result_number = 1
+				elif winners[game_idx] == "push":
+					ties += 1
+					result_number = 0
+				else: 
+					losses += 1
+					result_number = -1
+				pick_dict[f"result_{game_idx}"] = result_number
+		db.collection("picks").document(pick_doc.id).set(pick_dict)
+
+	if wins + losses + ties >= 1:
+		user_doc = db.collection("users").document(username)
+		user_dict = user_doc.get().to_dict()
+		user_dict[f"{CurrentSeason}_w"] += wins
+		user_dict[f"{CurrentSeason}_l"] += losses
+		user_dict[f"{CurrentSeason}_t"] += ties
+		user_doc.set(user_dict)		
 
 def post_date(day):
-	datefile = open(f"{DataPath}/2023/lines/{day}.txt", 'r')
+	datefile = open(f"{DataPath}/2223/lines/{day}.txt", 'r')
 	lines = datefile.readlines()
+	if lines[0].strip() == "": return
 
 	date_doc = season.document(f"day_{day}")
+	date_dict = {"date": day, "totg": len(lines)}
+
+	for i in range(len(lines)):
+		date_dict = date_dict | process_game(lines[i], i)
 	
-	date_games = date_doc.collection(u'games')
-	json_data = [process_game(line) for line in lines]
-	for game in json_data:
-		date_games.document(str(json_data.index(game))).set(game)
-
-	if "score" in json_data[-1]:
-		date_doc.set({u'done': True})
+	if f"score_{i}" in date_dict: date_dict["done"] = True
 	else:
-		date_doc.set({u'done': False, u'updated': round(time.time() * 1000)})
-		
-	return json_data
+		date_dict["done"] = False
+		date_dict["updated"] = round( time.time() * 1000 )
 
-def process_game(game):
+	season.document(f"day_{day}").set(date_dict)
+	return date_dict
+
+def process_game(game, idx):
 	x = game.strip().split("\t")
 	fav = x[0].replace("@", "")
 	line = x[1]
@@ -94,22 +93,28 @@ def process_game(game):
 		dog_score = int(score.split()[3]) if fav_won else int(score.split()[1])
 		if fav_adj_score == dog_score: ats_win = "push"
 		else: ats_win = fav if fav_adj_score > dog_score else dog
-		return { "fav": fav, "dog": dog, "line": line, "score": score, "home": home, "ats_win": ats_win }
+		return { f"fav_{idx}": fav, f"dog_{idx}": dog, f"line_{idx}": line, f"home_{idx}": home, f"score_{idx}": score, f"ats_win_{idx}": ats_win }
 	else:
-		return { "fav": fav, "dog": dog, "line": line, "home": home, "time": int(score)*1000 }
+		return { f"fav_{idx}": fav, f"dog_{idx}": dog, f"line_{idx}": line, f"home_{idx}": home, f"time_{idx}": int(score)*1000 }
 
 def database_update(mm, dd):
 	#this is the function we run in mornings when the previous day's scores need adding
 	getlines.main(mm, dd, 'y')
 	datestring = "%02d%02d" %(mm, dd)
+	season.document("today").set({"date": "%02d%02d" %(mm, dd+1)})
 	games = post_date(datestring)
-	winners = [game["ats_win"] for game in games]
+	winners = [ games[f"ats_win_{i}"] for i in range(games["totg"]) ]
 	user_col = db.collection("users")
 	all_users = [u.id for u in user_col.stream()]
 	for user in all_users:
 		initialize_stats(user)
-		process_user_wins(user, winners, datestring)
-	updateLastTen(games)
+		process_user_wins(user, datestring, winners)
+	makeTeamDocuments()
+
+def makeTeamDocuments():
+	teamdict = nbateam.teamDict()
+	for team in teamdict:
+		season.document(f"team_{team}").set(teamdict[team])
 
 if __name__ == '__main__':
 	if len(argv) == 3:

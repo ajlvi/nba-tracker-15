@@ -16,6 +16,7 @@ import { AuthInterceptorService } from './auth/auth-interceptor.service';
 import { MakePicksComponent } from './make-picks/make-picks.component';
 import { TimePipe } from './make-picks/time.pipe';
 import { PickHistoryComponent } from './pick-history/pick-history.component';
+import { DateExpandPipe } from './make-picks/date.pipe';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { PickHistoryComponent } from './pick-history/pick-history.component';
     AuthComponent,
     MakePicksComponent,
     TimePipe,
+    DateExpandPipe,
     PickHistoryComponent
   ],
   imports: [
