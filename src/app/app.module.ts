@@ -17,6 +17,7 @@ import { MakePicksComponent } from './make-picks/make-picks.component';
 import { TimePipe } from './make-picks/time.pipe';
 import { PickHistoryComponent } from './pick-history/pick-history.component';
 import { DateExpandPipe } from './make-picks/date.pipe';
+import { PickRowComponent } from './pick-history/pick-row/pick-row.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { DateExpandPipe } from './make-picks/date.pipe';
     MakePicksComponent,
     TimePipe,
     DateExpandPipe,
-    PickHistoryComponent
+    PickHistoryComponent,
+    PickRowComponent
   ],
   imports: [
     AppRoutingModule,

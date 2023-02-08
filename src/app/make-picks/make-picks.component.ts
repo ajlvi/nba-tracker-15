@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
+import { AuthService } from '../auth/auth.service';
 import { Game } from '../shared/game.model';
 import { SeenDataService } from '../shared/seen-data-service';
 import { TodayService } from '../shared/today.service';
@@ -20,7 +21,8 @@ export class MakePicksComponent implements OnInit, OnDestroy {
 
   constructor(
     private todayService: TodayService,
-    private seen: SeenDataService) {}
+    private seen: SeenDataService,
+    private auth: AuthService) {}
 
   ngOnInit(): void {
     this.isCommunicating = true;
@@ -53,14 +55,15 @@ export class MakePicksComponent implements OnInit, OnDestroy {
   }
 
   fetchPicksData() {
-    if (this.seen.sawPicks(this.todays_date)) {
-      let seenPicks = this.seen.userPicks[this.todays_date]
+    const username = this.auth.currentEmail;
+    if (this.seen.sawPicks(username, this.todays_date)) {
+      let seenPicks = this.seen.seenPicks[username][this.todays_date]
       for (let gameno in seenPicks) {
         this.serverPicks[gameno] = seenPicks[gameno]["pick"]
       }
     }
     else {
-      this.seen.getPicks(this.todays_date).subscribe(
+      this.seen.getPicks(username, this.todays_date).subscribe(
         response => {
           for (let gameno in response) {
             this.serverPicks[gameno] = response[gameno]["pick"]

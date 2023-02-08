@@ -11,6 +11,8 @@ import { SinglePick, DayPicks } from "./pick.interface";
 
 @Injectable({providedIn: 'root'})
 export class FirestoreService {
+  queryUrl = "https://firestore.googleapis.com/v1/projects/nba-8bb05/databases/(default)/documents:runQuery"
+
   constructor(
     private http: HttpClient, 
     private auth: AuthService,
@@ -27,8 +29,7 @@ export class FirestoreService {
   }
 
   fetchTeamsData() {
-    const url = "https://firestore.googleapis.com/v1/projects/nba-8bb05/databases/(default)/documents:runQuery";
-    return this.http.post(url, this.queryService.query_team_documents()).pipe(
+    return this.http.post(this.queryUrl, this.queryService.query_team_documents()).pipe(
       map( response => {
         console.log(response);
         return {};
@@ -63,26 +64,53 @@ export class FirestoreService {
     return output;
   }
 
-  fetchUserPicks(date: string) {
-    const username = this.auth.currentEmail;
-    const url = "https://firestore.googleapis.com/v1/projects/nba-8bb05/databases/(default)/documents:runQuery"
-    return this.http.post(url, this.queryService.query_player_picks_single(username, date)).pipe(
+  fetchUserPicksSingle(user: string, date: string) {
+    return this.http.post(
+      this.queryUrl, 
+      this.queryService.query_player_picks_single(user, date)
+    ).pipe(
       map( response => {
-        return this.pruneFetchedPicks(response, date)
+        //we looked for picks on this day and found nothing. we return something to indicate we looked
+        if (!response[0]["document"]) { 
+          return {
+            "doc_id": '',
+            "user": this.auth.currentEmail,
+            "date": date
+          } 
+        }
+        return this.pruneFetchedPicks(response[0])
+      })
+    )
+  }
+
+  fetchUserPicksMultiple(user: string, daterange: string[]) {
+    let output = {}
+    return this.http.post(
+      this.queryUrl,
+      this.queryService.query_player_picks_multiple(user, daterange[0], daterange[6])
+    ).pipe(
+      map( (response: any[]) => {
+        // first we'll take the successes and store those.
+        for (let document of response) {
+          output[document["document"]["fields"]["date"]["stringValue"]] = this.pruneFetchedPicks(document)
+        }
+        // since we looked and didn't find the other dates, we'll store a reminder.
+        for (let date of daterange) {
+          if (!(date in output)) {
+            output[date] = {
+              "doc_id": '',
+              "user": this.auth.currentEmail,
+              "date": date
+            } 
+          }
+        }
+        return output
       })
     )
   }
   
-  pruneFetchedPicks(response, date) {
-    //we looked for picks on this day and found nothing. we return something to indicate we looked
-    if (!response[0]["document"]) { 
-      return {
-        "doc_id": '',
-        "user": this.auth.currentEmail,
-        "date": date
-      } 
-    }
-    const document = response[0]["document"]
+  pruneFetchedPicks(response) {
+    const document = response["document"]
     let slashsplit = document["name"].split("/")
     let output: DayPicks = {
       "doc_id": slashsplit[slashsplit.length - 1],
@@ -153,20 +181,21 @@ export class FirestoreService {
   getUserStats() {
     const username = this.auth.currentEmail;
     const baseurl = "https://firestore.googleapis.com/v1/projects/nba-8bb05/databases/(default)/documents/users/"
-    let stats_suffix = username + "/" + environment.season + "/" + "stats"
+    let stats_suffix = username + "/"
     return this.http.get(baseurl + stats_suffix).pipe(
       catchError(this.handleError),
       map( response => {
-        return this.process_stats_response(response)
+        return this.process_stats_response(response, username)
       })
     )
   }
 
-  process_stats_response(response) {
-    const respWins = parseInt(response["fields"]["wins"]["integerValue"])
-    const respLosses = parseInt(response["fields"]["losses"]["integerValue"])
-    const respTies = parseInt(response["fields"]["ties"]["integerValue"])
-    return new RecordData(respWins, respLosses, respTies);
+  process_stats_response(response, username: string) {
+    const season = environment.season
+    const respWins = parseInt(response["fields"][season + "_w"]["integerValue"])
+    const respLosses = parseInt(response["fields"][season + "_l"]["integerValue"])
+    const respTies = parseInt(response["fields"][season + "_t"]["integerValue"])
+    return new RecordData(username, respWins, respLosses, respTies);
   }
 
   private handleError(errorResponse: HttpErrorResponse) {
@@ -177,7 +206,7 @@ export class FirestoreService {
     switch (errorResponse.error.error.status) {
         case 'NOT_FOUND':
             return new Observable( subscriber => {
-              subscriber.next(new RecordData(-1, -1, -1));
+              subscriber.next(new RecordData('', -1, -1, -1));
             });
         case 'TOO_MANY_ATTEMPTS_TRY_LATER':
             errorMessage = "You have tried logging in too many times; try later."; break;

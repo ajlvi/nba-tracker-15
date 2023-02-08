@@ -11,5 +11,9 @@ export class Game {
 }
 
 export class RecordData {
-    constructor(public wins: number, public losses: number, public ties: number) {}
+    constructor(
+        public user: string,
+        public wins: number, 
+        public losses: number, 
+        public ties: number) {}
 }

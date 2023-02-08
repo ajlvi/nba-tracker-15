@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-xs-1">
+        <span class="date-box">{{date}}</span>
+    </div>
+    <div class="col-xs-1">
+        <span class="record-box" *ngIf="record">{{record.wins}} - {{record.losses}} <span *ngIf="record.ties>0"> - {{record.ties}}</span></span>
+    </div>
+    <div class="col-xs-10">
+        <span *ngFor="let game of cell_indices; let i = index">
+            <span
+                class="pick-cell"
+                [ngClass]="{
+                    'win': picks[i]['result'] == 1,
+                    'loss': picks[i]['result'] == -1,
+                    'tie': picks[i]['result'] == 0,
+                    'tbd': !picks[i]['result']
+                }"
+                *ngIf="picks[i]">{{ picks[i]["pick"] }}</span>
+            <span class="pick-cell blank" *ngIf="!picks[i]">&nbsp;</span>
+        </span>
+    </div>
+</div>

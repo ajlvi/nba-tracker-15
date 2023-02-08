@@ -60,4 +60,44 @@ export class FirestoreQueryService {
           }
         }
     }
+
+    query_player_picks_multiple(user: string, start_date: string, end_date: string) {
+        return {
+          "structuredQuery": {
+            "where": {
+              "compositeFilter": {
+                "op": "AND",
+                "filters": [ 
+                    { "fieldFilter": {
+                        "field": { "fieldPath": "user" },
+                        "op": "EQUAL",
+                        "value": { "stringValue": user }
+                    }} , 
+                    { "fieldFilter": {
+                        "field": { "fieldPath": "date" },
+                        "op": "GREATER_THAN_OR_EQUAL",
+                        "value": { "stringValue": start_date }
+                    }},
+                    { "fieldFilter": {
+                        "field": { "fieldPath": "date" },
+                        "op": "LESS_THAN_OR_EQUAL",
+                        "value": { "stringValue": end_date }
+                    }},
+                    { "fieldFilter": {
+                        "field": { "fieldPath": "season" },
+                        "op": "EQUAL",
+                        "value": { "stringValue": environment.season }
+                    }},
+                ]
+              }
+            },
+            "from": [
+              {
+                "collectionId": "picks",
+                "allDescendants": true
+              }
+            ]
+          }
+        }
+    }
 }

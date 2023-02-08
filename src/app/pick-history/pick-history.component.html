@@ -1,12 +1,22 @@
-<p>pick-history works!</p>
-
-<div class="row" *ngIf="recordData">
-    <div class="col-xs-12" *ngIf="recordData.wins >= 0">
-        {{recordData.wins}} - {{recordData.losses}} - {{recordData.ties}}
+<div class="row" *ngIf="seasonRecordData">
+    <div class="col-xs-12" *ngIf="seasonRecordData.wins >= 0">
+        Season record: {{seasonRecordData.wins}} - {{seasonRecordData.losses}} - {{seasonRecordData.ties}}
     </div>
-    <div class="col-xs-12" *ngIf="recordData.wins < 0">
+
+    <div class="col-xs-12" *ngIf="seasonRecordData.wins < 0">
         You don't seem to have any graded picks yet. Check this page tomorrow, or after the page refreshes next.
     </div>
 </div>
 
-<!-- {{yesterday[0]["pick"]}} {{yesterday[0]["result"]}} -->
+<div class="row" *ngIf="visibleRecordData">
+    <div class="col-xs-12" *ngIf="visibleRecordData.wins >= 0">
+        Record this week: {{visibleRecordData.wins}} - {{visibleRecordData.losses}} - {{visibleRecordData.ties}}
+    </div>
+</div>
+
+
+<div class="row" *ngIf="dates">
+    <div class="col-xs-12" *ngFor="let date of dates">
+        <app-pick-row [date]="date" [user]="username"></app-pick-row>
+    </div>
+</div>
