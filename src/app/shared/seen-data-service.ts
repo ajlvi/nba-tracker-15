@@ -5,13 +5,14 @@ import { CommonService } from "./common.service";
 import { FirestoreService } from "./firestore.service";
 import { Game, RecordData } from "./game.model";
 import { DayPicks, SinglePick } from "./pick.interface";
+import { TeamData } from "./team.interface";
 
 @Injectable({providedIn: 'root'})
 export class SeenDataService {
     public seenPicks: { [user: string] : {[date: string]: DayPicks} } = {};
     public gamesByDay: { [date: string] : Game[] } = {};
     public recordData: { [user: string] : RecordData } = {};
-    public teamData = {};
+    public teamData: { [team: string] : TeamData } = {};
 
     constructor(
         private fire: FirestoreService, 
@@ -37,6 +38,17 @@ export class SeenDataService {
     getGames(date: string) {
         return this.fire.fetchGamesByDate(date).pipe(
             tap( (response: Game[] ) => { this.gamesByDay[date] = response; } )
+        )
+    }
+
+    getTeamData() {
+        return this.fire.fetchTeamsData().pipe(
+            tap ( (response: any[]) => {
+                for (let i=0; i < response.length; i++) {
+                    const teamname = response[i]["document"]["fields"]["team"]["stringValue"]
+                    this.teamData[teamname] = this.common.process_team_document(response[i]["document"]);
+                }
+            })
         )
     }
 
@@ -97,4 +109,6 @@ export class SeenDataService {
     sawDate(date: string): boolean { return date in this.gamesByDay; }
 
     sawRecord(username: string): boolean { return username in this.recordData; }
+
+    sawTeamData(): boolean {return !this.teamData}
 }

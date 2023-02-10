@@ -3,7 +3,7 @@
     <div class="col-xs-12 info-paragraph">Click teams to select them, then use the update picks button to save them. Your saved picks are <b>bold</b>. To change your picks, make different selections and update again.</div>
     <div class="col-xs-12 date-holder">{{todays_date | DateExpand}}</div>
     <div class="col-xs-6" *ngIf="!isCommunicating">
-        <div *ngFor="let game of today; let i=index">
+        <div class="game-holder" *ngFor="let game of today; let i=index">
             <span class="col-xs-2 time-container">
                 {{game.time | time}}
             </span>
@@ -12,8 +12,11 @@
                 (click)="toggleSelected(i, game.fav)"
                 [ngClass] = "{'selected': selected[i] === game.fav, 'on-server': serverPicks[i] === game.fav}"
             >
-                <span class="home" *ngIf="game.fav == game.home">@</span>
-                <span class="teamname">{{game.fav}}</span>
+                <span class="teamname">
+                    {{game.fav | home : game }}
+                    <br>
+                    <app-team-form *ngIf="teamDataReady" [team]="game.fav"></app-team-form>
+                </span>
             </span>
             <span class="col-xs-2 line-container">
                 {{game.line}}
@@ -21,9 +24,13 @@
             <span 
                 class="col-xs-4 team-name-container" 
                 (click)="toggleSelected(i, game.dog)"
-                [ngClass] = "{'selected': selected[i] === game.dog, 'on-server': serverPicks[i] === game.dog}">
-                <span class="home" *ngIf="game.dog == game.home">@</span>
-                <span class="teamname">{{game.dog}}</span>
+                [ngClass] = "{'selected': selected[i] === game.dog, 'on-server': serverPicks[i] === game.dog}"
+            >
+                <span class="teamname">
+                    {{game.dog | home : game }}
+                    <br>
+                    <app-team-form *ngIf="teamDataReady" [team]="game.dog"></app-team-form>
+                </span>
             </span>
         </div>
         <div>
@@ -35,6 +42,7 @@
                     Update picks
                 </button>
             </span>
+            
             <span class="clear-button-holder">
                 <button 
                     type="button" 

@@ -1,38 +1,61 @@
-import { Component } from '@angular/core';
-import { FirestoreService } from '../shared/firestore.service';
-import { Game } from '../shared/game.model';
+import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment.development';
+import { CommonService } from '../shared/common.service';
 import { SeenDataService } from '../shared/seen-data-service';
+import { TodayService } from '../shared/today.service';
 
 @Component({
   selector: 'app-calendar',
   templateUrl: './calendar.component.html',
   styleUrls: ['./calendar.component.css']
 })
-export class CalendarComponent {
-  pickerDate: Date;
-  calendarMin = new Date(2022, 9, 18);
-  calendarMax = new Date();
-  daygames: Game[] = [];
+export class CalendarComponent implements OnInit {
+  divisions: string[][] = [];
+  todays_date: string = '';
 
-  constructor(private seen: SeenDataService) {}
+  constructor(
+    private seen: SeenDataService,
+    private common: CommonService,
+    private today: TodayService) {}
 
-  onDateSelected() {
-    const day: string = ("0" + this.pickerDate.getDate().toString()).slice(-2)
-    let month = this.pickerDate.getMonth() + 1;
-    if (month < 10) { month = month + 12; }
-    const datecode = month.toString() + day;
-    this.onFetchDate(datecode);
-  }
-
-  //we should store these as we load them?
-  onFetchDate(date: string) {
-    if (this.seen.sawDate(date)) {
-      this.daygames = this.seen.gamesByDay[date];
+  ngOnInit(): void {
+    if (this.seen.sawTeamData()) {
+      this.setDivisions()
     }
     else {
-      this.seen.getGames(date).subscribe(
-        response => { this.daygames = response; }
+      this.seen.getTeamData().subscribe(
+        () => {this.setDivisions()}
       )
     }
+    this.today.todaySubject.subscribe(
+      date => {
+        if (date) {
+          this.todays_date = date;
+          this.onSetEnd(1);
+        }
+      }
+    )
+  }
+
+  setDivisions() {
+    this.divisions = [
+      ["PHI", "NY", "BOS", "BKN", "TOR"], 
+      ["CHI", "DET", "IND", "CLE", "MIL"], 
+      ["MIA", "ATL", "ORL", "CHA", "WSH"], 
+      ["DEN", "UTAH", "OKC", "POR", "MIN"], 
+      ["LAL", "LAC", "PHX", "SAC", "GS"], 
+      ["SA", "DAL", "HOU", "MEM", "NO"]
+    ];
+  }
+
+  onSetEnd(option: number): void {
+    if (option === 1) {
+      let day = this.todays_date;
+      for (let j=0; j <= 30; j++) {
+        day = this.common.previous_day(day)
+      }
+      this.common.calendarEndDateSub.next(day);
+    }
+    else { this.common.calendarEndDateSub.next(environment.season_start) }
   }
 }

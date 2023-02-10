@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { AuthService } from '../auth/auth.service';
+import { CommonService } from '../shared/common.service';
 import { RecordData } from '../shared/game.model';
 import { SeenDataService } from '../shared/seen-data-service';
 import { TodayService } from '../shared/today.service';
@@ -19,6 +20,7 @@ export class PickHistoryComponent implements OnInit {
   constructor(
     private seen: SeenDataService,
     private today: TodayService,
+    private common: CommonService,
     private auth: AuthService) {}
 
   ngOnInit(): void {
@@ -61,33 +63,11 @@ export class PickHistoryComponent implements OnInit {
     let current = end_date;
     let dates = [end_date]
     while ( dates.length < 7 ) {
-      let prev = this.previous_day(current);
+      let prev = this.common.previous_day(current);
       dates.unshift(prev);
       current = prev;
     }
     return dates
-  }
-
-  previous_day(date: string) {
-    const month = parseInt(date.slice(0, 2));
-    const day = parseInt(date.slice(2));
-    if (day >= 2) {
-      return date.slice(0, 2) + ("00" + (day-1).toString()).slice(-2)
-    }
-    else {
-      switch (month) {
-        case 11: return "1031";
-        case 12: return "1130";
-        case 13: return "1231";
-        case 14: return "1331";
-        case 15:
-          if ( parseInt(environment.season.slice(3))%4 === 0) { return "1429" }
-          else { return "1428" }
-        case 16: return "1531";
-        case 17: return "1630";
-        default: console.log(date); return "xxxx";
-      }
-    }
   }
 
   needsPicks(username: string, daterange: string[]) {

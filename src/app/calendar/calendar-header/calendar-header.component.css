@@ -1,0 +1,29 @@
+.calendar-header { 
+    font-size: 8pt;
+    font-family: Ubuntu;
+    white-space: nowrap;
+}
+
+.month-end {
+    margin: 0px 10px 0px 0px;
+}
+
+.game-header-box {
+    width: 17px;
+    display: inline-block;
+    font-size:8pt;
+    text-align: center;
+}
+
+.team-name {
+    font-weight: bold;
+    display: inline-block; 
+    width: 40px;
+}
+
+.team-record {
+    display: inline-block;
+    width: 40px;
+    text-align: center;
+    font-size: 8pt;
+}

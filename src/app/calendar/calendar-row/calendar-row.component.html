@@ -1,0 +1,19 @@
+
+<div class="row calendar-row">
+    <span class="team-name">{{team}}</span>
+    <span class="team-record">{{teamdata.wins}}-{{teamdata.losses}}-{{teamdata.ties}}</span>
+    <span class="result-box" *ngFor="let day of daterange"
+        [ngClass]='{"month-end": day.slice(2) === "01"}'>
+        <span class="game-result" 
+            *ngIf="teamdata[day]"
+            [ngClass]='{
+                "win": teamdata[day]["result"] === "W", 
+                "loss": teamdata[day]["result"] === "L",
+                "push": teamdata[day]["result"] === "P"
+            }'
+            attr.data-result = "{{teamdata[day] | teamform : team : false}}"
+        >
+            {{teamdata[day]["result"]}}</span>
+        <span class="game-result" *ngIf="!teamdata[day]"></span>
+    </span>
+</div>

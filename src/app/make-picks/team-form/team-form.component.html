@@ -1,0 +1,12 @@
+<div *ngIf="last5">
+    <span 
+        class="team-form-box"
+        [ngClass]='{
+            "win-box": last5[i]["result"] === "W",
+            "loss-box": last5[i]["result"] === "L",
+            "push-box": last5[i]["result"] === "P"
+        }'
+        *ngFor="let game of last5; let i = index"
+        attr.data-result="{{last5[i] | teamform : team : true }}">
+    </span>
+</div>

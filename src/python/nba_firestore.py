@@ -101,6 +101,7 @@ def database_update(mm, dd):
 	#this is the function we run in mornings when the previous day's scores need adding
 	getlines.main(mm, dd, 'y')
 	datestring = "%02d%02d" %(mm, dd)
+	#WHOA WHOA this is wrong
 	season.document("today").set({"date": "%02d%02d" %(mm, dd+1)})
 	games = post_date(datestring)
 	winners = [ games[f"ats_win_{i}"] for i in range(games["totg"]) ]
@@ -121,4 +122,7 @@ if __name__ == '__main__':
 		if argv[1].isdigit() and int(argv[1]) in range(10, 17):
 			if argv[2].isdigit() and int(argv[2]) in range(1, 32):
 				month, day = int(argv[1]), int(argv[2])
-				post_date(f"{month}{day}")
+				database_update(month, day)
+				#get next date
+				#get lines for next date
+				#post lines for next date

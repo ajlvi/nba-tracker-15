@@ -1,14 +1,16 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { AuthComponent } from "./auth/auth.component";
-import { CalendarComponent } from "./calendar/calendar.component";
+import { ScoresComponent } from "./scores/scores.component";
 import { MakePicksComponent } from "./make-picks/make-picks.component";
 import { PickHistoryComponent } from "./pick-history/pick-history.component";
+import { CalendarComponent } from "./calendar/calendar.component";
 
 const appRoutes: Routes = [
     { path: '', redirectTo: '/auth', pathMatch: 'full' },
     { path: 'auth', component: AuthComponent },
     { path: 'calendar', component: CalendarComponent },
+    { path: 'scores', component: ScoresComponent },
     { path: 'make-picks', component: MakePicksComponent },
     { path: 'pick-history', component: PickHistoryComponent }
 ]

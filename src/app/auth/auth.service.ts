@@ -138,7 +138,9 @@ export class AuthService{
         if (!errorResponse.error || !errorResponse.error.error) {
             return throwError(errorMessage);
         }
-        switch (errorResponse.error.error.message) {
+        switch (errorResponse.error.error.status) {
+            case "UNAUTHENTICATED":
+                errorMessage = "Invalid username/passsword."; break;
             case 'EMAIL_EXISTS':
                 errorMessage = 'This e-mail address is already in use.'; break;
             case 'TOO_MANY_ATTEMPTS_TRY_LATER':

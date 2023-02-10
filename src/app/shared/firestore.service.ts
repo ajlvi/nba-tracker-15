@@ -29,13 +29,7 @@ export class FirestoreService {
   }
 
   fetchTeamsData() {
-    return this.http.post(this.queryUrl, this.queryService.query_team_documents()).pipe(
-      map( response => {
-        console.log(response);
-        return {};
-        // return this.pruneFetchedGamesData(response)
-      })
-    )
+    return this.http.post(this.queryUrl, this.queryService.query_team_documents())
   }
 
   pruneFetchedDate(response): Game[] {

@@ -18,6 +18,7 @@ export class MakePicksComponent implements OnInit, OnDestroy {
   selected = {};
   serverPicks = {};
   isCommunicating = false;
+  teamDataReady: boolean = false;
 
   constructor(
     private todayService: TodayService,
@@ -33,10 +34,22 @@ export class MakePicksComponent implements OnInit, OnDestroy {
           this.todays_date = response;
           this.fetchGameData();
           this.fetchPicksData();
+          this.fetchTeamsData();
           this.isCommunicating = false;
         }
       }
     )
+  }
+
+  fetchTeamsData() {
+    if (this.seen.sawTeamData()) {
+      this.teamDataReady = true;
+    }
+    else {
+      this.seen.getTeamData().subscribe(
+        () => { this.teamDataReady = true; }
+      );
+    }
   }
 
   fetchGameData() {

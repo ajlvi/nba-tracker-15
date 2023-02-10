@@ -1,0 +1,10 @@
+
+<div class="row calendar-header">
+    <span class="team-name"></span>
+    <span class="team-record"></span>
+    <span class="result-box" 
+        *ngFor="let day of daterange"
+        [ngClass]='{"month-end": day.slice(2) === "01"}'>
+        <span class="game-header-box">{{day.slice(2)}}</span>
+    </span>
+</div>

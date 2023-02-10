@@ -1,0 +1,36 @@
+.team-form-box { 
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.win-box { border: 1px solid #282; background: #8F8; }
+.loss-box { border: 1px solid #822; background: #F88; }
+.push-box { border: 1px solid #888; background: #DDD; }
+
+/* this is copied from stackexchange answer https://stackoverflow.com/a/49395765 */
+[data-result]:hover:after {
+    opacity: 1;
+    transition: all 0.1s ease 0.5s;
+    visibility: visible;
+}
+[data-result]:after {
+    content: attr(data-result);
+    background-color: #111;
+    color: white;
+    position: absolute;
+    padding: 5px 8px;
+    bottom: -1.6em;
+    left: 100%;
+    white-space: nowrap;
+    box-shadow: 1px 1px 3px #222222;
+    opacity: 0.2;
+    border: 1px solid #111111;
+    z-index: 99999;
+    visibility: hidden;
+    border-radius: 4px;
+}
+[data-result] {
+    position: relative;
+}

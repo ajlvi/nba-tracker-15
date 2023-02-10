@@ -6,7 +6,7 @@ def teamDict():
 	teamdict = {} #will be {TEAM : {TEAM: TEAM, ATS_W/L/T: #, GAME_N: [...]}}
 	for fname in days:
 		dayfile = open(f"{DataPath}/2223/lines/{fname}", 'r')
-		lines = [l for l in dayfile.readlines() if l.strip() != ""]
+		lines = [l.strip() for l in dayfile.readlines() if l.strip() != ""]
 		for line in lines:
 			x = line.split('\t')
 			home = x[0] if "@" in x[0] else x[2]
