@@ -1,7 +1,7 @@
 import { HttpClient, HttpErrorResponse, HttpParams } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { catchError, Observable, throwError } from "rxjs";
-import { map } from "rxjs/operators";
+import { map, tap } from "rxjs/operators";
 
 import { environment } from "src/environments/environment.development";
 import { AuthService } from "../auth/auth.service";
@@ -172,7 +172,60 @@ export class FirestoreService {
     return outputDoc;
   }
 
-  getUserStats() {
+  setHandle(email: string, newHandle: string) {
+    const baseurl = "https://firestore.googleapis.com/v1/projects/nba-8bb05/databases/(default)/documents/users/"
+    let user_suffix = email + "/"
+    let query_params = new HttpParams().set("updateMask.fieldPaths", "handle")
+    let payload = {"fields": {"handle": {"stringValue": newHandle}}}
+    return this.http.patch(baseurl + user_suffix, payload, {params: query_params})
+  }
+
+  setGroups(email: string, groupNames: string[]) {
+    const baseurl = "https://firestore.googleapis.com/v1/projects/nba-8bb05/databases/(default)/documents/users/";
+    let user_suffix = email + "/";
+    let query_params = new HttpParams().set("updateMask.fieldPaths", "groups");
+    let payload = {
+      "fields": {
+        "groups": {
+          "arrayValue": {
+            "values": this.groupNamesPayload(groupNames)
+          }
+        }
+      }
+    };
+    return this.http.patch(baseurl + user_suffix, payload, {params: query_params})
+  }
+
+  groupNamesPayload(groupNames: string[]) {
+    let payload = []
+    for (let i=0; i < groupNames.length; i++) {
+      payload.push( {"stringValue": groupNames[i]} );
+    }
+    return payload;
+  }
+
+  fetchUserData(email: string) {
+    const baseurl = "https://firestore.googleapis.com/v1/projects/nba-8bb05/databases/(default)/documents/users/"
+    let user_suffix = email + "/"
+    return this.http.get(baseurl + user_suffix).pipe(
+      catchError(this.handleError),
+      map( response => {
+        return this.process_userdata_response(response)
+      })
+    )
+  }
+
+  process_userdata_response(response) {
+    const handle = response["fields"]["handle"]["stringValue"]
+    const email = response["fields"]["user"]["stringValue"]
+    let groups = []
+    for (let group of response["fields"]["groups"]["arrayValue"]["values"]) {
+      groups.push(group["stringValue"])
+    }
+    return {"handle": handle, "groups": groups, "email": email}
+  }
+
+  fetchUserStats() {
     const username = this.auth.currentEmail;
     const baseurl = "https://firestore.googleapis.com/v1/projects/nba-8bb05/databases/(default)/documents/users/"
     let stats_suffix = username + "/"

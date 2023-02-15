@@ -6,6 +6,7 @@ import { FirestoreService } from "./firestore.service";
 import { Game, RecordData } from "./game.model";
 import { DayPicks, SinglePick } from "./pick.interface";
 import { TeamData } from "./team.interface";
+import { UserData } from "./user-data.interface";
 
 @Injectable({providedIn: 'root'})
 export class SeenDataService {
@@ -13,6 +14,7 @@ export class SeenDataService {
     public gamesByDay: { [date: string] : Game[] } = {};
     public recordData: { [user: string] : RecordData } = {};
     public teamData: { [team: string] : TeamData } = {};
+    public UserData: { [user: string] : UserData } = {};
 
     constructor(
         private fire: FirestoreService, 
@@ -81,8 +83,14 @@ export class SeenDataService {
     }
 
     getUserStats() {
-        return this.fire.getUserStats().pipe(
+        return this.fire.fetchUserStats().pipe(
             tap( (response: RecordData) => { this.recordData[response.user] = response } )
+        )
+    }
+
+    getUserData(email: string) {
+        return this.fire.fetchUserData(email).pipe(
+            tap( (response: UserData) => {this.UserData[email] = response; } )
         )
     }
 
@@ -102,6 +110,18 @@ export class SeenDataService {
         { this.seenPicks[user][date] = picks }
     }
 
+    setHandle(user: string, newHandle: string) {
+        return this.fire.setHandle(user, newHandle).pipe(
+            tap( () => {this.UserData[user]["handle"] = newHandle; })
+        )
+    }
+
+    setGroups(user: string, groupNames: string[]) {
+        return this.fire.setGroups(user, groupNames).pipe(
+            tap( () => {this.UserData[user]["groups"] = groupNames; })
+        )
+    }
+
     sawPicks(user: string, date: string): boolean { 
         return (!!this.seenPicks[user]) && (date in this.seenPicks[user]); 
     }
@@ -111,4 +131,6 @@ export class SeenDataService {
     sawRecord(username: string): boolean { return username in this.recordData; }
 
     sawTeamData(): boolean {return !this.teamData}
+
+    sawUser(email: string): boolean { return email in this.UserData; }
 }

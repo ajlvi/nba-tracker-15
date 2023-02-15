@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-xs-1">
-        <span class="date-box">{{date}}</span>
+        <span class="date-box">{{date | DateExpand : true}}</span>
     </div>
     <div class="col-xs-1">
         <span class="record-box" *ngIf="record">{{record.wins}} - {{record.losses}} <span *ngIf="record.ties>0"> - {{record.ties}}</span></span>

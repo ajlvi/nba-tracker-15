@@ -22,7 +22,6 @@ export class TeamFormComponent implements OnInit {
   setup() {
     let gameidx = this.teamdata.totg - 1;
     while (this.last5.length < 5 && gameidx >= 0) {
-      console.log(this.teamdata[gameidx])
       this.last5.push(this.teamdata[gameidx])
       gameidx--;
     }

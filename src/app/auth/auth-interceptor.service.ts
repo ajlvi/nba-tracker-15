@@ -13,6 +13,7 @@ export class AuthInterceptorService implements HttpInterceptor {
             take(1),
             exhaustMap(user => {
                 if (!user) { return next.handle(req) }
+                if (req.url.includes("identitytoolkit")) { return next.handle(req) }
                 const modifiedReq = req.clone(
                     {headers: new HttpHeaders().set('Authorization', 'Bearer '+ user.token)}
                 );

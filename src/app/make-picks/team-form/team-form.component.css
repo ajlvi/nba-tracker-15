@@ -1,6 +1,6 @@
 .team-form-box { 
     width: 15px;
-    height: 15px;
+    height: 8px;
     display: inline-block;
     box-sizing: border-box;
 }
@@ -30,6 +30,7 @@
     z-index: 99999;
     visibility: hidden;
     border-radius: 4px;
+    font-weight: normal;
 }
 [data-result] {
     position: relative;

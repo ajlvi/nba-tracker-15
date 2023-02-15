@@ -1,0 +1,37 @@
+<div class="row">
+    <div class="col-xs-12">
+        The groups you're in appear below. You can be a member of up to five groups. To join or create a group, add its name to the roster below. Any other user who has the same group name in their roster is automatically included in the group. Group names must have between 3 and 50 characters. 
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12" *ngIf="!isLoading">
+        <form #groupForm="ngForm" (ngSubmit)="onUpdateGroups(groupForm)">
+            <div class="row" *ngFor="let group of groupNames; let i = index">
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <label [for]="'group' + i.toString()">Group #{{i+1}}</label>
+                        <input
+                            type="text"
+                            [name]="'group' + i.toString()"
+                            [id]="'group' + i.toString()"
+                            class="form-control"
+                            [ngModel]="group"
+                            required
+                            minlength="3"
+                            maxlength="50">
+                    </div>
+                    <div class="col-xs-3">
+                        <button class="btn btn-danger" type="button" (click)="onClearGroup(i)">Remove group</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <button class="btn btn-success" type="button" (click)="onAddGroup()" [disabled]="groupNames.length>=5">Add group</button>
+                <button class="btn btn-primary" type="submit">Update groups</button>
+                <span *ngIf="!successfulChange && error" class="error-tip">{{error}}</span>
+                <span *ngIf="successfulChange" class="success-tip">Groups updated successfully.</span>
+            </div>
+        </form>
+    </div>
+</div>

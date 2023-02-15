@@ -2,15 +2,16 @@
     <div class="container-fluid">
         <div class="navbar-default">
             <ul class="nav navbar-nav">
-                <li><a routerLink="/auth">Sign in</a></li>
-                <li *ngIf="isAuthenticated"><a routerLink="/make-picks">Make picks</a></li>
-                <li *ngIf="isAuthenticated"><a routerLink="/pick-history">Pick history</a></li>
-                <li><a routerLink="/scores">Game scores</a></li>
-                <li><a routerLink="/calendar">Results calendar</a></li>
+                <li *ngIf="isAuthenticated"><a class="section-button" routerLink="/make-picks">Make picks</a></li>
+                <li *ngIf="isAuthenticated"><a class="section-button" routerLink="/pick-history">Pick history</a></li>
+                <li *ngIf="isAuthenticated" ><a class="section-button" routerLink="/scores">Game scores</a></li>
+                <li *ngIf="isAuthenticated" ><a class="section-button" routerLink="/calendar">Results calendar</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
+                <li *ngIf="isAuthenticated"><a class="section-button" routerLink="/account">Account</a></li>
                 <li>
-                    <a style="cursor:pointer" *ngIf="isAuthenticated" (click)="onLogOut()">Sign out</a>
+                    <a class="section-button" *ngIf="!isAuthenticated" routerLink="/auth">Sign in</a>
+                    <a class="section-button" *ngIf="isAuthenticated" (click)="onLogOut()">Sign out</a>
                 </li>
             </ul>
         </div>

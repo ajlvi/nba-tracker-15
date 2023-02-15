@@ -43,7 +43,7 @@ export class AuthComponent {
           this.authService.makePlayerDocument()
         }
         this.isLoading = false;
-        this.router.navigate(['/calendar']);
+        this.router.navigate(['/make-picks']);
       },
       errorMessage => {
         console.log(errorMessage);

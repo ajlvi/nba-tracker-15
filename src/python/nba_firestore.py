@@ -6,7 +6,7 @@ import firebase_admin
 from firebase_admin import firestore
 from firebase_admin import credentials
 
-from nba_fire_config import CertificatePath, DataPath, CurrentSeason
+from nba_fire_config import CertificatePath, DataPath, CurrentSeason, CurrentSeasonEnd
 import nba_getlines as getlines
 import nba_teamdata as nbateam
 
@@ -23,7 +23,7 @@ def initial_batch_upload():
 def initialize_stats(username):
 	user_doc = db.collection("users").document(username)
 	user_get = user_doc.get()
-	blank_stats = {f"{CurrentSeason}_w": 0, f"{CurrentSeason}_l": 0, f"{CurrentSeason}_t": 0, "user": username}
+	blank_stats = {f"{CurrentSeason}_w": 0, f"{CurrentSeason}_l": 0, f"{CurrentSeason}_t": 0, "user": username, "handle": username}
 	if not user_get.exists:
 		user_doc.set({"groups": []} | blank_stats)
 	elif f"{CurrentSeason}_w" not in user_get.to_dict():
@@ -101,8 +101,8 @@ def database_update(mm, dd):
 	#this is the function we run in mornings when the previous day's scores need adding
 	getlines.main(mm, dd, 'y')
 	datestring = "%02d%02d" %(mm, dd)
-	#WHOA WHOA this is wrong
-	season.document("today").set({"date": "%02d%02d" %(mm, dd+1)})
+	nextm, nextd = nextDay(mm, dd)
+	season.document("today").set({"date": "%02d%02d" %(nextm, nextd)})
 	games = post_date(datestring)
 	winners = [ games[f"ats_win_{i}"] for i in range(games["totg"]) ]
 	user_col = db.collection("users")
@@ -112,10 +112,25 @@ def database_update(mm, dd):
 		process_user_wins(user, datestring, winners)
 	makeTeamDocuments()
 
+	if "%02d%02d" %(nextm, nextd) <= CurrentSeasonEnd:
+		getlines.main(nextm, nextd, 'n')
+		post_date("%02d%02d" %(nextm, nextd))
+
 def makeTeamDocuments():
 	teamdict = nbateam.teamDict()
 	for team in teamdict:
 		season.document(f"team_{team}").set(teamdict[team])
+
+def nextDay(mm, dd):
+	if mm in [10, 12, 13, 15] and dd <= 30: return (mm, dd+1)
+	elif mm in [10, 12, 13, 15] and dd == 31: return (mm+1, 1)
+	elif mm in [11, 16] and dd <= 29: return (mm, dd+1)
+	elif mm in [11, 16] and dd == 30: return (mm+1, 1)
+	elif mm == 14 and dd <= 27: return (mm, dd+1)
+	elif (mm, dd) == (14, 28) and int(CurrentSeason[3:])%4 != 0: return (15, 1)
+	elif (mm, dd) == (14, 28) and int(CurrentSeason[3:])%4 == 0: retunr (14, 29)
+	elif (mm, dd) == (14, 29): return (15, 1)
+	else: raise ValueError(f"{mm}{dd} is not something nextDay can handle")
 
 if __name__ == '__main__':
 	if len(argv) == 3:
@@ -123,6 +138,9 @@ if __name__ == '__main__':
 			if argv[2].isdigit() and int(argv[2]) in range(1, 32):
 				month, day = int(argv[1]), int(argv[2])
 				database_update(month, day)
-				#get next date
-				#get lines for next date
-				#post lines for next date
+	elif len(argv) == 4 and argv[1] == "UPDATE":
+		if argv[2].isdigit() and int(argv[2]) in range(10, 17):
+			if argv[3].isdigit() and int(argv[3]) in range(1, 32):
+				month, day = int(argv[2]), int(argv[3])
+				getlines.main(month, day, 'n')
+				post_date("%02d%02d" %(month, day))

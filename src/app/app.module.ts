@@ -22,8 +22,12 @@ import { CalendarHeaderComponent } from './calendar/calendar-header/calendar-hea
 import { TeamFormComponent } from './make-picks/team-form/team-form.component';
 import { HomePipe } from './make-picks/home.pipe';
 import { TimePipe } from './make-picks/time.pipe';
-import { DateExpandPipe } from './make-picks/date.pipe';
+import { DateExpandPipe } from './shared/date.pipe';
 import { TeamFormPipe } from './shared/team-form.pipe';
+import { AccountComponent } from './account/account.component';
+import { PasswordUpdateComponent } from './account/password-update/password-update.component';
+import { HandleUpdateComponent } from './account/handle-update/handle-update.component';
+import { GroupsUpdateComponent } from './account/groups-update/groups-update.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +45,11 @@ import { TeamFormPipe } from './shared/team-form.pipe';
     PickRowComponent,
     CalendarRowComponent,
     CalendarHeaderComponent,
-    TeamFormComponent
+    TeamFormComponent,
+    AccountComponent,
+    PasswordUpdateComponent,
+    HandleUpdateComponent,
+    GroupsUpdateComponent
   ],
   imports: [
     AppRoutingModule,
