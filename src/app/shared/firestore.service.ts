@@ -22,6 +22,7 @@ export class FirestoreService {
     const url = "https://firestore.googleapis.com/v1/projects/nba-8bb05/databases/(default)/documents/"
       + environment.season + "/day_" + date;
     return this.http.get(url).pipe(
+      catchError(this.dateError),
       map( response => {
         return this.pruneFetchedDate(response)
       })
@@ -77,25 +78,33 @@ export class FirestoreService {
     )
   }
 
-  fetchUserPicksMultiple(user: string, daterange: string[]) {
+  fetchUserPicksMultiple(users: string[], daterange: string[]) {
+    //the output will be {user: {date: DayPicks} }
     let output = {}
+    for (let user of users) { output[user] = {} }
     return this.http.post(
       this.queryUrl,
-      this.queryService.query_player_picks_multiple(user, daterange[0], daterange[6])
+      this.queryService.query_player_picks_multiple(users, daterange[0], daterange[daterange.length-1])
     ).pipe(
       map( (response: any[]) => {
         // first we'll take the successes and store those.
         for (let document of response) {
-          output[document["document"]["fields"]["date"]["stringValue"]] = this.pruneFetchedPicks(document)
+          if (document["document"]) {
+              const user = document["document"]["fields"]["user"]["stringValue"]
+              const date = document["document"]["fields"]["date"]["stringValue"]
+              output[user][date] = this.pruneFetchedPicks(document)
+            }
         }
         // since we looked and didn't find the other dates, we'll store a reminder.
-        for (let date of daterange) {
-          if (!(date in output)) {
-            output[date] = {
-              "doc_id": '',
-              "user": this.auth.currentEmail,
-              "date": date
-            } 
+        for (let user of users) {
+          for (let date of daterange) {
+            if (!(date in output[user])) {
+              output[user][date] = {
+                "doc_id": '',
+                "user": user,
+                "date": date
+              } 
+            }
           }
         }
         return output
@@ -216,33 +225,35 @@ export class FirestoreService {
   }
 
   process_userdata_response(response) {
+    let outputObj = {}
     const handle = response["fields"]["handle"]["stringValue"]
     const email = response["fields"]["user"]["stringValue"]
-    let groups = []
-    for (let group of response["fields"]["groups"]["arrayValue"]["values"]) {
-      groups.push(group["stringValue"])
+    let groups = [];
+    if ( response["fields"]["groups"]["arrayValue"]["values"] ) {
+      for (let group of response["fields"]["groups"]["arrayValue"]["values"]) {
+        groups.push(group["stringValue"])
+      }
     }
-    return {"handle": handle, "groups": groups, "email": email}
-  }
+    outputObj["userdata"] = {"handle": handle, "groups": groups, "email": email}
 
-  fetchUserStats() {
-    const username = this.auth.currentEmail;
-    const baseurl = "https://firestore.googleapis.com/v1/projects/nba-8bb05/databases/(default)/documents/users/"
-    let stats_suffix = username + "/"
-    return this.http.get(baseurl + stats_suffix).pipe(
-      catchError(this.handleError),
-      map( response => {
-        return this.process_stats_response(response, username)
-      })
-    )
-  }
-
-  process_stats_response(response, username: string) {
     const season = environment.season
     const respWins = parseInt(response["fields"][season + "_w"]["integerValue"])
     const respLosses = parseInt(response["fields"][season + "_l"]["integerValue"])
     const respTies = parseInt(response["fields"][season + "_t"]["integerValue"])
-    return new RecordData(username, respWins, respLosses, respTies);
+    outputObj["record"] = new RecordData(email, respWins, respLosses, respTies);
+
+    return outputObj;
+  }
+
+  findGroupMembers(groupname: string) {
+    return this.http.post(
+      this.queryUrl, 
+      this.queryService.query_group_membership(groupname)
+    ).pipe(
+      map( response => {
+        console.log(response); return response;
+      })
+    )
   }
 
   private handleError(errorResponse: HttpErrorResponse) {
@@ -263,5 +274,18 @@ export class FirestoreService {
             errorMessage = "Your password was incorrect."; break;
     }
     return throwError(errorMessage);
-}
+  }
+
+  private dateError(errorResponse: HttpErrorResponse) {
+    console.log(errorResponse);
+    let errorMessage = "Unknown error occurred :("
+    if (!errorResponse.error || !errorResponse.error.error || !errorResponse.error.error.status) {
+        return throwError(errorMessage);
+    }
+    switch (errorResponse.error.error.status) {
+        case "NOT_FOUND":
+            errorMessage = "There are no games on this date.";
+    }
+    return throwError(errorMessage);
+  }
 }

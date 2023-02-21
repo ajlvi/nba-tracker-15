@@ -13,11 +13,12 @@ import { TodayService } from '../shared/today.service';
 export class MakePicksComponent implements OnInit, OnDestroy {
   today: Game[]
   todays_date = ''
+  error = '';
   total: number = 0
   todaySub: Subscription;
   selected = {};
   serverPicks = {};
-  isCommunicating = false;
+  doneCommunicating: boolean;
   teamDataReady: boolean = false;
 
   constructor(
@@ -26,7 +27,7 @@ export class MakePicksComponent implements OnInit, OnDestroy {
     private auth: AuthService) {}
 
   ngOnInit(): void {
-    this.isCommunicating = true;
+    this.doneCommunicating = false;
     this.todaySub = this.todayService.todaySubject.subscribe(
       response => {
         // response will be null if we subscribe before the date update is done!
@@ -35,7 +36,7 @@ export class MakePicksComponent implements OnInit, OnDestroy {
           this.fetchGameData();
           this.fetchPicksData();
           this.fetchTeamsData();
-          this.isCommunicating = false;
+          this.doneCommunicating = true;
         }
       }
     )
@@ -53,6 +54,7 @@ export class MakePicksComponent implements OnInit, OnDestroy {
   }
 
   fetchGameData() {
+    this.error = '';
     if (this.seen.sawDate(this.todays_date)) {
       this.today = this.seen.gamesByDay[this.todays_date]
       this.total = this.today.length;
@@ -62,6 +64,9 @@ export class MakePicksComponent implements OnInit, OnDestroy {
         response => { 
           this.today = response; 
           this.total= this.today.length;
+        },
+        error => {
+          this.error = error;
         }
       )
     }
@@ -104,7 +109,7 @@ export class MakePicksComponent implements OnInit, OnDestroy {
   }
 
   onStorePicks() {
-    this.isCommunicating = true
+    this.doneCommunicating = false
     this.seen.makePicks(this.todays_date, this.selected).subscribe(
       //I don't care about the response, I just need to know the operation finished.
       () => {
@@ -112,7 +117,7 @@ export class MakePicksComponent implements OnInit, OnDestroy {
           if (this.selected[i]) { this.serverPicks[i] = this.selected[i]; }
           else { delete this.serverPicks[i] }
         }
-        this.isCommunicating = false;
+        this.doneCommunicating = true;
       }
     )
   }

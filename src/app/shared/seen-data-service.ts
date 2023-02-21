@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
-import { map, tap } from "rxjs";
+import { map, switchMap, tap } from "rxjs";
+import { environment } from "src/environments/environment.development";
 import { AuthService } from "../auth/auth.service";
 import { CommonService } from "./common.service";
 import { FirestoreService } from "./firestore.service";
@@ -15,6 +16,7 @@ export class SeenDataService {
     public recordData: { [user: string] : RecordData } = {};
     public teamData: { [team: string] : TeamData } = {};
     public UserData: { [user: string] : UserData } = {};
+    public GroupRosters: { [group: string] : string[] } = {};
 
     constructor(
         private fire: FirestoreService, 
@@ -27,11 +29,13 @@ export class SeenDataService {
         )
     }
 
-    getMultiplePicks(user: string, daterange: string[]) {
-        return this.fire.fetchUserPicksMultiple(user, daterange).pipe(
-            tap ( (response: {[date: string]: DayPicks}) => {
-                for (let date of daterange) { 
-                    this.setPicks(user, date, response[date])
+    getMultiplePicks(users: string[], daterange: string[]) {
+        return this.fire.fetchUserPicksMultiple(users, daterange).pipe(
+            tap ( (response: {[user: string]: {[date: string]: DayPicks}} ) => {
+                for (let user in response) {
+                    for (let date of daterange) {
+                        this.setPicks(user, date, response[user][date])
+                    }
                 }
             })
         )
@@ -82,16 +86,42 @@ export class SeenDataService {
         )
     }
 
-    getUserStats() {
-        return this.fire.fetchUserStats().pipe(
-            tap( (response: RecordData) => { this.recordData[response.user] = response } )
+    getUserData(email: string) {
+        return this.fire.fetchUserData(email).pipe(
+            tap( (response: {"userdata": UserData, "record": RecordData}) => {
+                this.UserData[email] = response["userdata"]; 
+                this.recordData[email] = response["record"]
+            } 
+            )
         )
     }
 
-    getUserData(email: string) {
-        return this.fire.fetchUserData(email).pipe(
-            tap( (response: UserData) => {this.UserData[email] = response; } )
-        )
+    getGroupRoster(groupname: string) {
+        return this.fire.findGroupMembers(groupname).pipe(
+            tap( (response: Object[] ) => {
+                //we should get back users-collection documents here; let's process them
+                let roster = [];
+                for (let doc of response) {
+                    if (doc["document"]) {
+                        let fields = doc["document"]["fields"];
+                        const user: string = fields["user"]["stringValue"]
+                        const w = parseInt(fields[environment.season + "_w"]["integerValue"])
+                        const l = parseInt(fields[environment.season + "_l"]["integerValue"])
+                        const t = parseInt(fields[environment.season + "_t"]["integerValue"])
+                        roster.push(user);
+                        if (! (user in this.recordData) ) {
+                            this.recordData[user] = new RecordData(user, w, l, t);
+                        }
+                        //we don't want to overwrite the current user's data since it has groups
+                        if (! (user in this.UserData) ) {
+                            const handle = fields["handle"]["stringValue"]
+                            this.UserData[user] = {"email": user, "handle": handle}
+                        }
+                    }
+                }
+                this.GroupRosters[groupname] = roster;
+            })
+        );
     }
 
     recordOverRange(user: string, daterange: string[]) {
@@ -107,7 +137,7 @@ export class SeenDataService {
 
     setPicks(user: string, date: string, picks: DayPicks) {
         if (!this.seenPicks[user]) { this.seenPicks[user] = {} }
-        { this.seenPicks[user][date] = picks }
+        this.seenPicks[user][date] = picks
     }
 
     setHandle(user: string, newHandle: string) {
@@ -133,4 +163,6 @@ export class SeenDataService {
     sawTeamData(): boolean {return !this.teamData}
 
     sawUser(email: string): boolean { return email in this.UserData; }
+
+    sawGroup(name: string): boolean { return name in this.GroupRosters; }
 }

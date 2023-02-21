@@ -44,8 +44,8 @@ export class GroupsUpdateComponent {
     }
     else {
       this.seen.getUserData(email).subscribe(
-        (response: UserData) => {
-          this.groupNames = response.groups;
+        () => {
+          this.groupNames = this.seen.UserData[email]["groups"]
           this.padGroups();
         }
       )

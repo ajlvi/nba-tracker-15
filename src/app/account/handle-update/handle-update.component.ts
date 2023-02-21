@@ -42,8 +42,8 @@ export class HandleUpdateComponent implements OnInit, OnDestroy {
     }
     else {
       this.seen.getUserData(email).subscribe(
-        (response: UserData) => {
-          this.displayName = response.handle;
+        () => {
+          this.displayName = this.seen.UserData[email].handle;
         }
       )
     }

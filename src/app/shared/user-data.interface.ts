@@ -1,5 +1,5 @@
 export interface UserData {
-    groups: string[];
+    groups?: string[];
     handle: string;
     email: string;
 }

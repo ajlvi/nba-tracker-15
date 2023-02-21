@@ -9,19 +9,48 @@ import { AccountComponent } from "./account/account.component";
 import { PasswordUpdateComponent } from "./account/password-update/password-update.component";
 import { HandleUpdateComponent } from "./account/handle-update/handle-update.component";
 import { GroupsUpdateComponent } from "./account/groups-update/groups-update.component";
+import { AuthGuard } from "./auth/auth.guard";
 
 const appRoutes: Routes = [
-    { path: '', redirectTo: '/auth', pathMatch: 'full' },
-    { path: 'auth', component: AuthComponent },
-    { path: 'account', component: AccountComponent, children: [
-        { path: 'display-name', component: HandleUpdateComponent },
-        { path: 'password-change', component: PasswordUpdateComponent },
-        { path: 'groups', component: GroupsUpdateComponent }
-    ] },
-    { path: 'calendar', component: CalendarComponent },
-    { path: 'scores', component: ScoresComponent },
-    { path: 'make-picks', component: MakePicksComponent },
-    { path: 'pick-history', component: PickHistoryComponent }
+    { 
+        path: '',
+        redirectTo: '/make-picks', 
+        pathMatch: 'full' 
+    },
+    { 
+        path: 'auth', 
+        component: AuthComponent 
+    },
+    { 
+        path: 'account', 
+        component: AccountComponent, 
+        canActivate: [AuthGuard],
+        children: [
+            { path: 'display-name', component: HandleUpdateComponent },
+            { path: 'password-change', component: PasswordUpdateComponent },
+            { path: 'groups', component: GroupsUpdateComponent }
+        ] 
+    },
+    { 
+        path: 'calendar', 
+        canActivate: [AuthGuard], 
+        component: CalendarComponent 
+    },
+    { 
+        path: 'scores', 
+        canActivate: [AuthGuard],
+        component: ScoresComponent 
+    },
+    { 
+        path: 'make-picks', 
+        canActivate: [AuthGuard],
+        component: MakePicksComponent 
+    },
+    { 
+        path: 'pick-history', 
+        canActivate: [AuthGuard],
+        component: PickHistoryComponent 
+    }
 ]
 
 @NgModule({

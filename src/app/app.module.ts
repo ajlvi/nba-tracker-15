@@ -24,6 +24,7 @@ import { HomePipe } from './make-picks/home.pipe';
 import { TimePipe } from './make-picks/time.pipe';
 import { DateExpandPipe } from './shared/date.pipe';
 import { TeamFormPipe } from './shared/team-form.pipe';
+import { ExcludeUserPipe } from './pick-history/exclude-user.pipe';
 import { AccountComponent } from './account/account.component';
 import { PasswordUpdateComponent } from './account/password-update/password-update.component';
 import { HandleUpdateComponent } from './account/handle-update/handle-update.component';
@@ -41,6 +42,7 @@ import { GroupsUpdateComponent } from './account/groups-update/groups-update.com
     HomePipe,
     DateExpandPipe,
     TeamFormPipe,
+    ExcludeUserPipe,
     PickHistoryComponent,
     PickRowComponent,
     CalendarRowComponent,
