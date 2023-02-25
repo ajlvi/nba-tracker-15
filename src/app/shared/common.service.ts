@@ -50,7 +50,7 @@ export class CommonService {
         return new RecordData('', wins, losses, ties);
     }
 
-    //takes a team document (returned from firestore) and conevrts it to TeamData format.
+    //takes a team document (returned from firestore) and converts it to TeamData format.
     process_team_document(document: any): TeamData {
         const fields = document["fields"]
         const ats_w = parseInt(fields["ats_w"]["integerValue"]);
