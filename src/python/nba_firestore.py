@@ -128,7 +128,7 @@ def nextDay(mm, dd):
 	elif mm in [11, 16] and dd == 30: return (mm+1, 1)
 	elif mm == 14 and dd <= 27: return (mm, dd+1)
 	elif (mm, dd) == (14, 28) and int(CurrentSeason[3:])%4 != 0: return (15, 1)
-	elif (mm, dd) == (14, 28) and int(CurrentSeason[3:])%4 == 0: retunr (14, 29)
+	elif (mm, dd) == (14, 28) and int(CurrentSeason[3:])%4 == 0: return (14, 29)
 	elif (mm, dd) == (14, 29): return (15, 1)
 	else: raise ValueError(f"{mm}{dd} is not something nextDay can handle")
 

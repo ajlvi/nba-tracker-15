@@ -18,7 +18,8 @@ export class MakePicksComponent implements OnInit, OnDestroy {
   todaySub: Subscription;
   selected = {};
   serverPicks = {};
-  doneCommunicating: boolean;
+  possessDate: boolean = false;
+  possessGames: boolean = false;
   teamDataReady: boolean = false;
 
   constructor(
@@ -27,16 +28,15 @@ export class MakePicksComponent implements OnInit, OnDestroy {
     private auth: AuthService) {}
 
   ngOnInit(): void {
-    this.doneCommunicating = false;
     this.todaySub = this.todayService.todaySubject.subscribe(
       response => {
         // response will be null if we subscribe before the date update is done!
         if (response) {
           this.todays_date = response;
+          this.possessDate = true;
           this.fetchGameData();
           this.fetchPicksData();
           this.fetchTeamsData();
-          this.doneCommunicating = true;
         }
       }
     )
@@ -55,15 +55,18 @@ export class MakePicksComponent implements OnInit, OnDestroy {
 
   fetchGameData() {
     this.error = '';
+    this.possessGames = false;
     if (this.seen.sawDate(this.todays_date)) {
       this.today = this.seen.gamesByDay[this.todays_date]
       this.total = this.today.length;
+      this.possessGames = true;
     }
     else {
       this.seen.getGames(this.todays_date).subscribe(
         response => { 
           this.today = response; 
-          this.total= this.today.length;
+          this.total = this.today.length;
+          this.possessGames = true;
         },
         error => {
           this.error = error;
@@ -109,7 +112,7 @@ export class MakePicksComponent implements OnInit, OnDestroy {
   }
 
   onStorePicks() {
-    this.doneCommunicating = false
+    this.possessDate = false
     this.seen.makePicks(this.todays_date, this.selected).subscribe(
       //I don't care about the response, I just need to know the operation finished.
       () => {
@@ -117,7 +120,7 @@ export class MakePicksComponent implements OnInit, OnDestroy {
           if (this.selected[i]) { this.serverPicks[i] = this.selected[i]; }
           else { delete this.serverPicks[i] }
         }
-        this.doneCommunicating = true;
+        this.possessDate = true;
       }
     )
   }
