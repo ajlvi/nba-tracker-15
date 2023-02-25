@@ -3,7 +3,7 @@ import { Injectable } from "@angular/core";
 import { Router } from "@angular/router";
 import { BehaviorSubject, throwError } from "rxjs";
 import { catchError, switchMap, tap } from "rxjs/operators";
-import { environment } from "src/environments/environment.development";
+import { environment } from "src/environments/environment";
 import { TodayService } from "../shared/today.service";
 import { User } from "./user.model";
 

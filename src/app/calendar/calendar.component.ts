@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { environment } from 'src/environments/environment.development';
+import { environment } from 'src/environments/environment';
 import { CommonService } from '../shared/common.service';
 import { SeenDataService } from '../shared/seen-data-service';
 import { TodayService } from '../shared/today.service';

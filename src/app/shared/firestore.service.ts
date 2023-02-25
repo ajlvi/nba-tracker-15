@@ -3,7 +3,7 @@ import { Injectable } from "@angular/core";
 import { catchError, Observable, throwError } from "rxjs";
 import { map, tap } from "rxjs/operators";
 
-import { environment } from "src/environments/environment.development";
+import { environment } from "src/environments/environment";
 import { AuthService } from "../auth/auth.service";
 import { FirestoreQueryService } from "./firestore-query.service";
 import { Game, RecordData } from "./game.model";
