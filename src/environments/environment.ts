@@ -1,7 +1,7 @@
 export const environment = {
     production: true,
-    firebaseAPIkey: process.env.API_KEY,
-    season: process.env.SEASON,
-    season_start: process.env.SEASON_START,
-    season_end: process.env.SEASON_END
+    firebaseAPIkey: process.env.NG_APP_API_KEY,
+    season: process.env.NG_APP_SEASON,
+    season_start: process.env.NG_APP_SEASON_START,
+    season_end: process.env.NG_APP_SEASON_END
 };
