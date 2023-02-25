@@ -9,7 +9,6 @@
     "test": "ng test",
     "postinstall": "ng build --aot --configuration production"
   },
-  "private": true,
   "engines": {
     "node": "^16.18.1",
     "npm": "^9.3.1"
