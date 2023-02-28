@@ -2,6 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { AuthService } from '../auth/auth.service';
 import { Game } from '../shared/game.model';
+import { DayPicks } from '../shared/pick.interface';
 import { SeenDataService } from '../shared/seen-data-service';
 import { TodayService } from '../shared/today.service';
 
@@ -81,6 +82,7 @@ export class MakePicksComponent implements OnInit, OnDestroy {
       let seenPicks = this.seen.seenPicks[username][this.todays_date]
       for (let gameno in seenPicks) {
         this.serverPicks[gameno] = seenPicks[gameno]["pick"]
+        this.toggleSelected(parseInt(gameno), seenPicks[gameno]["pick"])
       }
     }
     else {
@@ -88,6 +90,7 @@ export class MakePicksComponent implements OnInit, OnDestroy {
         response => {
           for (let gameno in response) {
             this.serverPicks[gameno] = response[gameno]["pick"]
+            this.toggleSelected(parseInt(gameno), response[gameno]["pick"])
           }         
         }
       )
@@ -114,11 +117,20 @@ export class MakePicksComponent implements OnInit, OnDestroy {
   onStorePicks() {
     this.possessDate = false
     this.seen.makePicks(this.todays_date, this.selected).subscribe(
-      //I don't care about the response, I just need to know the operation finished.
-      () => {
+      // makePicks checks for time; we'll use that to determine what's on the server
+      (response: DayPicks) => {
+        console.log(response);
         for (let i=0; i < this.total ; i++) {
-          if (this.selected[i]) { this.serverPicks[i] = this.selected[i]; }
-          else { delete this.serverPicks[i] }
+          if (response[i]) { 
+            this.serverPicks[i] = response[i].pick;
+            if (this.selected[i] !== response[i].pick) {
+              this.toggleSelected(i, response[i].pick)
+            }
+          }
+          else { 
+              delete this.selected[i];
+              delete this.serverPicks[i];
+            }
         }
         this.possessDate = true;
       }

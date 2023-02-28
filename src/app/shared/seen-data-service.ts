@@ -61,20 +61,34 @@ export class SeenDataService {
     makePicks(date: string, selections: any) {
         //selections is just {gameno: pick}. only the default user can make picks.
         const totg = this.gamesByDay[date].length;
-        let doc_id = ''; let username = this.auth.currentEmail;
+        let doc_id = ''; 
+        let username = this.auth.currentEmail;
         if (this.seenPicks[username][date].doc_id) {
             doc_id = this.seenPicks[username][date].doc_id;
         }
         let picks: DayPicks = {doc_id: doc_id, user: username, date: date};
-        for (let i in selections) {
-            if (selections[i]) {
-                let pick_i: SinglePick = {"pick": selections[i], gameno: parseInt(i)}
-                picks[i] = pick_i
+        for (let i=0; i < this.gamesByDay[date].length; i++) {
+            // we're in time; it's legal to make a pick
+            if ( (new Date().getTime()) < this.gamesByDay[date][i].time) {
+                if (selections[i]) {
+                    console.log( (new Date().getTime()).toString() + " < " + this.gamesByDay[date][i].time.toString() + " OK")
+                    let pick_i: SinglePick = {
+                        "pick": selections[i], 
+                        gameno: i
+                    }
+                    picks[i] = pick_i
+                }
+            }
+            else { // after time. if the pick is already there we want to preserve it
+                if (this.seenPicks[username][date][i]){
+                    let pick_i: SinglePick =  this.seenPicks[username][date][i];
+                    picks[i] = pick_i;
+                }
+                console.log( (new Date().getTime()).toString() + " > " + this.gamesByDay[date][i].time.toString() + " BAD")
             }
         }
         return this.fire.make_picks(date, picks).pipe(
             tap( (response ) => { 
-                console.log(response)
                 if (! this.seenPicks[username][date].doc_id) {
                     let slashsplit = response["name"].split("/");
                     this.seenPicks[username][date] = picks;
@@ -82,7 +96,7 @@ export class SeenDataService {
                     this.seenPicks[username][date].user = response["fields"]["user"]["stringValue"];
                 }
             } ),
-            map( () => { return selections } )
+            map( () => { return picks } )
         )
     }
 

@@ -50,7 +50,7 @@ export class ScoresComponent implements OnInit{
     }
     else {
       this.seen.getGames(date).subscribe(
-        response => { this.daygames = response; }
+        response => { this.daygames = response }
       )
     }
   }
