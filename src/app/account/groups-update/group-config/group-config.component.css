@@ -1,0 +1,17 @@
+.group-name-box {
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 6px;
+}
+
+.close-button::before {
+    content: "×";
+    color: #ff6666;
+    font-size: 12pt;
+    float: right;
+    padding: 0px 6px;
+}
+
+.close-button { 
+    cursor: pointer;
+}

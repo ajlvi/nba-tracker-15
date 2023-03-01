@@ -29,6 +29,8 @@ import { AccountComponent } from './account/account.component';
 import { PasswordUpdateComponent } from './account/password-update/password-update.component';
 import { HandleUpdateComponent } from './account/handle-update/handle-update.component';
 import { GroupsUpdateComponent } from './account/groups-update/groups-update.component';
+import { AddGroupComponent } from './account/groups-update/add-group/add-group.component';
+import { GroupConfigComponent } from './account/groups-update/group-config/group-config.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +53,9 @@ import { GroupsUpdateComponent } from './account/groups-update/groups-update.com
     AccountComponent,
     PasswordUpdateComponent,
     HandleUpdateComponent,
-    GroupsUpdateComponent
+    GroupsUpdateComponent,
+    AddGroupComponent,
+    GroupConfigComponent
   ],
   imports: [
     AppRoutingModule,

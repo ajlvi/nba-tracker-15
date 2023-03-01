@@ -40,50 +40,35 @@ export class GroupsUpdateComponent {
   getCurrentGroups(email: string) {
     if (this.seen.sawUser(email)) {
       this.groupNames = this.seen.UserData[email].groups;
-      this.padGroups();
     }
     else {
       this.seen.getUserData(email).subscribe(
         () => {
           this.groupNames = this.seen.UserData[email]["groups"]
-          this.padGroups();
         }
       )
     }
   }
 
-  onAddGroup() {
-    if (this.groupNames.length < 5) {
-      this.groupNames.push('');
-    }
+  onAddGroup(newGroupName: string) {
+    let newGroupNames = this.groupNames.slice()
+    newGroupNames.push(newGroupName)
+    this.seen.setGroups(this.username, newGroupNames).subscribe(
+      () => {
+        this.successfulChange = true;
+        this.groupNames = newGroupNames;
+      }
+    )
   }
 
-  onClearGroup(i: number) {
-    this.groupNames = this.groupNames.slice(0, i).concat(this.groupNames.slice(i+1));
+  onDelete(group) {
+    let groupidx = this.groupNames.indexOf(group)
+    let newGroupNames = this.groupNames.slice(0, groupidx).concat(this.groupNames.slice(groupidx+1));
+    this.seen.setGroups(this.username, newGroupNames).subscribe(
+      () => {
+        this.successfulChange = true;
+        this.groupNames = newGroupNames;
+      }
+    )
   }
-
-  padGroups() {
-    if (this.groupNames.length == 0) {this.onAddGroup();}
-  }
-
-  onUpdateGroups(groupForm: NgForm) {
-    let proceed = true;
-    let input_names = [];
-    for (let group in groupForm.form.value) {
-      const groupname = groupForm.form.value[group];
-      input_names.push(groupname)
-      if (groupname.length <= 2) { 
-        proceed = false; 
-        this.error = "Remove or replace groups with fewer than three characters before updating."}
-    }
-    if (proceed) {
-      this.seen.setGroups(this.username, input_names).subscribe(
-        () => { 
-          this.successfulChange = true; 
-          this.groupNames = input_names;
-        }
-      )
-    }
-  }
-
 }
