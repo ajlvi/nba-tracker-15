@@ -1,6 +1,13 @@
 <div class="row">
-    <div class="col-xs-8" class="group-name-box">
-        {{groupname}}
-    <span class="close-button" aria-label="Remove" (click)="onDelete()"></span>
+    <div class="col-sm-12">
+        <div class="group-name-box">
+            <span class="caret-closed" *ngIf="!expanded" aria-label="expand" (click)="onExpand()"></span>
+            <span class="caret-open" *ngIf="expanded" aria-label="close" (click)="onContract()"></span>
+            {{groupname}}
+        <span class="close-button" aria-label="Remove" (click)="onDelete()"></span>
+        </div>
     </div>
+    <ul *ngIf="expanded">
+        <li *ngFor="let user of roster | keyvalue">{{user.value.handle}} ({{user.value.email}})</li>
+    </ul>
 </div>

@@ -7,3 +7,10 @@
     color: #0d0;
     padding: 0px 0px 0px 10px;
 }
+
+.caret-closed::before {
+    content: "▶";
+    color: #222;
+    font-size: 12pt;
+    padding: 0px 6px;
+}
