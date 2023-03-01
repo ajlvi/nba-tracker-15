@@ -229,7 +229,7 @@ export class FirestoreService {
     const handle = response["fields"]["handle"]["stringValue"]
     const email = response["fields"]["user"]["stringValue"]
     let groups = [];
-    if ( response["fields"]["groups"]["arrayValue"]["values"] ) {
+    if ( response["fields"]["groups"] && response["fields"]["groups"]["arrayValue"]["values"] ) {
       for (let group of response["fields"]["groups"]["arrayValue"]["values"]) {
         groups.push(group["stringValue"])
       }

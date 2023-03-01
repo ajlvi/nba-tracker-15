@@ -15,18 +15,19 @@ export class PickHistoryComponent implements OnInit {
   pickerDate: Date;
   calendarMin: Date;
   calendarMax: Date;
+  dates: string[] = [];
  
   //logged-in user's data
   username: string = ''
+  isLoading: boolean = true;
 
   //others' data
   activeGroup: string = '';
+  groupsLoading: boolean = true;
   groups: string[] = [];
   roster: string[] = [];
   groupData: {[user: string] : {"handle": string, "seasonRecord": RecordData, "visibleRecord": RecordData}} = {};
  
-  dates: string[] = [];
-  isLoading: boolean = true;
   
   constructor(
     private seen: SeenDataService,
@@ -47,7 +48,18 @@ export class PickHistoryComponent implements OnInit {
         () => { this.initialDataGathering(); }
       )
     }
+  }
 
+  initialDataGathering() {
+    // not run until user document has been received
+    this.groups = this.seen.UserData[this.username]["groups"]; 
+    this.groupData[this.username] = 
+      {
+        "handle": this.seen.UserData[this.username].handle, 
+        "seasonRecord": this.seen.recordData[this.username], 
+        "visibleRecord": new RecordData(this.username, -1, -1, -1)
+      }
+    
     this.today.todaySubject.subscribe(
       todays_date => {
         if (todays_date) {
@@ -61,28 +73,22 @@ export class PickHistoryComponent implements OnInit {
           this.calendarMin = new Date(startYear, seasonStartMonth, seasonStartDay);
           this.calendarMax = new Date(currentYear, currentMonth%12, currentDay);
           this.pickerDate = this.calendarMax;      
-          this.getGroupmateData(todays_date)
+          this.getGroupmateData(todays_date) //gets own pick history
         }
       }
     )
   }
 
-  initialDataGathering() {
-    // not run until user document has been received
-    this.groups = this.seen.UserData[this.username]["groups"]; 
-    this.groupData[this.username] = 
-      {
-        "handle": this.seen.UserData[this.username].handle, 
-        "seasonRecord": this.seen.recordData[this.username], 
-        "visibleRecord": new RecordData(this.username, -1, -1, -1)
-      }
-  }
-
   onGroupSelected(group: string) {
     //if we're picking a group then we're in a loaded state, so this.dates is reversed!
+    this.groupsLoading = true;
     this.activeGroup = group;
-    if (this.seen.sawGroup(group)) {
-      this.getGroupmateData(this.dates[0])  
+    if (group === 'xx') {
+      this.groupsLoading = false;
+      this.roster = []
+    }
+    else if (this.seen.sawGroup(group)) {
+      this.getGroupmateData(this.dates[0])
     }
     else {
       this.seen.getGroupRoster(group).subscribe(
@@ -96,7 +102,8 @@ export class PickHistoryComponent implements OnInit {
     // if this.activeGroup is undefined, then this.roster = [this.username].
     if (this.activeGroup) { this.roster = this.seen.GroupRosters[this.activeGroup] }
     // the roster collection already done will also have set season-record and handle data, 
-    // but we probably need picks.
+    // but we probably need picks. If activeGroup isn't defined we could be loading the page,
+    // in which case our picks could have changed.
     let needsPicks = [];
     for (let user of this.roster) {
       let sawPicks = true;
@@ -106,7 +113,7 @@ export class PickHistoryComponent implements OnInit {
       if (!sawPicks) { needsPicks.push(user) }
     }
     if (needsPicks.length > 0 ) {
-      this.isLoading = true;
+      this.groupsLoading = true;
       this.seen.getMultiplePicks(needsPicks, daterange).subscribe(
         () => { this.processGroupPicks(daterange); }
       )
@@ -123,7 +130,8 @@ export class PickHistoryComponent implements OnInit {
       const visibleRec = this.seen.recordOverRange(user, daterange);
       this.groupData[user] = {"handle": handle, "seasonRecord": seasonRec, "visibleRecord": visibleRec}
     }
-    this.isLoading = false;
+    this.isLoading = false; this.groupsLoading = false;
+    console.log(this.seen.seenPicks);
     this.dates = daterange.reverse();
   }
 

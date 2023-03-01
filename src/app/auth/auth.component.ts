@@ -39,11 +39,19 @@ export class AuthComponent {
     authObs.subscribe(
       respData => {
         console.log(respData);
+        //if we are signing up, we need to make the player document.
         if (!this.isLoginMode) {
-          this.authService.makePlayerDocument()
+          this.authService.makePlayerDocument().subscribe(
+            () => {
+              this.isLoading = false;
+              this.router.navigate(['/make-picks']);
+            }
+          )
         }
-        this.isLoading = false;
-        this.router.navigate(['/make-picks']);
+        else {
+          this.isLoading = false;
+          this.router.navigate(['/make-picks']);
+        }
       },
       errorMessage => {
         console.log(errorMessage);

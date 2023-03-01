@@ -89,9 +89,9 @@ export class SeenDataService {
         }
         return this.fire.make_picks(date, picks).pipe(
             tap( (response ) => { 
+                this.seenPicks[username][date] = picks;
                 if (! this.seenPicks[username][date].doc_id) {
                     let slashsplit = response["name"].split("/");
-                    this.seenPicks[username][date] = picks;
                     this.seenPicks[username][date].doc_id = slashsplit[slashsplit.length -1];
                     this.seenPicks[username][date].user = response["fields"]["user"]["stringValue"];
                 }
@@ -162,7 +162,14 @@ export class SeenDataService {
 
     setGroups(user: string, groupNames: string[]) {
         return this.fire.setGroups(user, groupNames).pipe(
-            tap( () => {this.UserData[user]["groups"] = groupNames; })
+            tap( () => {
+                this.UserData[user]["groups"] = groupNames; 
+                for (let group of groupNames) {
+                    if (!this.GroupRosters[group].includes(user)) {
+                        this.GroupRosters[group].push(user);
+                    }
+                }
+            })
         )
     }
 

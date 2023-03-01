@@ -119,7 +119,7 @@ export class MakePicksComponent implements OnInit, OnDestroy {
     this.seen.makePicks(this.todays_date, this.selected).subscribe(
       // makePicks checks for time; we'll use that to determine what's on the server
       (response: DayPicks) => {
-        console.log(response);
+        console.log(this.seen.seenPicks);
         for (let i=0; i < this.total ; i++) {
           if (response[i]) { 
             this.serverPicks[i] = response[i].pick;

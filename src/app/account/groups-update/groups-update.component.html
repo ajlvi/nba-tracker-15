@@ -12,7 +12,7 @@
             (groupAdded)="onAddGroup($event)">
         </app-add-group>
     </div>
-    <div class="col-xs-12" *ngIf="!isLoading">
+    <div class="col-xs-12" *ngIf="!isLoading && this.groupNames.length > 0">
         <div class="row">
             <div class="col-sm-4"><label>Your groups</label></div>
         </div>

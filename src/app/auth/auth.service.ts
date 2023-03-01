@@ -191,11 +191,20 @@ export class AuthService{
 
         let docpath = "projects/nba-8bb05/databases/(default)/documents/users/" + this.currentEmail; 
 
-        this.http.post(
+        return this.http.post(
             api_url, 
             {
-                writes: [{"update": {"name": docpath, "fields": {}}}]
+                writes: [{"update": {
+                    "name": docpath, 
+                    "fields": {
+                        "user": {"stringValue": this.currentEmail},
+                        "handle": {"stringValue": this.currentEmail},
+                        [environment.season + "_w"]: {"integerValue": 0},
+                        [environment.season + "_l"]: {"integerValue": 0},
+                        [environment.season + "_t"]: {"integerValue": 0}
+                    }
+                }}]
             }
-        ).subscribe(() => undefined)
+        )
     }
 }

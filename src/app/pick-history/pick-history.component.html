@@ -7,58 +7,73 @@
         <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
 </div>
-
+<br>
 <div class="row" *ngIf="!isLoading && groupData[username]">
-    <div class="col-xs-12" *ngIf="groupData[username]['seasonRecord'].wins >= 0">
-        {{groupData[username]["handle"]}} Season record: {{groupData[username]['seasonRecord'].wins}} - {{groupData[username]['seasonRecord'].losses}} - {{groupData[username]['seasonRecord'].ties}}
+    <div class="col-sm-2">
+        {{groupData[username]["handle"]}}
     </div>
-
-    <div class="col-xs-12" *ngIf="groupData[username]['seasonRecord'].wins < 0">
-        You don't seem to have any graded picks yet. Check this page tomorrow, or after the page refreshes next.
+    <div class="col-sm-3" *ngIf="groupData[username]['seasonRecord'].wins >= 0">
+        <span>Season record: {{groupData[username]['seasonRecord'].wins}}-{{groupData[username]['seasonRecord'].losses}}-{{groupData[username]['seasonRecord'].ties}}</span>
     </div>
-</div>
-
-<div class="row" *ngIf="!isLoading">
-    <div class="col-xs-12" *ngIf="groupData[username]['visibleRecord'].wins >= 0">
-        Record this week: {{groupData[username]['visibleRecord'].wins}} - {{groupData[username]['visibleRecord'].losses}} - {{groupData[username]['visibleRecord'].ties}}
+    <div class="col-sm-7" *ngIf="groupData[username]['visibleRecord'].wins >= 0">
+            <span>Visible record: {{groupData[username]['visibleRecord'].wins}}-{{groupData[username]['visibleRecord'].losses}}-{{groupData[username]['visibleRecord'].ties}}</span>
     </div>
 </div>
-
 
 <div class="row" *ngIf="dates.length > 0">
     <div class="col-xs-12" *ngFor="let date of dates">
         <app-pick-row [date]="date" [user]="username"></app-pick-row>
     </div>
 </div>
-
+<br>
 <!-- other group members picks -->
 <div class="row" *ngIf="!isLoading && groups.length > 0">
-    Show members of group: 
-    <form #groupSelect="ngForm">
-        <select name="group" id="group" (change)="onGroupSelected($event.target.value)">
-            <option value="xx">select a group</option>
-            <option *ngFor="let group of groups" value="{{group}}">{{group}}</option>
-        </select>
-    </form>
+    <div class="col-sm-2">Show group:</div> 
+    <div class="col-sm-10">
+        <form #groupSelect="ngForm">
+            <select
+                name="group"
+                id="group"
+                [ngModel]="activeGroup ? activeGroup : 'xx'"
+                (change)="onGroupSelected($event.target.value)">
+                <option value="xx">select a group</option>
+                <option *ngFor="let group of groups" value="{{group}}">{{group}}</option>
+            </select>
+        </form>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-xs-12" *ngIf="!groupsLoading && activeGroup && roster.length === 1">You appear to be the only person in this group at the moment. Invite others to add your group, then check again.</div>
 
-    <div class="col-xs-12" *ngIf="!isLoading && activeGroup && roster.length === 1">You appear to be the only person in this group at the moment. Invite others to add your group, then check again.</div>
-
-    <div class="col-xs-12" *ngIf="!isLoading && roster.length > 1">
-        <div class="row" *ngFor="let user of roster | ExcludeUser : username">
-            <div class="col-xs-12">
-                {{groupData[user]["handle"]}} Season record: {{groupData[user]['seasonRecord'].wins}} - {{groupData[user]['seasonRecord'].losses}} - {{groupData[user]['seasonRecord'].ties}}
-            </div>
+    <div class="col-xs-12" *ngIf="!groupsLoading && roster.length > 1">
+        <span *ngFor="let user of roster | ExcludeUser : username">
             <div class="row">
-                <div class="col-xs-12">
-                    Record this week: {{groupData[user]["visibleRecord"].wins}} - {{groupData[user]["visibleRecord"].losses}} - {{groupData[user]["visibleRecord"].ties}}
+                <div class="col-sm-2">
+                    {{groupData[user]["handle"]}}
                 </div>
+                <div class="col-sm-3" *ngIf="groupData[user]['seasonRecord'].wins >= 0">
+                    <span>Season record: {{groupData[user]['seasonRecord'].wins}}-{{groupData[user]['seasonRecord'].losses}}-{{groupData[user]['seasonRecord'].ties}}</span>
+                </div>
+                <div class="col-sm-7" *ngIf="groupData[user]['seasonRecord'].wins >= 0">
+                    <span>Visible record: {{groupData[user]['visibleRecord'].wins}}-{{groupData[user]['visibleRecord'].losses}}-{{groupData[user]['visibleRecord'].ties}}</span>
+                </div>
+                <!-- <div class="col-xs-12">
+                    {{groupData[user]["handle"]}} Season record: {{groupData[user]['seasonRecord'].wins}} - {{groupData[user]['seasonRecord'].losses}} - {{groupData[user]['seasonRecord'].ties}}
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        Record this week: {{groupData[user]["visibleRecord"].wins}} - {{groupData[user]["visibleRecord"].losses}} - {{groupData[user]["visibleRecord"].ties}}
+                    </div> -->
+
             </div>
             <div class="row" *ngIf="dates.length > 0">
                 <div class="col-xs-12" *ngFor="let date of dates">
                     <app-pick-row [date]="date" [user]="user"></app-pick-row>
                 </div>
             </div>
-        </div>
+            <br>
+        </span>
     </div>
 </div>
 
