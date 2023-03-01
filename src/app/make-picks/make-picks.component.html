@@ -1,64 +1,67 @@
 
 <div class="row">
     <div class="col-xs-12 info-paragraph">Click teams to select them, then use the update picks button to save them. Your saved picks are <b>bold</b>. To change your picks, make different selections and update again. (Note the "clear selections" button doesn't update picks.)</div>
-    <div class="row" *ngIf="possessDate">
-        <div class="col-xs-12 date-holder">{{todays_date | DateExpand : false}}</div>
-        <div class="col-xs-6" *ngIf="error">
-            {{error}}
+</div>
+<br>
+<div class="row" *ngIf="possessDate">
+    <div class="col-xs-12 date-holder">{{todays_date | DateExpand : false}}</div>
+    <div class="col-xs-6" *ngIf="error">
+        {{error}}
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-10 col-xs-8 col-md-5" *ngIf="possessGames && !error">
+        <div class="game-holder" *ngFor="let game of today; let i=index">
+            <span class="col-xs-2 time-container">
+                {{game.time | time}}
+            </span>
+            <span 
+                class="col-xs-4 team-name-container" 
+                (click)="toggleSelected(i, game.fav)"
+                [ngClass] = "{'selected': selected[i] === game.fav, 'on-server': serverPicks[i] === game.fav}"
+            >
+                <span class="teamname">
+                    {{game.fav | home : game }}
+                    <br>
+                    <app-team-form *ngIf="teamDataReady" [team]="game.fav"></app-team-form>
+                </span>
+            </span>
+            <span class="col-xs-2 line-container">
+                {{game.line}}
+            </span>
+            <span 
+                class="col-xs-4 team-name-container" 
+                (click)="toggleSelected(i, game.dog)"
+                [ngClass] = "{'selected': selected[i] === game.dog, 'on-server': serverPicks[i] === game.dog}"
+            >
+                <span class="teamname">
+                    {{game.dog | home : game }}
+                    <br>
+                    <app-team-form *ngIf="teamDataReady" [team]="game.dog"></app-team-form>
+                </span>
+            </span>
         </div>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div>
+        <span class="pick-button-holder">
+            <button 
+                type="button" 
+                class="btn btn-primary" 
+                (click)="onStorePicks()">
+                Update picks
+            </button>
+        </span>
         
-        <div class="col-xs-6" *ngIf="possessGames && !error">
-            <div class="game-holder" *ngFor="let game of today; let i=index">
-                <span class="col-xs-2 time-container">
-                    {{game.time | time}}
-                </span>
-                <span 
-                    class="col-xs-4 team-name-container" 
-                    (click)="toggleSelected(i, game.fav)"
-                    [ngClass] = "{'selected': selected[i] === game.fav, 'on-server': serverPicks[i] === game.fav}"
-                >
-                    <span class="teamname">
-                        {{game.fav | home : game }}
-                        <br>
-                        <app-team-form *ngIf="teamDataReady" [team]="game.fav"></app-team-form>
-                    </span>
-                </span>
-                <span class="col-xs-2 line-container">
-                    {{game.line}}
-                </span>
-                <span 
-                    class="col-xs-4 team-name-container" 
-                    (click)="toggleSelected(i, game.dog)"
-                    [ngClass] = "{'selected': selected[i] === game.dog, 'on-server': serverPicks[i] === game.dog}"
-                >
-                    <span class="teamname">
-                        {{game.dog | home : game }}
-                        <br>
-                        <app-team-form *ngIf="teamDataReady" [team]="game.dog"></app-team-form>
-                    </span>
-                </span>
-            </div>
-
-            <div>
-                <span class="pick-button-holder">
-                    <button 
-                        type="button" 
-                        class="btn btn-primary" 
-                        (click)="onStorePicks()">
-                        Update picks
-                    </button>
-                </span>
-                
-                <span class="clear-button-holder">
-                    <button 
-                        type="button" 
-                        class="btn btn-secondary" 
-                        (click)="onClearSelected()">
-                        Clear selections
-                    </button>
-                </span>
-            </div>
-
-        </div>
+        <span class="clear-button-holder">
+            <button 
+                type="button" 
+                class="btn btn-secondary" 
+                (click)="onClearSelected()">
+                Clear selections
+            </button>
+        </span>
     </div>
 </div>

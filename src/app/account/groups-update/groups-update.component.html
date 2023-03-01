@@ -3,7 +3,7 @@
         The groups you're in appear below. You can be a member of up to five groups, and each group can have up to ten members. To join or create a group, add its name to the roster below. Any other user who has the same group name in their roster is automatically included in the group. Group names must have between 3 and 50 characters. Use <span class="caret-closed"></span> to see each group's membership.
     </div>
 </div>
-
+<br>
 <div class="row">
     <div class="col-xs-12" *ngIf="!isLoading">
         <app-add-group
@@ -13,7 +13,9 @@
         </app-add-group>
     </div>
     <div class="col-xs-12" *ngIf="!isLoading">
-        <div class="row"><label>Your groups</label></div>
+        <div class="row">
+            <div class="col-sm-4"><label>Your groups</label></div>
+        </div>
         <div class="row">
             <div class="col-sm-4">
                 <app-group-config

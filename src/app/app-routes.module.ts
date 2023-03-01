@@ -19,7 +19,7 @@ const appRoutes: Routes = [
     },
     { 
         path: 'auth', 
-        component: AuthComponent 
+        component: AuthComponent
     },
     { 
         path: 'account', 

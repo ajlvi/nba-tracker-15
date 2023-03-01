@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { AuthService } from 'src/app/auth/auth.service';
 import { SeenDataService } from 'src/app/shared/seen-data-service';
-import { UserData } from 'src/app/shared/user-data.interface';
 
 @Component({
   selector: 'app-groups-update',

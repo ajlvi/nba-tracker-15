@@ -1,9 +1,9 @@
 <div class="row">
     You're currently logged in as <b>{{username}}</b>. <span *ngIf="displayName">You'll show up as <b>{{displayName}}</b>.</span>
 </div>
-
+<br>
 <div class="row">
-    <div class="col-xs-12 col-md-6 col-md-offset-3">
+    <div class="col-xs-12 col-md-6 col-md-offset-2">
         <form #nameChangeForm="ngForm" (ngSubmit)="onChangeHandle(nameChangeForm)" *ngIf="!isLoading">
             <div class="form-group">
                 <label for="handle">Display name</label>

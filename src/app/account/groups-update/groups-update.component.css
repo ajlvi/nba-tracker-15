@@ -11,6 +11,6 @@
 .caret-closed::before {
     content: "▶";
     color: #222;
-    font-size: 12pt;
+    font-size: 11pt;
     padding: 0px 6px;
 }
