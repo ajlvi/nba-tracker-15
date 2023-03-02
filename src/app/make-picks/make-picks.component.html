@@ -1,6 +1,6 @@
 
 <div class="row">
-    <div class="col-xs-12 info-paragraph">Click teams to select them, then use the update picks button to save them. Your saved picks are <b>bold</b>. To change your picks, make different selections and update again. (Note the "clear selections" button doesn't update picks.)</div>
+    <div class="col-xs-12 info-paragraph">Click teams to select them, then use the update picks button to save them. Your saved picks are <b>bold</b>. To change your picks, make different selections and update again. (Note the "clear selections" button doesn't update picks.) Games with a red time can no longer be changed.</div>
 </div>
 <br>
 <div class="row" *ngIf="possessDate">
@@ -12,7 +12,7 @@
 <div class="row">
     <div class="col-xs-10 col-xs-8 col-md-5" *ngIf="possessGames && !error">
         <div class="game-holder" *ngFor="let game of today; let i=index">
-            <span class="col-xs-2 time-container">
+            <span class="col-xs-2 time-container" [ngClass]='{"expired": isExpired(i)}'>
                 {{game.time | time}}
             </span>
             <span 
@@ -62,6 +62,10 @@
                 (click)="onClearSelected()">
                 Clear selections
             </button>
+        </span>
+
+        <span class="response-message">
+            {{message}}
         </span>
     </div>
 </div>

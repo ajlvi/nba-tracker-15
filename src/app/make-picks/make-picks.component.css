@@ -14,9 +14,16 @@
     text-align: center ;
     line-height: normal;
     min-width: 75px;
+    cursor: pointer;
 }
 
 .game-holder {
     display: flex;
     align-items: center;
 }
+
+.expired {
+    color: red;
+}
+
+.response-message { padding: 0px 0px 0px 10px; }

@@ -15,6 +15,7 @@ export class MakePicksComponent implements OnInit, OnDestroy {
   today: Game[]
   todays_date = ''
   error = '';
+  message: string = '';
   total: number = 0
   todaySub: Subscription;
   selected = {};
@@ -95,6 +96,10 @@ export class MakePicksComponent implements OnInit, OnDestroy {
         }
       )
     }
+  }
+
+  isExpired(gameno: number) {
+    return new Date().getTime() > this.today[gameno].time;
   }
 
   ngOnDestroy(): void {
