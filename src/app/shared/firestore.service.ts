@@ -284,7 +284,9 @@ export class FirestoreService {
     }
     switch (errorResponse.error.error.status) {
         case "NOT_FOUND":
-            errorMessage = "There are no games on this date.";
+            errorMessage = "There are no games on this date."; break;
+        case "UNAUTHENTICATED":
+            errorMessage = "You appear to be unauthenticated; try logging in again."; break;
     }
     return throwError(errorMessage);
   }

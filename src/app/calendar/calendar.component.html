@@ -3,22 +3,26 @@
         display: <a class="scope-link" (click)="onSetEnd(1)">past month</a> | <a class="scope-link" (click)="onSetEnd(2)">whole season</a>
     </div>
 </div>
-
+<br>
 <div class="row">
-    <app-calendar-header
-        *ngIf="todays_date"
-        [start_date]="todays_date">
-    </app-calendar-header>
+    <div class="col-xs-12">
+        <app-calendar-header
+            *ngIf="todays_date"
+            [start_date]="todays_date">
+        </app-calendar-header>
+    </div>
 </div>
 
 <div class="row" *ngIf="divisions">
-    <div class="division" *ngFor="let division of divisions">
-        <div class="team-calendar-row" *ngFor="let team of division">
-            <app-calendar-row
-                *ngIf="todays_date"
-                [team]="team" 
-                [start_date]="todays_date">
-            </app-calendar-row>
+    <div class="col-xs-12">
+        <div class="division" *ngFor="let division of divisions">
+            <div class="team-calendar-row" *ngFor="let team of division">
+                <app-calendar-row
+                    *ngIf="todays_date"
+                    [team]="team"
+                    [start_date]="todays_date">
+                </app-calendar-row>
+            </div>
         </div>
     </div>
 </div>

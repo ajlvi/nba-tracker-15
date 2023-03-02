@@ -74,12 +74,12 @@ export class AuthService{
     logout() {
         this.user.next(null);
         this.currentEmail = '';
-        this.router.navigate(['/auth']);
         localStorage.removeItem('userdata');
         if (this.tokenExpirationTimer) {
             clearTimeout(this.tokenExpirationTimer)
         }
         this.tokenExpirationTimer = null;
+        this.router.navigate(['/auth']);
     }
 
     change_password(username: string, oldpass: string, newpass: string) {
@@ -130,7 +130,7 @@ export class AuthService{
 
         if (loadedUser.token) {
             const expirationDuration = new Date(userData._tokenExpirationDate).getTime() - new Date().getTime();
-            // this.autoLogout(expirationDuration);
+            this.autoLogout(expirationDuration);
             this.currentEmail = userData.email;
             this.user.next(loadedUser);
             this.today.getTodaysDate()
