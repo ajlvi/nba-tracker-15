@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { CommonService } from 'src/app/shared/common.service';
-import { SeenDataService } from 'src/app/shared/seen-data-service';
+import { SeenDataService } from 'src/app/shared/seen-data.service';
 import { TeamData } from 'src/app/shared/team.interface';
 
 @Component({

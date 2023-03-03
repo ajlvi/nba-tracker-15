@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { CommonService } from 'src/app/shared/common.service';
 import { RecordData } from 'src/app/shared/game.model';
 import { DayPicks } from 'src/app/shared/pick.interface';
-import { SeenDataService } from 'src/app/shared/seen-data-service';
+import { SeenDataService } from 'src/app/shared/seen-data.service';
 
 @Component({
   selector: 'app-pick-row',

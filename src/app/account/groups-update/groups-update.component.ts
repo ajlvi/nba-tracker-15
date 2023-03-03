@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { AuthService } from 'src/app/auth/auth.service';
-import { SeenDataService } from 'src/app/shared/seen-data-service';
+import { SeenDataService } from 'src/app/shared/seen-data.service';
 
 @Component({
   selector: 'app-groups-update',

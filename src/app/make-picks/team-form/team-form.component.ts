@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { SeenDataService } from 'src/app/shared/seen-data-service';
+import { SeenDataService } from 'src/app/shared/seen-data.service';
 import { TeamData, TeamGameResult } from 'src/app/shared/team.interface';
 
 @Component({

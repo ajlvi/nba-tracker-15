@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { SeenDataService } from 'src/app/shared/seen-data-service';
+import { SeenDataService } from 'src/app/shared/seen-data.service';
 
 @Component({
   selector: 'app-add-group',
