@@ -18,7 +18,6 @@ export interface AuthResponseData {
 
 @Injectable({providedIn: 'root'})
 export class AuthService{
-    //eventually will go in interceptor
     private tokenExpirationTimer: any;
     public user = new BehaviorSubject<User>(null)
     public currentEmail: string = '' //is there a reason for a getter here?

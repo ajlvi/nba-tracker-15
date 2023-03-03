@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Game } from '../shared/game.model';
-import { SeenDataService } from '../shared/seen-data-service';
+import { SeenDataService } from '../shared/seen-data.service';
 import { TodayService } from '../shared/today.service';
 
 @Component({

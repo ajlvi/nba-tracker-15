@@ -3,7 +3,7 @@ import { Subscription } from 'rxjs';
 import { AuthService } from '../auth/auth.service';
 import { Game } from '../shared/game.model';
 import { DayPicks } from '../shared/pick.interface';
-import { SeenDataService } from '../shared/seen-data-service';
+import { SeenDataService } from '../shared/seen-data.service';
 import { TodayService } from '../shared/today.service';
 
 @Component({
