@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { AuthService } from 'src/app/auth/auth.service';
 import { SeenDataService } from 'src/app/shared/seen-data.service';
@@ -8,7 +8,7 @@ import { SeenDataService } from 'src/app/shared/seen-data.service';
   templateUrl: './groups-update.component.html',
   styleUrls: ['./groups-update.component.css']
 })
-export class GroupsUpdateComponent {
+export class GroupsUpdateComponent implements OnInit, OnDestroy {
   userSub: Subscription;
   username: string;
   groupNames: string[] = [];

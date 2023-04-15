@@ -13,7 +13,7 @@ import nba_teamdata as nbateam
 cred = credentials.Certificate(CertificatePath)
 app = firebase_admin.initialize_app(cred)
 db = firestore.client()
-season = db.collection(u's2223')
+season = db.collection(CurrentSeason)
 
 def initial_batch_upload():
 	dates = os.listdir(f"{DataPath}/2223/lines/")[2:]

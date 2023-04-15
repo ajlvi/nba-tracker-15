@@ -10,7 +10,7 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-xs-10 col-xs-8 col-md-5" *ngIf="possessGames && !error">
+    <div class="col-xs-10 col-sm-8 col-md-5" *ngIf="possessGames && !error">
         <div class="game-holder" *ngFor="let game of today; let i=index">
             <span class="col-xs-2 time-container" [ngClass]='{"expired": isExpired(i)}'>
                 {{game.time | time}}

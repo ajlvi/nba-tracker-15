@@ -225,21 +225,21 @@ export class FirestoreService {
   }
 
   process_userdata_response(response) {
-    let outputObj = {}
-    const handle = response["fields"]["handle"]["stringValue"]
-    const email = response["fields"]["user"]["stringValue"]
+    let outputObj = {};
+    const handle = response["fields"]["handle"]["stringValue"];
+    const email = response["fields"]["user"]["stringValue"];
     let groups = [];
     if ( response["fields"]["groups"] && response["fields"]["groups"]["arrayValue"]["values"] ) {
       for (let group of response["fields"]["groups"]["arrayValue"]["values"]) {
-        groups.push(group["stringValue"])
+        groups.push(group["stringValue"]);
       }
     }
-    outputObj["userdata"] = {"handle": handle, "groups": groups, "email": email}
+    outputObj["userdata"] = {"handle": handle, "groups": groups, "email": email};
 
-    const season = environment.season
-    const respWins = parseInt(response["fields"][season + "_w"]["integerValue"])
-    const respLosses = parseInt(response["fields"][season + "_l"]["integerValue"])
-    const respTies = parseInt(response["fields"][season + "_t"]["integerValue"])
+    const season = environment.season;
+    const respWins = parseInt(response["fields"][season + "_w"]["integerValue"]);
+    const respLosses = parseInt(response["fields"][season + "_l"]["integerValue"]);
+    const respTies = parseInt(response["fields"][season + "_t"]["integerValue"]);
     outputObj["record"] = new RecordData(email, respWins, respLosses, respTies);
 
     return outputObj;

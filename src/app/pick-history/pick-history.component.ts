@@ -26,9 +26,13 @@ export class PickHistoryComponent implements OnInit {
   groupsLoading: boolean = true;
   groups: string[] = [];
   roster: string[] = [];
-  groupData: {[user: string] : {"handle": string, "seasonRecord": RecordData, "visibleRecord": RecordData}} = {};
+  groupData: {
+    [user: string] : {
+      "handle": string, 
+      "seasonRecord": RecordData, 
+      "visibleRecord": RecordData}
+    } = {};
  
-  
   constructor(
     private seen: SeenDataService,
     private today: TodayService,

@@ -94,11 +94,12 @@ export class AuthService{
             catchError(this.handleAuthError),
             switchMap(
                 (response) => this.http.post<AuthResponseData>(
-                    'https://identitytoolkit.googleapis.com/v1/accounts:update?key=' + environment.firebaseAPIkey, {
+                    'https://identitytoolkit.googleapis.com/v1/accounts:update?key=' + environment.firebaseAPIkey, 
+                    {
                     'returnSecureToken': true,
                     'password': newpass,
                     "idToken": response.idToken
-                }).pipe(
+                    }).pipe(
                     tap(responseData => {
                         this.handleAuthentication(
                             responseData.email,

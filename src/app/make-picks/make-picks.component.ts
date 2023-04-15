@@ -13,8 +13,8 @@ import { TodayService } from '../shared/today.service';
 })
 export class MakePicksComponent implements OnInit, OnDestroy {
   today: Game[]
-  todays_date = ''
-  error = '';
+  todays_date: string = ''
+  error: string = '';
   message: string = '';
   total: number = 0
   todaySub: Subscription;
@@ -121,10 +121,10 @@ export class MakePicksComponent implements OnInit, OnDestroy {
 
   onStorePicks() {
     this.possessDate = false
-    this.seen.makePicks(this.todays_date, this.selected).subscribe(
+    this.seen.makePicks(this.auth.currentEmail, this.todays_date, this.selected).subscribe(
       // makePicks checks for time; we'll use that to determine what's on the server
       (response: DayPicks) => {
-        console.log(this.seen.seenPicks);
+        // console.log(this.seen.seenPicks);
         for (let i=0; i < this.total ; i++) {
           if (response[i]) { 
             this.serverPicks[i] = response[i].pick;

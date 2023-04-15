@@ -1,7 +1,6 @@
 import { Injectable } from "@angular/core";
 import { map, tap } from "rxjs";
 import { environment } from "src/environments/environment";
-import { AuthService } from "../auth/auth.service";
 import { CommonService } from "./common.service";
 import { FirestoreService } from "./firestore.service";
 import { Game, RecordData } from "./game.model";
@@ -20,9 +19,9 @@ export class SeenDataService {
 
     constructor(
         private fire: FirestoreService, 
-        private auth: AuthService,
         private common: CommonService) { }
 
+    //we need setPicks to avoid putting data in a location that's undefined.
     getPicks(user: string, date: string) {
         return this.fire.fetchUserPicksSingle(user, date).pipe(
             tap( (response: DayPicks) => { this.setPicks(user, date, response) } )
@@ -58,22 +57,21 @@ export class SeenDataService {
         )
     }
 
-    makePicks(date: string, selections: any) {
+    makePicks(username: string, date: string, selections: any) {
         //selections is just {gameno: pick}. only the default user can make picks.
         const totg = this.gamesByDay[date].length;
         let doc_id = ''; 
-        let username = this.auth.currentEmail;
         if (this.seenPicks[username][date].doc_id) {
             doc_id = this.seenPicks[username][date].doc_id;
         }
         let picks: DayPicks = {doc_id: doc_id, user: username, date: date};
-        for (let i=0; i < this.gamesByDay[date].length; i++) {
+        for (let i=0; i < totg; i++) {
             // we're in time; it's legal to make a pick
             if ( (new Date().getTime()) < this.gamesByDay[date][i].time) {
                 if (selections[i]) {
                     console.log( (new Date().getTime()).toString() + " < " + this.gamesByDay[date][i].time.toString() + " OK")
                     let pick_i: SinglePick = {
-                        "pick": selections[i], 
+                        pick: selections[i], 
                         gameno: i
                     }
                     picks[i] = pick_i
@@ -165,7 +163,10 @@ export class SeenDataService {
             tap( () => {
                 this.UserData[user]["groups"] = groupNames; 
                 for (let group of groupNames) {
-                    if (!this.GroupRosters[group].includes(user)) {
+                    if (!this.GroupRosters[group]) {
+                        this.GroupRosters[group] = [user];
+                    }
+                    else if (!this.GroupRosters[group].includes(user)) {
                         this.GroupRosters[group].push(user);
                     }
                 }
