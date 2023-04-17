@@ -60,7 +60,7 @@ def process_user_wins(username, date, winners):
 		user_doc.set(user_dict)		
 
 def post_date(day):
-	datefile = open(f"{DataPath}/2223/lines/{day}.txt", 'r')
+	datefile = open(f"{DataPath}/{CurrentSeason[1:]}/lines/{day}.txt", 'r')
 	lines = datefile.readlines()
 	if lines[0].strip() == "": return
 
@@ -75,7 +75,7 @@ def post_date(day):
 		date_dict["done"] = False
 		date_dict["updated"] = round( time.time() * 1000 )
 
-	season.document(f"day_{day}").set(date_dict)
+	date_doc.set(date_dict)
 	return date_dict
 
 def process_game(game, idx):

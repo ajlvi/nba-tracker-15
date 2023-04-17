@@ -1,11 +1,11 @@
 import os
-from nba_fire_config import DataPath
+from nba_fire_config import DataPath, CurrentSeason
 
 def teamDict():
-	days = sorted(os.listdir(f"{DataPath}/2223/lines/"))
+	days = sorted(os.listdir(f"{DataPath}/{CurrentSeason[1:]}/lines/"))
 	teamdict = {} #will be {TEAM : {TEAM: TEAM, ATS_W/L/T: #, GAME_N: [...]}}
 	for fname in days:
-		dayfile = open(f"{DataPath}/2223/lines/{fname}", 'r')
+		dayfile = open(f"{DataPath}/{CurrentSeason[1:]}/lines/{fname}", 'r')
 		lines = [l.strip() for l in dayfile.readlines() if l.strip() != ""]
 		for line in lines:
 			x = line.split('\t')

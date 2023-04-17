@@ -11,7 +11,7 @@ import { TodayService } from '../shared/today.service';
 })
 export class ScoresComponent implements OnInit{
   pickerDate: Date;
-  calendarMin = new Date(2022, 9, 18);
+  calendarMin = new Date();
   calendarMax = new Date();
   daygames: Game[] = [];
 
@@ -21,15 +21,16 @@ export class ScoresComponent implements OnInit{
     this.today.todaySubject.subscribe(
       response => {
         if (response) {
-          const startYear = 2000 + parseInt(environment.season.slice(1, 3));
+          let startYear = 2000 + parseInt(environment.season.slice(1, 3));
           const seasonStartMonth = (parseInt(environment.season_start.slice(0, 2)) - 1) % 12;
           const seasonStartDay = parseInt(environment.season_start.slice(2));
           const currentMonth = parseInt(response.slice(0, 2)) - 1
           const currentDay = parseInt(response.slice(2));
           let currentYear = startYear;
+          if (parseInt(environment.season_start.slice(0, 2)) >= 12) {startYear++;}
           if (currentMonth >= 12) {currentYear++;}
           this.calendarMin = new Date(startYear, seasonStartMonth, seasonStartDay);
-          this.calendarMax = new Date(currentYear, currentMonth%12, currentDay)          
+          this.calendarMax = new Date(currentYear, currentMonth%12, currentDay)
         }
       }
     )
