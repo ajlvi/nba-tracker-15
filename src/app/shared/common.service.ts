@@ -27,6 +27,7 @@ export class CommonService {
               else { return "1428" }
             case 16: return "1531";
             case 17: return "1630";
+            case 18: return "1731";
             default: console.log(date); return "xxxx";
           }
         }

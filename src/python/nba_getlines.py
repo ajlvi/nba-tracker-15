@@ -1,6 +1,6 @@
 from urllib.request import urlopen
-from nba_fire_config import DataPath
-from sys import stdout, argv
+from nba_fire_config import DataPath, CurrentSeason
+from sys import argv
 import time, datetime
 
 teamdict = {'MIL' : 'MIL', 'MIN' : 'MIN', 'MIA' : 'MIA', 'WAS' : 'WSH', 'ATL' : 'ATL', 'BOS' : 'BOS', 'DET' : 'DET', 'DEN' : 'DEN', 'Nets' : 'BKN', 'NO' : 'NO', 'SAC' : 'SAC', 'POR' : 'POR', 'ORL' : 'ORL', 'NY' : 'NY', 'UTA' : 'UTAH' , 'CLE' : 'CLE', 'CHA' : 'CHA', 'TOR' : 'TOR', 'GS' : 'GS', 'CHI': 'CHI', 'HOU' : 'HOU', 'LAL' : 'LAL', 'PHI' : 'PHI', 'MEM' : 'MEM', 'LAC' : 'LAC', 'DAL' : 'DAL', 'OKC' : 'OKC' , 'PHO' : 'PHX' , 'IND' : 'IND' , 'SA' : 'SA', "BK": "BKN"}
@@ -99,7 +99,7 @@ def setTime(line):
 
 def makeTXTs(games, day, month, yesno):
 	mo = month + 12 if month < 10 else month
-	outfile = open(f'{DataPath}/2223/lines/%02d%02d.txt' %(mo, day), 'w')
+	outfile = open(f'{DataPath}/{CurrentSeason[1:]}/lines/%02d%02d.txt' %(mo, day), 'w')
 	for game in games:
 		home, away = game[2], game[1]
 		odds = float(game[5])
@@ -118,7 +118,7 @@ def makeTXTs(games, day, month, yesno):
 	outfile.close()
 
 def main(mo, da, yesno):
-	global year; year = 2022
+	global year; year = 2000 + int(CurrentSeason[1:3])
 	global month; month = mo
 	global day; day = da
 	if mo > 12:

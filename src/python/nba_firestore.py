@@ -16,7 +16,7 @@ db = firestore.client()
 season = db.collection(CurrentSeason)
 
 def initial_batch_upload():
-	dates = os.listdir(f"{DataPath}/2223/lines/")[2:]
+	dates = os.listdir(f"{DataPath}/{CurrentSeason[1:]}/lines/")[2:]
 #	dates = [d for d in dates if d not in ["1224.txt", "1124.txt", "1108.txt"]]:
 	for fname in dates: post_date(fname[:4])
 			
