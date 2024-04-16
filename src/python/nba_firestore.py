@@ -158,12 +158,12 @@ def nextDay(mm, dd):
 
 if __name__ == '__main__':
 	if len(argv) == 3:
-		if argv[1].isdigit() and int(argv[1]) in range(10, 17):
+		if argv[1].isdigit() and int(argv[1]) in range(10, 19):
 			if argv[2].isdigit() and int(argv[2]) in range(1, 32):
 				month, day = int(argv[1]), int(argv[2])
 				database_update(month, day)
 	elif len(argv) == 4 and argv[1] == "UPDATE":
-		if argv[2].isdigit() and int(argv[2]) in range(10, 17):
+		if argv[2].isdigit() and int(argv[2]) in range(10, 19):
 			if argv[3].isdigit() and int(argv[3]) in range(1, 32):
 				month, day = int(argv[2]), int(argv[3])
 				getlines.main(month, day, 'n')
