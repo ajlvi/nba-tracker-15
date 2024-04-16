@@ -29,8 +29,27 @@ def initialize_stats(username):
 	elif f"{CurrentSeason}_w" not in user_get.to_dict():
 		user_doc.set(user_get.to_dict() | blank_stats)
 
+def find_user_record(username):
+	user_picks = db.collection("picks").where("user", "==", username).where("season", "==", CurrentSeason)
+	wins, losses, ties = 0, 0, 0
+	date_dict = {}
+	for pick_doc in user_picks.stream():
+		day_w, day_l, day_t = 0, 0, 0
+		pick_dict = pick_doc.to_dict()
+		pick_date = pick_dict["date"]
+		for game_idx in range(15):
+			if f"result_{game_idx}" in pick_dict:
+				pick_result = pick_dict[f"result_{game_idx}"]
+				if pick_result == 1: day_w += 1
+				elif pick_result == -1: day_l += 1
+				elif pick_result == 0: day_t += 1
+		date_dict[pick_date] = (day_w, day_l, day_t)
+		wins += day_w; losses += day_l; ties += day_t
+	print(wins, losses, ties)
+	return date_dict
+
 def process_user_wins(username, date, winners):
-	user_picks = db.collection("picks").where("user", "==", username).where("date", "==", date)
+	user_picks = db.collection("picks").where("user", "==", username).where("date", "==", date).where("season", "==", CurrentSeason)
 	wins, losses, ties = 0, 0, 0
 
 	for pick_doc in user_picks.stream():
@@ -62,7 +81,7 @@ def process_user_wins(username, date, winners):
 def post_date(day):
 	datefile = open(f"{DataPath}/{CurrentSeason[1:]}/lines/{day}.txt", 'r')
 	lines = datefile.readlines()
-	if lines[0].strip() == "": return
+	if len(lines) == 0 or lines[0].strip() == "": return
 
 	date_doc = season.document(f"day_{day}")
 	date_dict = {"date": day, "totg": len(lines)}
@@ -99,19 +118,24 @@ def process_game(game, idx):
 
 def database_update(mm, dd):
 	#this is the function we run in mornings when the previous day's scores need adding
+	#step one: get the results from the date requested.
+	#this just updates a .txt file so that future functions can find the data.
 	getlines.main(mm, dd, 'y')
 	datestring = "%02d%02d" %(mm, dd)
 	nextm, nextd = nextDay(mm, dd)
+	#we always update today.
 	season.document("today").set({"date": "%02d%02d" %(nextm, nextd)})
 	games = post_date(datestring)
-	winners = [ games[f"ats_win_{i}"] for i in range(games["totg"]) ]
-	user_col = db.collection("users")
-	all_users = [u.id for u in user_col.stream()]
-	for user in all_users:
-		initialize_stats(user)
-		process_user_wins(user, datestring, winners)
-	makeTeamDocuments()
+	if games: 
+		winners = [ games[f"ats_win_{i}"] for i in range(games["totg"]) ]
+		user_col = db.collection("users")
+		all_users = [u.id for u in user_col.stream()]
+		for user in all_users:
+			initialize_stats(user)
+			process_user_wins(user, datestring, winners)
+		makeTeamDocuments()
 
+	#lastly if there are potentially games on the next date, find them.
 	if "%02d%02d" %(nextm, nextd) <= CurrentSeasonEnd:
 		getlines.main(nextm, nextd, 'n')
 		post_date("%02d%02d" %(nextm, nextd))

@@ -1,0 +1,1764 @@
+1700589004696	geckodriver	INFO	Listening on 127.0.0.1:49843
+1700589005086	mozrunner::runner	INFO	Running command: "/snap/firefox/current/firefox.launcher" "--marionette" "-headless" "--remote-debugging-port" "42873" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilebVhaDj"
+*** You are running in headless mode.
+Gtk-Message: 12:50:05.108: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1700589005285	Marionette	INFO	Marionette enabled
+1700589005334	Marionette	INFO	Listening on port 36875
+WebDriver BiDi listening on ws://127.0.0.1:42873
+Read port: 36875
+1700589005463	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+DevTools listening on ws://127.0.0.1:42873/devtools/browser/ec63c59f-815f-43e9-aa30-da8529049fd6
+JavaScript warning: https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js, line 19: unreachable code after return statement
+1700589008710	Marionette	INFO	Stopped listening on port 36875
+1700589009566	geckodriver	INFO	Listening on 127.0.0.1:56081
+1700589009867	mozrunner::runner	INFO	Running command: "/snap/firefox/current/firefox.launcher" "--marionette" "-headless" "--remote-debugging-port" "43197" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileZOt679"
+*** You are running in headless mode.
+Gtk-Message: 12:50:09.890: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1700589010056	Marionette	INFO	Marionette enabled
+1700589010105	Marionette	INFO	Listening on port 45473
+WebDriver BiDi listening on ws://127.0.0.1:43197
+Read port: 45473
+1700589010234	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+DevTools listening on ws://127.0.0.1:43197/devtools/browser/3afed467-03e0-49bf-a258-c1e0861bbab9
+JavaScript warning: https://sportsbook.draftkings.com/MNu2gEag/mqQ/odr/vTTdvvVCgl/azESXQrJQhVafO/Ay4KP0QVAw/dh1qQQ1b/VWkB, line 1: unreachable code after return statement
+libEGL warning: egl: failed to create dri2 screen
+JavaScript warning: https://sportsbook.draftkings.com/MNu2gEag/mqQ/odr/vTTdvvVCgl/azESXQrJQhVafO/Ay4KP0QVAw/dh1qQQ1b/VWkB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sportsbook.draftkings.com/MNu2gEag/mqQ/odr/vTTdvvVCgl/azESXQrJQhVafO/Ay4KP0QVAw/dh1qQQ1b/VWkB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sportsbook.draftkings.com/MNu2gEag/mqQ/odr/vTTdvvVCgl/azESXQrJQhVafO/Ay4KP0QVAw/dh1qQQ1b/VWkB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sc-static.net/scevent.min.js, line 2: Script terminated by timeout at:
+m@https://sc-static.net/scevent.min.js:2:2788
+c@https://sc-static.net/scevent.min.js:2:6744
+
+1700589014788	Marionette	INFO	Stopped listening on port 45473
+JavaScript warning: https://sportsbook.draftkings.com/leagues/football/nfl, line 44: Script terminated by timeout at:
+nrWrapper@https://sportsbook.draftkings.com/leagues/football/nfl:44:15607
+
+1700589016205	geckodriver	INFO	Listening on 127.0.0.1:59735
+1700589016561	mozrunner::runner	INFO	Running command: "/snap/firefox/current/firefox.launcher" "--marionette" "-headless" "--remote-debugging-port" "57503" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileg4bMbB"
+*** You are running in headless mode.
+Gtk-Message: 12:50:16.584: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1700589016752	Marionette	INFO	Marionette enabled
+1700589016801	Marionette	INFO	Listening on port 40735
+WebDriver BiDi listening on ws://127.0.0.1:57503
+Read port: 40735
+1700589016927	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+DevTools listening on ws://127.0.0.1:57503/devtools/browser/fcc4cb81-ab45-46c0-bbc9-007fb7d7b922
+libEGL warning: egl: failed to create dri2 screen
+JavaScript warning: https://sports.nj.betmgm.com/ClientDist/main.7b202397d9f067c3.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1700589020431	Marionette	INFO	Stopped listening on port 40735
+1700589021270	geckodriver	INFO	Listening on 127.0.0.1:51807
+1700589021657	mozrunner::runner	INFO	Running command: "/snap/firefox/current/firefox.launcher" "--marionette" "-headless" "--remote-debugging-port" "42213" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileERw5Uq"
+*** You are running in headless mode.
+Gtk-Message: 12:50:21.682: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1700589021848	Marionette	INFO	Marionette enabled
+1700589021896	Marionette	INFO	Listening on port 43279
+WebDriver BiDi listening on ws://127.0.0.1:42213
+Read port: 43279
+1700589022021	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+DevTools listening on ws://127.0.0.1:42213/devtools/browser/81a50ab9-ff21-466a-aeba-e45e9bfd6e43
+JavaScript warning: https://sc-static.net/scevent.min.js, line 2: Script terminated by timeout at:
+m@https://sc-static.net/scevent.min.js:2:2788
+c@https://sc-static.net/scevent.min.js:2:6744
+
+1700589026323	Marionette	INFO	Stopped listening on port 43279
+JavaScript warning: https://sportsbook.fanduel.com/static/js/vendor.506334516a96ce4c99dd.js, line 2: Script terminated by timeout at:
+r@https://sportsbook.fanduel.com/static/js/vendor.506334516a96ce4c99dd.js:2:1035717
+
+1700589027370	geckodriver	INFO	Listening on 127.0.0.1:46357
+1700589027725	mozrunner::runner	INFO	Running command: "/snap/firefox/current/firefox.launcher" "--marionette" "-headless" "--remote-debugging-port" "36431" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileXCClf6"
+*** You are running in headless mode.
+Gtk-Message: 12:50:27.748: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1700589027914	Marionette	INFO	Marionette enabled
+1700589027962	Marionette	INFO	Listening on port 44365
+WebDriver BiDi listening on ws://127.0.0.1:36431
+Read port: 44365
+1700589028090	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+DevTools listening on ws://127.0.0.1:36431/devtools/browser/a62b8116-d0eb-4ecb-90e9-e7b1d67ca5a3
+1700589030684	Marionette	INFO	Stopped listening on port 44365
+1700935181303	geckodriver	INFO	Listening on 127.0.0.1:56641
+1700935181520	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "37737" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilejQiLhj"
+*** You are running in headless mode.
+Gtk-Message: 12:59:41.545: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1700935181744	Marionette	INFO	Marionette enabled
+1700935181796	Marionette	INFO	Listening on port 41429
+WebDriver BiDi listening on ws://127.0.0.1:37737
+Read port: 41429
+1700935181942	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+[Parent 152014, Main Thread] WARNING: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.849" (uid=1000 pid=152014 comm="/snap/firefox/3416/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2040 comm="/usr/bin/gnome-shell " label="unconfined")
+: 'glib warning', file /build/firefox/parts/firefox/build/toolkit/xre/nsSigHandlers.cpp:187
+
+** (firefox:152014): WARNING **: 12:59:42.551: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.849" (uid=1000 pid=152014 comm="/snap/firefox/3416/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2040 comm="/usr/bin/gnome-shell " label="unconfined")
+
+DevTools listening on ws://127.0.0.1:37737/devtools/browser/654eec69-0521-4515-bc76-757a828223db
+JavaScript warning: https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js, line 19: unreachable code after return statement
+1700935184557	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1700935185214	Marionette	INFO	Stopped listening on port 41429
+1700935185973	geckodriver	INFO	Listening on 127.0.0.1:40529
+1700935186352	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "59181" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileMMbMOy"
+*** You are running in headless mode.
+Gtk-Message: 12:59:46.377: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1700935186568	Marionette	INFO	Marionette enabled
+1700935186619	Marionette	INFO	Listening on port 46785
+WebDriver BiDi listening on ws://127.0.0.1:59181
+Read port: 46785
+1700935186754	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+[Parent 152397, Main Thread] WARNING: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.851" (uid=1000 pid=152397 comm="/snap/firefox/3416/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2040 comm="/usr/bin/gnome-shell " label="unconfined")
+: 'glib warning', file /build/firefox/parts/firefox/build/toolkit/xre/nsSigHandlers.cpp:187
+
+** (firefox:152397): WARNING **: 12:59:47.322: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.851" (uid=1000 pid=152397 comm="/snap/firefox/3416/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2040 comm="/usr/bin/gnome-shell " label="unconfined")
+
+DevTools listening on ws://127.0.0.1:59181/devtools/browser/60fb3c07-9978-4b6f-9522-a01be969916d
+JavaScript warning: https://sportsbook.draftkings.com/vApMLct_fN3t/l74lyB7mC2/M7/1Yz7bkpbfmDa/SXktOwsLYAQ/Yyw4/aCdFVD8B, line 1: unreachable code after return statement
+libEGL warning: egl: failed to create dri2 screen
+JavaScript warning: https://sportsbook.draftkings.com/vApMLct_fN3t/l74lyB7mC2/M7/1Yz7bkpbfmDa/SXktOwsLYAQ/Yyw4/aCdFVD8B, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sportsbook.draftkings.com/vApMLct_fN3t/l74lyB7mC2/M7/1Yz7bkpbfmDa/SXktOwsLYAQ/Yyw4/aCdFVD8B, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sportsbook.draftkings.com/vApMLct_fN3t/l74lyB7mC2/M7/1Yz7bkpbfmDa/SXktOwsLYAQ/Yyw4/aCdFVD8B, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1700935191057	Marionette	INFO	Stopped listening on port 46785
+JavaScript warning: https://js.adsrvr.org/universal_pixel.1.1.0.js, line 1: Script terminated by timeout at:
+n@https://js.adsrvr.org/universal_pixel.1.1.0.js:1:296
+TTDCM/this.init@https://js.adsrvr.org/universal_pixel.1.1.0.js:1:477
+@https://match.adsrvr.org/track/upb/?adv=psxacxe&ref=https%3A%2F%2Fsportsbook.draftkings.com%2Fleagues%2Ffootball%2Fnfl&upid=p5iiifm&upv=1.1.0:11:23
+@https://match.adsrvr.org/track/upb/?adv=psxacxe&ref=https%3A%2F%2Fsportsbook.draftkings.com%2Fleagues%2Ffootball%2Fnfl&upid=p5iiifm&upv=1.1.0:12:15
+
+JavaScript warning: https://sportsbook.draftkings.com/leagues/football/nfl, line 47: Script terminated by timeout at:
+nrWrapper@https://sportsbook.draftkings.com/leagues/football/nfl:47:15607
+
+1700935192433	geckodriver	INFO	Listening on 127.0.0.1:48585
+1700935192733	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "54851" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileoaTL8v"
+*** You are running in headless mode.
+Gtk-Message: 12:59:52.759: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1700935193021	Marionette	INFO	Marionette enabled
+1700935193075	Marionette	INFO	Listening on port 37447
+WebDriver BiDi listening on ws://127.0.0.1:54851
+Read port: 37447
+1700935193214	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+[Parent 152940, Main Thread] WARNING: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.853" (uid=1000 pid=152940 comm="/snap/firefox/3416/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2040 comm="/usr/bin/gnome-shell " label="unconfined")
+: 'glib warning', file /build/firefox/parts/firefox/build/toolkit/xre/nsSigHandlers.cpp:187
+
+** (firefox:152940): WARNING **: 12:59:53.730: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.853" (uid=1000 pid=152940 comm="/snap/firefox/3416/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2040 comm="/usr/bin/gnome-shell " label="unconfined")
+
+DevTools listening on ws://127.0.0.1:54851/devtools/browser/2f59a2da-1da2-4bc2-9084-1b5f3a4c5662
+libEGL warning: egl: failed to create dri2 screen
+JavaScript warning: https://sports.nj.betmgm.com/ClientDist/main.04b0afd7bf723d98.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1700935196466	Marionette	INFO	Stopped listening on port 37447
+JavaScript warning: https://sports.nj.betmgm.com/ClientDist/polyfills.1f3f08edea812ee5.js, line 1: Script terminated by timeout at:
+L@https://sports.nj.betmgm.com/ClientDist/polyfills.1f3f08edea812ee5.js:1:13679
+
+1700935197337	geckodriver	INFO	Listening on 127.0.0.1:43557
+1700935197728	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "40151" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilejymYqv"
+*** You are running in headless mode.
+Gtk-Message: 12:59:57.754: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1700935197949	Marionette	INFO	Marionette enabled
+1700935198001	Marionette	INFO	Listening on port 33175
+WebDriver BiDi listening on ws://127.0.0.1:40151
+Read port: 33175
+1700935198137	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+[Parent 153387, Main Thread] WARNING: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.855" (uid=1000 pid=153387 comm="/snap/firefox/3416/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2040 comm="/usr/bin/gnome-shell " label="unconfined")
+: 'glib warning', file /build/firefox/parts/firefox/build/toolkit/xre/nsSigHandlers.cpp:187
+
+** (firefox:153387): WARNING **: 12:59:58.641: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.855" (uid=1000 pid=153387 comm="/snap/firefox/3416/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2040 comm="/usr/bin/gnome-shell " label="unconfined")
+
+DevTools listening on ws://127.0.0.1:40151/devtools/browser/c0da2cdb-0384-41b7-9621-24c7b34453fb
+1700935201292	Marionette	INFO	Stopped listening on port 33175
+JavaScript warning: https://tracker.ads.sportradar.com/dist/tracker.js, line 1: Script terminated by timeout at:
+n.r@https://tracker.ads.sportradar.com/dist/tracker.js:1:335
+_ads<@https://tracker.ads.sportradar.com/dist/tracker.js:8:2787
+n@https://tracker.ads.sportradar.com/dist/tracker.js:1:118
+_ads<@https://tracker.ads.sportradar.com/dist/tracker.js:1:951
+@https://tracker.ads.sportradar.com/dist/tracker.js:1:960
+
+1700935202889	geckodriver	INFO	Listening on 127.0.0.1:40517
+1700935203249	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "45067" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile3zMobr"
+*** You are running in headless mode.
+Gtk-Message: 13:00:03.275: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1700935203479	Marionette	INFO	Marionette enabled
+1700935203533	Marionette	INFO	Listening on port 45493
+WebDriver BiDi listening on ws://127.0.0.1:45067
+Read port: 45493
+1700935203653	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+[Parent 153820, Main Thread] WARNING: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.857" (uid=1000 pid=153820 comm="/snap/firefox/3416/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2040 comm="/usr/bin/gnome-shell " label="unconfined")
+: 'glib warning', file /build/firefox/parts/firefox/build/toolkit/xre/nsSigHandlers.cpp:187
+
+** (firefox:153820): WARNING **: 13:00:04.208: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.857" (uid=1000 pid=153820 comm="/snap/firefox/3416/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2040 comm="/usr/bin/gnome-shell " label="unconfined")
+
+DevTools listening on ws://127.0.0.1:45067/devtools/browser/e6a6770f-affa-4fc5-af7b-7e728adfd644
+1700935206681	Marionette	INFO	Stopped listening on port 45493
+1701371477540	geckodriver	INFO	Listening on 127.0.0.1:36809
+1701371477930	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "49557" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilefYCR6R"
+*** You are running in headless mode.
+Gtk-Message: 14:11:17.961: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1701371478198	Marionette	INFO	Marionette enabled
+1701371478265	Marionette	INFO	Listening on port 41289
+WebDriver BiDi listening on ws://127.0.0.1:49557
+Read port: 41289
+1701371478425	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+[Parent 1069610, Main Thread] WARNING: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.8313" (uid=1000 pid=1069610 comm="/snap/firefox/3416/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2040 comm="/usr/bin/gnome-shell " label="unconfined")
+: 'glib warning', file /build/firefox/parts/firefox/build/toolkit/xre/nsSigHandlers.cpp:187
+
+** (firefox:1069610): WARNING **: 14:11:18.928: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.8313" (uid=1000 pid=1069610 comm="/snap/firefox/3416/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2040 comm="/usr/bin/gnome-shell " label="unconfined")
+
+DevTools listening on ws://127.0.0.1:49557/devtools/browser/bc9fb20f-2145-4007-bf9e-96c1e0d16197
+JavaScript warning: https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js, line 19: unreachable code after return statement
+1701371481591	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1701371481812	Marionette	INFO	Stopped listening on port 41289
+1701371482733	geckodriver	INFO	Listening on 127.0.0.1:40957
+1701371483091	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "35225" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileD0Rg1u"
+*** You are running in headless mode.
+Gtk-Message: 14:11:23.117: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1701371483315	Marionette	INFO	Marionette enabled
+1701371483368	Marionette	INFO	Listening on port 37611
+WebDriver BiDi listening on ws://127.0.0.1:35225
+Read port: 37611
+1701371483504	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+[Parent 1070005, Main Thread] WARNING: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.8315" (uid=1000 pid=1070005 comm="/snap/firefox/3416/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2040 comm="/usr/bin/gnome-shell " label="unconfined")
+: 'glib warning', file /build/firefox/parts/firefox/build/toolkit/xre/nsSigHandlers.cpp:187
+
+** (firefox:1070005): WARNING **: 14:11:24.096: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.8315" (uid=1000 pid=1070005 comm="/snap/firefox/3416/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2040 comm="/usr/bin/gnome-shell " label="unconfined")
+
+DevTools listening on ws://127.0.0.1:35225/devtools/browser/7a5ad167-02c2-41ee-b0d3-8d8cbee80cd2
+JavaScript warning: https://sportsbook.draftkings.com/zH9r8c/aIXMh/jyimg/9g/1tDEppLNkrOJ/QlM4AQE/DQMESkNW/KiQB, line 1: unreachable code after return statement
+libEGL warning: egl: failed to create dri2 screen
+JavaScript warning: https://sportsbook.draftkings.com/zH9r8c/aIXMh/jyimg/9g/1tDEppLNkrOJ/QlM4AQE/DQMESkNW/KiQB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sportsbook.draftkings.com/zH9r8c/aIXMh/jyimg/9g/1tDEppLNkrOJ/QlM4AQE/DQMESkNW/KiQB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sportsbook.draftkings.com/zH9r8c/aIXMh/jyimg/9g/1tDEppLNkrOJ/QlM4AQE/DQMESkNW/KiQB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sc-static.net/scevent.min.js, line 2: Script terminated by timeout at:
+Q/c.send@https://sc-static.net/scevent.min.js:2:4833
+Pt/</c/<@https://sc-static.net/scevent.min.js:2:6767
+m@https://sc-static.net/scevent.min.js:2:2805
+c@https://sc-static.net/scevent.min.js:2:6744
+
+1701371502091	Marionette	INFO	Stopped listening on port 37611
+JavaScript warning: https://sportsbook.draftkings.com/leagues/football/nfl, line 48: Script terminated by timeout at:
+nrWrapper@https://sportsbook.draftkings.com/leagues/football/nfl:48:15607
+
+1701371503500	geckodriver	INFO	Listening on 127.0.0.1:38583
+1701371503864	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "56755" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileOqIz6g"
+*** You are running in headless mode.
+Gtk-Message: 14:11:43.891: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1701371504088	Marionette	INFO	Marionette enabled
+1701371504143	Marionette	INFO	Listening on port 43289
+WebDriver BiDi listening on ws://127.0.0.1:56755
+Read port: 43289
+1701371504283	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+[Parent 1070627, Main Thread] WARNING: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.8318" (uid=1000 pid=1070627 comm="/snap/firefox/3416/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2040 comm="/usr/bin/gnome-shell " label="unconfined")
+: 'glib warning', file /build/firefox/parts/firefox/build/toolkit/xre/nsSigHandlers.cpp:187
+
+** (firefox:1070627): WARNING **: 14:11:44.855: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.8318" (uid=1000 pid=1070627 comm="/snap/firefox/3416/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2040 comm="/usr/bin/gnome-shell " label="unconfined")
+
+DevTools listening on ws://127.0.0.1:56755/devtools/browser/5b7f6dc5-e9ec-41a7-bab0-ec7ade6263e7
+libEGL warning: egl: failed to create dri2 screen
+JavaScript warning: https://sports.nj.betmgm.com/ClientDist/main.04b0afd7bf723d98.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1701371508010	Marionette	INFO	Stopped listening on port 43289
+JavaScript warning: https://s.go-mpulse.net/boomerang/Y7GWT-NNGZ5-ZQ87J-PKAU9-X68KK, line 10: Script terminated by timeout at:
+c@https://s.go-mpulse.net/boomerang/Y7GWT-NNGZ5-ZQ87J-PKAU9-X68KK:10:43296
+
+1701371508887	geckodriver	INFO	Listening on 127.0.0.1:39799
+1701371509257	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "44163" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofiletPK0Da"
+*** You are running in headless mode.
+Gtk-Message: 14:11:49.283: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1701371509465	Marionette	INFO	Marionette enabled
+1701371509516	Marionette	INFO	Listening on port 42747
+WebDriver BiDi listening on ws://127.0.0.1:44163
+Read port: 42747
+1701371509654	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+[Parent 1071147, Main Thread] WARNING: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.8321" (uid=1000 pid=1071147 comm="/snap/firefox/3416/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2040 comm="/usr/bin/gnome-shell " label="unconfined")
+: 'glib warning', file /build/firefox/parts/firefox/build/toolkit/xre/nsSigHandlers.cpp:187
+
+** (firefox:1071147): WARNING **: 14:11:50.295: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.8321" (uid=1000 pid=1071147 comm="/snap/firefox/3416/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2040 comm="/usr/bin/gnome-shell " label="unconfined")
+
+DevTools listening on ws://127.0.0.1:44163/devtools/browser/b57432e4-4812-4a47-96b1-5a0f73a6330b
+JavaScript warning: https://sc-static.net/scevent.min.js, line 2: Script terminated by timeout at:
+m@https://sc-static.net/scevent.min.js:2:2788
+c@https://sc-static.net/scevent.min.js:2:6744
+
+1701371517699	Marionette	INFO	Stopped listening on port 42747
+JavaScript warning: https://sportsbook.fanduel.com/static/js/vendor.be38fcf4dc00095925bb.js, line 2: Script terminated by timeout at:
+r@https://sportsbook.fanduel.com/static/js/vendor.be38fcf4dc00095925bb.js:2:1054101
+
+1701371518855	geckodriver	INFO	Listening on 127.0.0.1:55443
+1701371519207	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "41181" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilelQ8KB1"
+*** You are running in headless mode.
+Gtk-Message: 14:11:59.232: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1701371519421	Marionette	INFO	Marionette enabled
+1701371519473	Marionette	INFO	Listening on port 33771
+WebDriver BiDi listening on ws://127.0.0.1:41181
+Read port: 33771
+1701371519608	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+[Parent 1071618, Main Thread] WARNING: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.8323" (uid=1000 pid=1071618 comm="/snap/firefox/3416/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2040 comm="/usr/bin/gnome-shell " label="unconfined")
+: 'glib warning', file /build/firefox/parts/firefox/build/toolkit/xre/nsSigHandlers.cpp:187
+
+** (firefox:1071618): WARNING **: 14:12:00.281: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.8323" (uid=1000 pid=1071618 comm="/snap/firefox/3416/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2040 comm="/usr/bin/gnome-shell " label="unconfined")
+
+DevTools listening on ws://127.0.0.1:41181/devtools/browser/408e75b8-2825-424b-80ef-de2b751a9a17
+1701371522846	Marionette	INFO	Stopped listening on port 33771
+JavaScript warning: https://www.bovada.lv/assets/js/vendor.f656d63e74795f08b33c.js, line 2: Script terminated by timeout at:
+a/n.args[0]@https://www.bovada.lv/assets/js/vendor.f656d63e74795f08b33c.js:2:773949
+
+JavaScript warning: https://www.gstatic.com/recaptcha/releases/-QbJqHfGOUB8nuVRLvzFLVed/recaptcha__en.js, line 74: Script terminated by timeout at:
+X</G</d.M.onmessage@https://www.gstatic.com/recaptcha/releases/-QbJqHfGOUB8nuVRLvzFLVed/recaptcha__en.js:74:287
+
+1701965557374	geckodriver	INFO	Listening on 127.0.0.1:53135
+1701965557707	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "38519" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileQwVHXu"
+*** You are running in headless mode.
+Gtk-Message: 11:12:37.734: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1701965557916	Marionette	INFO	Marionette enabled
+1701965557964	Marionette	INFO	Listening on port 43011
+WebDriver BiDi listening on ws://127.0.0.1:38519
+Read port: 43011
+1701965558098	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+[Parent 120139, Main Thread] WARNING: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.552" (uid=1000 pid=120139 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2592 comm="/usr/bin/gnome-shell " label="unconfined")
+: 'glib warning', file /build/firefox/parts/firefox/build/toolkit/xre/nsSigHandlers.cpp:187
+
+** (firefox:120139): WARNING **: 11:12:38.564: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.552" (uid=1000 pid=120139 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2592 comm="/usr/bin/gnome-shell " label="unconfined")
+
+DevTools listening on ws://127.0.0.1:38519/devtools/browser/197ee985-9b27-44a5-9b54-7c6e61a8ccd3
+JavaScript warning: https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js, line 19: unreachable code after return statement
+1701965561585	Marionette	INFO	Stopped listening on port 43011
+1701965562343	geckodriver	INFO	Listening on 127.0.0.1:47783
+1701965562721	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "47745" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile0P82vh"
+*** You are running in headless mode.
+Gtk-Message: 11:12:42.745: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1701965562918	Marionette	INFO	Marionette enabled
+1701965562968	Marionette	INFO	Listening on port 35165
+WebDriver BiDi listening on ws://127.0.0.1:47745
+Read port: 35165
+1701965563103	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+[Parent 120527, Main Thread] WARNING: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.554" (uid=1000 pid=120527 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2592 comm="/usr/bin/gnome-shell " label="unconfined")
+: 'glib warning', file /build/firefox/parts/firefox/build/toolkit/xre/nsSigHandlers.cpp:187
+
+** (firefox:120527): WARNING **: 11:12:43.694: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.554" (uid=1000 pid=120527 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2592 comm="/usr/bin/gnome-shell " label="unconfined")
+
+DevTools listening on ws://127.0.0.1:47745/devtools/browser/473fee49-d4d7-4f71-894a-cc3834df2b1c
+JavaScript warning: https://sportsbook.draftkings.com/DO7Mil/nnjl/2RV/i6s/ZyD5Xc18/hEhakDGfhX/RhRKT3wpKgg/Y2F/iOCE3SVcB, line 1: unreachable code after return statement
+JavaScript warning: https://sportsbook.draftkings.com/_sec/cp_challenge/sec-cpt-4-1.js, line 1: unreachable code after return statement
+libEGL warning: egl: failed to create dri2 screen
+JavaScript warning: https://sportsbook.draftkings.com/DO7Mil/nnjl/2RV/i6s/ZyD5Xc18/hEhakDGfhX/RhRKT3wpKgg/Y2F/iOCE3SVcB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sportsbook.draftkings.com/DO7Mil/nnjl/2RV/i6s/ZyD5Xc18/hEhakDGfhX/RhRKT3wpKgg/Y2F/iOCE3SVcB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sportsbook.draftkings.com/DO7Mil/nnjl/2RV/i6s/ZyD5Xc18/hEhakDGfhX/RhRKT3wpKgg/Y2F/iOCE3SVcB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://apps.rokt.com/wsdk/controller/index.bc3d696b7207849f5109.js, line 1: Script terminated by timeout at:
+r/</</i</<@https://apps.rokt.com/wsdk/controller/index.bc3d696b7207849f5109.js:1:919
+r/</</i<@https://apps.rokt.com/wsdk/controller/index.bc3d696b7207849f5109.js:1:881
+next@https://apps.rokt.com/wsdk/controller/index.bc3d696b7207849f5109.js:1:349
+i@https://apps.rokt.com/wsdk/controller/index.bc3d696b7207849f5109.js:1:4683
+
+JavaScript warning: https://sc-static.net/scevent.min.js, line 2: Script terminated by timeout at:
+m@https://sc-static.net/scevent.min.js:2:2788
+c@https://sc-static.net/scevent.min.js:2:6744
+
+1701965567914	Marionette	INFO	Stopped listening on port 35165
+JavaScript warning: https://sportsbook.draftkings.com/leagues/football/nfl, line 48: Script terminated by timeout at:
+nrWrapper@https://sportsbook.draftkings.com/leagues/football/nfl:48:15607
+
+1701965569268	geckodriver	INFO	Listening on 127.0.0.1:34199
+1701965569646	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "59329" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile88sX5r"
+*** You are running in headless mode.
+Gtk-Message: 11:12:49.671: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1701965569848	Marionette	INFO	Marionette enabled
+1701965569897	Marionette	INFO	Listening on port 35471
+WebDriver BiDi listening on ws://127.0.0.1:59329
+Read port: 35471
+1701965570028	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+[Parent 121040, Main Thread] WARNING: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.556" (uid=1000 pid=121040 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2592 comm="/usr/bin/gnome-shell " label="unconfined")
+: 'glib warning', file /build/firefox/parts/firefox/build/toolkit/xre/nsSigHandlers.cpp:187
+
+** (firefox:121040): WARNING **: 11:12:50.556: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.556" (uid=1000 pid=121040 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2592 comm="/usr/bin/gnome-shell " label="unconfined")
+
+DevTools listening on ws://127.0.0.1:59329/devtools/browser/d77e3009-996c-4dd5-93c2-9bd7510f6526
+libEGL warning: egl: failed to create dri2 screen
+JavaScript warning: https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1701965573908	Marionette	INFO	Stopped listening on port 35471
+JavaScript warning: https://casinogames.nj.betmgm.com/htmllobby/minilobby/polyfills.a4aeb25d3dc48e59e0a8.js, line 2: Script terminated by timeout at:
+0TWp/dt/u/n.args[0]@https://casinogames.nj.betmgm.com/htmllobby/minilobby/polyfills.a4aeb25d3dc48e59e0a8.js:2:39038
+
+1701965574776	geckodriver	INFO	Listening on 127.0.0.1:41061
+1701965575166	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "59795" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileaVQ2pP"
+*** You are running in headless mode.
+Gtk-Message: 11:12:55.193: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1701965575368	Marionette	INFO	Marionette enabled
+1701965575418	Marionette	INFO	Listening on port 39997
+WebDriver BiDi listening on ws://127.0.0.1:59795
+Read port: 39997
+1701965575548	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+[Parent 121476, Main Thread] WARNING: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.558" (uid=1000 pid=121476 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2592 comm="/usr/bin/gnome-shell " label="unconfined")
+: 'glib warning', file /build/firefox/parts/firefox/build/toolkit/xre/nsSigHandlers.cpp:187
+
+** (firefox:121476): WARNING **: 11:12:56.009: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.558" (uid=1000 pid=121476 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2592 comm="/usr/bin/gnome-shell " label="unconfined")
+
+DevTools listening on ws://127.0.0.1:59795/devtools/browser/668a1b46-4d03-4827-9053-0caf3bdafcb4
+JavaScript warning: https://sc-static.net/scevent.min.js, line 2: Script terminated by timeout at:
+m@https://sc-static.net/scevent.min.js:2:2788
+c@https://sc-static.net/scevent.min.js:2:6744
+
+1701965580667	Marionette	INFO	Stopped listening on port 39997
+JavaScript warning: https://sportsbook.fanduel.com/static/js/vendor.be38fcf4dc00095925bb.js, line 2: Script terminated by timeout at:
+r@https://sportsbook.fanduel.com/static/js/vendor.be38fcf4dc00095925bb.js:2:1054101
+
+1701965581709	geckodriver	INFO	Listening on 127.0.0.1:49009
+1701965582069	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "58385" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileKS7vvj"
+*** You are running in headless mode.
+Gtk-Message: 11:13:02.093: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1701965582267	Marionette	INFO	Marionette enabled
+1701965582317	Marionette	INFO	Listening on port 44053
+WebDriver BiDi listening on ws://127.0.0.1:58385
+Read port: 44053
+1701965582445	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+[Parent 122047, Main Thread] WARNING: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.561" (uid=1000 pid=122047 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2592 comm="/usr/bin/gnome-shell " label="unconfined")
+: 'glib warning', file /build/firefox/parts/firefox/build/toolkit/xre/nsSigHandlers.cpp:187
+
+** (firefox:122047): WARNING **: 11:13:02.895: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.561" (uid=1000 pid=122047 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2592 comm="/usr/bin/gnome-shell " label="unconfined")
+
+DevTools listening on ws://127.0.0.1:58385/devtools/browser/7353584e-6fc8-49df-af6b-9234fc665ad6
+1701965585975	Marionette	INFO	Stopped listening on port 44053
+JavaScript warning: https://www.bovada.lv/assets/js/vendor.f656d63e74795f08b33c.js, line 2: Script terminated by timeout at:
+a/n.args[0]@https://www.bovada.lv/assets/js/vendor.f656d63e74795f08b33c.js:2:773949
+
+1702133861228	geckodriver	INFO	Listening on 127.0.0.1:47737
+1702133861418	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "43327" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileVG0GcW"
+*** You are running in headless mode.
+Gtk-Message: 09:57:41.446: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1702133861648	Marionette	INFO	Marionette enabled
+1702133861705	Marionette	INFO	Listening on port 43611
+WebDriver BiDi listening on ws://127.0.0.1:43327
+Read port: 43611
+1702133861819	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+[Parent 412502, Main Thread] WARNING: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.1901" (uid=1000 pid=412502 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2592 comm="/usr/bin/gnome-shell " label="unconfined")
+: 'glib warning', file /build/firefox/parts/firefox/build/toolkit/xre/nsSigHandlers.cpp:187
+
+** (firefox:412502): WARNING **: 09:57:42.319: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.1901" (uid=1000 pid=412502 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2592 comm="/usr/bin/gnome-shell " label="unconfined")
+
+DevTools listening on ws://127.0.0.1:43327/devtools/browser/1f9457c7-4101-42b9-99c2-b3dad8642b63
+JavaScript warning: https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js, line 19: unreachable code after return statement
+1702133866363	Marionette	INFO	Stopped listening on port 43611
+JavaScript warning: https://edge.fullstory.com/s/fs.js, line 4: Script terminated by timeout at:
+O/<@https://edge.fullstory.com/s/fs.js:4:9292
+
+1702133867263	geckodriver	INFO	Listening on 127.0.0.1:40469
+1702133867601	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "42065" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilecO3jnf"
+*** You are running in headless mode.
+Gtk-Message: 09:57:47.627: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1702133867805	Marionette	INFO	Marionette enabled
+1702133867854	Marionette	INFO	Listening on port 42687
+WebDriver BiDi listening on ws://127.0.0.1:42065
+Read port: 42687
+1702133867985	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+[Parent 412953, Main Thread] WARNING: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.1904" (uid=1000 pid=412953 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2592 comm="/usr/bin/gnome-shell " label="unconfined")
+: 'glib warning', file /build/firefox/parts/firefox/build/toolkit/xre/nsSigHandlers.cpp:187
+
+** (firefox:412953): WARNING **: 09:57:48.477: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.1904" (uid=1000 pid=412953 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2592 comm="/usr/bin/gnome-shell " label="unconfined")
+
+DevTools listening on ws://127.0.0.1:42065/devtools/browser/af2a9402-ea79-4435-9752-13d4fa81dcdb
+JavaScript warning: https://sportsbook.draftkings.com/Jn2PWL/Ly4k/Q-/Z1lf/woma6a82_qA/7c1ttQcDVfcuS5/GBAqNwE/Zn0dG/FNRYTkB, line 1: unreachable code after return statement
+libEGL warning: egl: failed to create dri2 screen
+JavaScript warning: https://sportsbook.draftkings.com/Jn2PWL/Ly4k/Q-/Z1lf/woma6a82_qA/7c1ttQcDVfcuS5/GBAqNwE/Zn0dG/FNRYTkB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sportsbook.draftkings.com/Jn2PWL/Ly4k/Q-/Z1lf/woma6a82_qA/7c1ttQcDVfcuS5/GBAqNwE/Zn0dG/FNRYTkB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sportsbook.draftkings.com/Jn2PWL/Ly4k/Q-/Z1lf/woma6a82_qA/7c1ttQcDVfcuS5/GBAqNwE/Zn0dG/FNRYTkB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sc-static.net/scevent.min.js, line 2: Script terminated by timeout at:
+m@https://sc-static.net/scevent.min.js:2:2788
+c@https://sc-static.net/scevent.min.js:2:6744
+
+1702133872587	Marionette	INFO	Stopped listening on port 42687
+JavaScript warning: https://sportsbook.draftkings.com/leagues/football/nfl, line 48: Script terminated by timeout at:
+nrWrapper@https://sportsbook.draftkings.com/leagues/football/nfl:48:15607
+
+1702133873876	geckodriver	INFO	Listening on 127.0.0.1:33155
+1702133874245	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "49805" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilenPo0yD"
+*** You are running in headless mode.
+Gtk-Message: 09:57:54.270: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1702133874450	Marionette	INFO	Marionette enabled
+1702133874501	Marionette	INFO	Listening on port 45467
+WebDriver BiDi listening on ws://127.0.0.1:49805
+Read port: 45467
+1702133874637	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+[Parent 413474, Main Thread] WARNING: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.1906" (uid=1000 pid=413474 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2592 comm="/usr/bin/gnome-shell " label="unconfined")
+: 'glib warning', file /build/firefox/parts/firefox/build/toolkit/xre/nsSigHandlers.cpp:187
+
+** (firefox:413474): WARNING **: 09:57:55.113: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.1906" (uid=1000 pid=413474 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2592 comm="/usr/bin/gnome-shell " label="unconfined")
+
+DevTools listening on ws://127.0.0.1:49805/devtools/browser/cc2580d3-2f0c-4ac6-9e3b-b20810f09cb0
+libEGL warning: egl: failed to create dri2 screen
+JavaScript warning: https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1702133877572	Marionette	INFO	Stopped listening on port 45467
+1702133878476	geckodriver	INFO	Listening on 127.0.0.1:37595
+1702133878832	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "54197" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile8pj7MO"
+*** You are running in headless mode.
+Gtk-Message: 09:57:58.857: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1702133879033	Marionette	INFO	Marionette enabled
+1702133879082	Marionette	INFO	Listening on port 41929
+WebDriver BiDi listening on ws://127.0.0.1:54197
+Read port: 41929
+1702133879214	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+[Parent 413912, Main Thread] WARNING: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.1908" (uid=1000 pid=413912 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2592 comm="/usr/bin/gnome-shell " label="unconfined")
+: 'glib warning', file /build/firefox/parts/firefox/build/toolkit/xre/nsSigHandlers.cpp:187
+
+** (firefox:413912): WARNING **: 09:57:59.715: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.1908" (uid=1000 pid=413912 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2592 comm="/usr/bin/gnome-shell " label="unconfined")
+
+DevTools listening on ws://127.0.0.1:54197/devtools/browser/f1a246ea-7907-4550-8acb-b6b58bf2e6c2
+1702133884121	Marionette	INFO	Stopped listening on port 41929
+JavaScript warning: https://www.googletagmanager.com/gtm.js?id=GTM-557C6Q2, line 103: Script terminated by timeout at:
+B@https://www.googletagmanager.com/gtm.js?id=GTM-557C6Q2:103:35
+B@https://www.googletagmanager.com/gtm.js?id=GTM-557C6Q2:103:147
+@https://www.googletagmanager.com/gtm.js?id=GTM-557C6Q2:623:430
+yf@https://www.googletagmanager.com/gtm.js?id=GTM-557C6Q2:154:199
+e@https://www.googletagmanager.com/gtm.js?id=GTM-557C6Q2:430:216
+Wa/<@https://www.googletagmanager.com/gtm.js?id=GTM-557C6Q2:99:130
+Pv/<@https://www.googletagmanager.com/gtm.js?id=GTM-557C6Q2:431:408
+Nv/<@https://www.googletagmanager.com/gtm.js?id=GTM-557C6Q2:431:148
+Kw@https://www.googletagmanager.com/gtm.js?id=GTM-557C6Q2:433:625
+Tw@https://www.googletagmanager.com/gtm.js?id=GTM-557C6Q2:438:194
+Px@https://www.googletagmanager.com/gtm.js?id=GTM-557C6Q2:452:272
+Sx@https://www.googletagmanager.com/gtm.js?id=GTM-557C6Q2:457:57
+Wx/b.push@https://www.googletagmanager.com/gtm.js?id=GTM-557C6Q2:461:315
+Cuog/ve/log/<@https://sportsbook.fanduel.com/static/js/main.1500326c5f61d7fc13d2.js:1:632533
+r@https://sportsbook.fanduel.com/static/js/vendor.be38fcf4dc00095925bb.js:2:1054240
+
+JavaScript warning: https://sc-static.net/scevent.min.js, line 2: Script terminated by timeout at:
+m@https://sc-static.net/scevent.min.js:2:2788
+tt/o<@https://sc-static.net/scevent.min.js:2:9389
+
+1702133885257	geckodriver	INFO	Listening on 127.0.0.1:50849
+1702133885617	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "35899" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofiletLNORP"
+*** You are running in headless mode.
+Gtk-Message: 09:58:05.641: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1702133885827	Marionette	INFO	Marionette enabled
+1702133885876	Marionette	INFO	Listening on port 42995
+WebDriver BiDi listening on ws://127.0.0.1:35899
+Read port: 42995
+1702133886005	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+[Parent 414381, Main Thread] WARNING: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.1910" (uid=1000 pid=414381 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2592 comm="/usr/bin/gnome-shell " label="unconfined")
+: 'glib warning', file /build/firefox/parts/firefox/build/toolkit/xre/nsSigHandlers.cpp:187
+
+** (firefox:414381): WARNING **: 09:58:06.498: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.1910" (uid=1000 pid=414381 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2592 comm="/usr/bin/gnome-shell " label="unconfined")
+
+DevTools listening on ws://127.0.0.1:35899/devtools/browser/edb79365-d36e-4668-a2e0-269cfd9462fd
+1702133889858	Marionette	INFO	Stopped listening on port 42995
+JavaScript warning: https://www.bovada.lv/assets/js/vendor.f656d63e74795f08b33c.js, line 2: Script terminated by timeout at:
+a/n.args[0]@https://www.bovada.lv/assets/js/vendor.f656d63e74795f08b33c.js:2:773949
+
+1702428663847	geckodriver	INFO	Listening on 127.0.0.1:53633
+1702428664218	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "44747" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile85wvPZ"
+*** You are running in headless mode.
+Gtk-Message: 19:51:04.244: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1702428664466	Marionette	INFO	Marionette enabled
+1702428664531	Marionette	INFO	Listening on port 45213
+WebDriver BiDi listening on ws://127.0.0.1:44747
+Read port: 45213
+1702428664722	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+[Parent 1060878, Main Thread] WARNING: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.6721" (uid=1000 pid=1060878 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2592 comm="/usr/bin/gnome-shell " label="unconfined")
+: 'glib warning', file /build/firefox/parts/firefox/build/toolkit/xre/nsSigHandlers.cpp:187
+
+** (firefox:1060878): WARNING **: 19:51:05.273: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.6721" (uid=1000 pid=1060878 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2592 comm="/usr/bin/gnome-shell " label="unconfined")
+
+DevTools listening on ws://127.0.0.1:44747/devtools/browser/00ab94e1-9f92-42a6-8342-abca70e08a8b
+JavaScript warning: https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js, line 19: unreachable code after return statement
+1702428667081	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1702428667708	Marionette	INFO	Stopped listening on port 45213
+1702428668615	geckodriver	INFO	Listening on 127.0.0.1:35189
+1702428668971	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "59319" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileIlm0W8"
+*** You are running in headless mode.
+Gtk-Message: 19:51:08.998: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1702428669206	Marionette	INFO	Marionette enabled
+1702428669261	Marionette	INFO	Listening on port 38601
+Read port: 38601
+WebDriver BiDi listening on ws://127.0.0.1:59319
+1702428669324	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+[Parent 1061295, Main Thread] WARNING: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.6723" (uid=1000 pid=1061295 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2592 comm="/usr/bin/gnome-shell " label="unconfined")
+: 'glib warning', file /build/firefox/parts/firefox/build/toolkit/xre/nsSigHandlers.cpp:187
+
+** (firefox:1061295): WARNING **: 19:51:09.935: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.6723" (uid=1000 pid=1061295 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2592 comm="/usr/bin/gnome-shell " label="unconfined")
+
+DevTools listening on ws://127.0.0.1:59319/devtools/browser/4317c5fb-32e2-4e17-a91f-baa5ca7af7b3
+JavaScript warning: https://sportsbook.draftkings.com/ACzMLsE84/vt/n2/vRWAM_toLMRkWA/7QV1QcDrpD7b/JGkkPDcC/YwkfVms8/VloB, line 1: unreachable code after return statement
+JavaScript warning: https://sportsbook.draftkings.com/_sec/cp_challenge/sec-cpt-4-1.js, line 1: unreachable code after return statement
+libEGL warning: egl: failed to create dri2 screen
+JavaScript warning: https://sportsbook.draftkings.com/ACzMLsE84/vt/n2/vRWAM_toLMRkWA/7QV1QcDrpD7b/JGkkPDcC/YwkfVms8/VloB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sportsbook.draftkings.com/ACzMLsE84/vt/n2/vRWAM_toLMRkWA/7QV1QcDrpD7b/JGkkPDcC/YwkfVms8/VloB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sportsbook.draftkings.com/ACzMLsE84/vt/n2/vRWAM_toLMRkWA/7QV1QcDrpD7b/JGkkPDcC/YwkfVms8/VloB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sc-static.net/scevent.min.js, line 2: Script terminated by timeout at:
+m@https://sc-static.net/scevent.min.js:2:2788
+c@https://sc-static.net/scevent.min.js:2:6744
+
+1702428674236	Marionette	INFO	Stopped listening on port 38601
+JavaScript warning: https://sportsbook.draftkings.com/leagues/football/nfl, line 48: Script terminated by timeout at:
+nrWrapper@https://sportsbook.draftkings.com/leagues/football/nfl:48:15607
+
+1702428677640	geckodriver	INFO	Listening on 127.0.0.1:49175
+1702428678000	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "59905" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile4ugtG9"
+*** You are running in headless mode.
+Gtk-Message: 19:51:18.027: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1702428678241	Marionette	INFO	Marionette enabled
+1702428678298	Marionette	INFO	Listening on port 43407
+Read port: 43407
+WebDriver BiDi listening on ws://127.0.0.1:59905
+1702428678349	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+[Parent 1061839, Main Thread] WARNING: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.6726" (uid=1000 pid=1061839 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2592 comm="/usr/bin/gnome-shell " label="unconfined")
+: 'glib warning', file /build/firefox/parts/firefox/build/toolkit/xre/nsSigHandlers.cpp:187
+
+** (firefox:1061839): WARNING **: 19:51:19.016: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.6726" (uid=1000 pid=1061839 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2592 comm="/usr/bin/gnome-shell " label="unconfined")
+
+DevTools listening on ws://127.0.0.1:59905/devtools/browser/2eed2ebc-ebba-47bb-986e-120e9b275287
+libEGL warning: egl: failed to create dri2 screen
+JavaScript warning: https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1702428683328	Marionette	INFO	Stopped listening on port 43407
+JavaScript warning: https://casinogames.nj.betmgm.com/htmllobby/minilobby/polyfills.a4aeb25d3dc48e59e0a8.js, line 2: Script terminated by timeout at:
+0TWp/dt/u/n.args[0]@https://casinogames.nj.betmgm.com/htmllobby/minilobby/polyfills.a4aeb25d3dc48e59e0a8.js:2:39038
+
+1702428684218	geckodriver	INFO	Listening on 127.0.0.1:60715
+1702428684588	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "45085" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileF38qE3"
+*** You are running in headless mode.
+Gtk-Message: 19:51:24.615: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1702428684826	Marionette	INFO	Marionette enabled
+1702428684882	Marionette	INFO	Listening on port 40445
+Read port: 40445
+WebDriver BiDi listening on ws://127.0.0.1:45085
+1702428684937	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+[Parent 1062287, Main Thread] WARNING: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.6728" (uid=1000 pid=1062287 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2592 comm="/usr/bin/gnome-shell " label="unconfined")
+: 'glib warning', file /build/firefox/parts/firefox/build/toolkit/xre/nsSigHandlers.cpp:187
+
+** (firefox:1062287): WARNING **: 19:51:25.593: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.6728" (uid=1000 pid=1062287 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2592 comm="/usr/bin/gnome-shell " label="unconfined")
+
+DevTools listening on ws://127.0.0.1:45085/devtools/browser/481b3b71-06d3-4b55-afd8-e6b74c17a1f2
+JavaScript warning: https://sc-static.net/scevent.min.js, line 2: Script terminated by timeout at:
+m@https://sc-static.net/scevent.min.js:2:2788
+c@https://sc-static.net/scevent.min.js:2:6744
+
+libEGL warning: egl: failed to create dri2 screen
+JavaScript warning: https://sportsbook.fanduel.com/JMCVuBG8/init.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.error: "update.locale" " file doesn't exist in either the application or GRE directories"
+1702428715294	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1702428721662	geckodriver	INFO	Listening on 127.0.0.1:37711
+1702428721918	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "37953" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile80qwFm"
+*** You are running in headless mode.
+Gtk-Message: 19:52:01.945: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1702428722150	Marionette	INFO	Marionette enabled
+1702428722208	Marionette	INFO	Listening on port 38857
+WebDriver BiDi listening on ws://127.0.0.1:37953
+Read port: 38857
+1702428722264	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+[Parent 1063349, Main Thread] WARNING: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.6733" (uid=1000 pid=1063349 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2592 comm="/usr/bin/gnome-shell " label="unconfined")
+: 'glib warning', file /build/firefox/parts/firefox/build/toolkit/xre/nsSigHandlers.cpp:187
+
+** (firefox:1063349): WARNING **: 19:52:03.029: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.6733" (uid=1000 pid=1063349 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2592 comm="/usr/bin/gnome-shell " label="unconfined")
+
+DevTools listening on ws://127.0.0.1:37953/devtools/browser/7c6c603e-770e-466a-87b9-6749c58ce207
+JavaScript warning: https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js, line 19: unreachable code after return statement
+1702428726834	Marionette	INFO	Stopped listening on port 38857
+JavaScript warning: https://edge.fullstory.com/s/fs.js, line 4: Script terminated by timeout at:
+O/<@https://edge.fullstory.com/s/fs.js:4:9292
+
+1702428728227	geckodriver	INFO	Listening on 127.0.0.1:39711
+1702428728720	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "41629" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileXstise"
+*** You are running in headless mode.
+Gtk-Message: 19:52:08.749: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1702428728993	Marionette	INFO	Marionette enabled
+1702428729066	Marionette	INFO	Listening on port 44487
+WebDriver BiDi listening on ws://127.0.0.1:41629
+Read port: 44487
+1702428729252	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+[Parent 1063786, Main Thread] WARNING: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.6735" (uid=1000 pid=1063786 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2592 comm="/usr/bin/gnome-shell " label="unconfined")
+: 'glib warning', file /build/firefox/parts/firefox/build/toolkit/xre/nsSigHandlers.cpp:187
+
+** (firefox:1063786): WARNING **: 19:52:09.856: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.6735" (uid=1000 pid=1063786 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2592 comm="/usr/bin/gnome-shell " label="unconfined")
+
+DevTools listening on ws://127.0.0.1:41629/devtools/browser/fac232fa-b68d-4b56-a927-cb9807125eea
+JavaScript warning: https://sportsbook.draftkings.com/ACzMLsE84/vt/n2/vRWAM_toLMRkWA/7QV1QcDrpD7b/JGkkPDcC/YwkfVms8/VloB, line 1: unreachable code after return statement
+JavaScript warning: https://sportsbook.draftkings.com/_sec/cp_challenge/sec-cpt-4-1.js, line 1: unreachable code after return statement
+libEGL warning: egl: failed to create dri2 screen
+JavaScript warning: https://sportsbook.draftkings.com/ACzMLsE84/vt/n2/vRWAM_toLMRkWA/7QV1QcDrpD7b/JGkkPDcC/YwkfVms8/VloB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sportsbook.draftkings.com/ACzMLsE84/vt/n2/vRWAM_toLMRkWA/7QV1QcDrpD7b/JGkkPDcC/YwkfVms8/VloB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sportsbook.draftkings.com/ACzMLsE84/vt/n2/vRWAM_toLMRkWA/7QV1QcDrpD7b/JGkkPDcC/YwkfVms8/VloB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sc-static.net/scevent.min.js, line 2: Script terminated by timeout at:
+m@https://sc-static.net/scevent.min.js:2:2788
+c@https://sc-static.net/scevent.min.js:2:6744
+
+1702428734594	Marionette	INFO	Stopped listening on port 44487
+JavaScript warning: https://sportsbook.draftkings.com/leagues/football/nfl, line 48: Script terminated by timeout at:
+nrWrapper@https://sportsbook.draftkings.com/leagues/football/nfl:48:15607
+
+1702428736137	geckodriver	INFO	Listening on 127.0.0.1:57425
+1702428736354	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "55161" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofiley5OuQe"
+*** You are running in headless mode.
+Gtk-Message: 19:52:16.383: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1702428736597	Marionette	INFO	Marionette enabled
+1702428736655	Marionette	INFO	Listening on port 34177
+WebDriver BiDi listening on ws://127.0.0.1:55161
+Read port: 34177
+1702428736817	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+[Parent 1064393, Main Thread] WARNING: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.6738" (uid=1000 pid=1064393 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2592 comm="/usr/bin/gnome-shell " label="unconfined")
+: 'glib warning', file /build/firefox/parts/firefox/build/toolkit/xre/nsSigHandlers.cpp:187
+
+** (firefox:1064393): WARNING **: 19:52:17.416: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.6738" (uid=1000 pid=1064393 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2592 comm="/usr/bin/gnome-shell " label="unconfined")
+
+DevTools listening on ws://127.0.0.1:55161/devtools/browser/000d43f7-27b9-41f5-a6a3-8fbe3766385c
+libEGL warning: egl: failed to create dri2 screen
+JavaScript warning: https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1702428740594	Marionette	INFO	Stopped listening on port 34177
+JavaScript warning: https://sports.nj.betmgm.com/ClientDist/polyfills.1f3f08edea812ee5.js, line 1: Script terminated by timeout at:
+Q@https://sports.nj.betmgm.com/ClientDist/polyfills.1f3f08edea812ee5.js:1:17704
+76657/</I/<@https://sports.nj.betmgm.com/ClientDist/polyfills.1f3f08edea812ee5.js:1:17504
+76657/</w/</<@https://sports.nj.betmgm.com/ClientDist/polyfills.1f3f08edea812ee5.js:1:17609
+t@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2949809
+a@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2949965
+83918/n/</<@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2950024
+t@https://sports.nj.betmgm.com/ClientDist/polyfills.1f3f08edea812ee5.js:1:20807
+83918/n/<@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2949905
+addStyle@https://sports.nj.betmgm.com/ClientDist/vendor.1507ddd549416f51.js:1:603826
+add/<@https://sports.nj.betmgm.com/ClientDist/vn-css-overrides.cc900f4994c2bd62.js:1:1153
+t@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2949762
+a@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2949965
+83918/n/</<@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2950024
+t@https://sports.nj.betmgm.com/ClientDist/polyfills.1f3f08edea812ee5.js:1:20807
+83918/n/<@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2949905
+add@https://sports.nj.betmgm.com/ClientDist/vn-css-overrides.cc900f4994c2bd62.js:1:1179
+show/<@https://sports.nj.betmgm.com/ClientDist/vn-css-overrides.cc900f4994c2bd62.js:1:1076
+t@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2949762
+a@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2949965
+invoke@https://sports.nj.betmgm.com/ClientDist/polyfills.1f3f08edea812ee5.js:1:8993
+onInvoke@https://sports.nj.betmgm.com/ClientDist/vendor.1507ddd549416f51.js:1:255658
+invoke@https://sports.nj.betmgm.com/ClientDist/polyfills.1f3f08edea812ee5.js:1:8933
+run@https://sports.nj.betmgm.com/ClientDist/polyfills.1f3f08edea812ee5.js:1:4345
+76657/</fe/<@https://sports.nj.betmgm.com/ClientDist/polyfills.1f3f08edea812ee5.js:1:19213
+invokeTask@https://sports.nj.betmgm.com/ClientDist/polyfills.1f3f08edea812ee5.js:1:9611
+onInvokeTask@https://sports.nj.betmgm.com/ClientDist/vendor.1507ddd549416f51.js:1:255474
+invokeTask@https://sports.nj.betmgm.com/ClientDist/polyfills.1f3f08edea812ee5.js:1:9532
+runTask@https://sports.nj.betmgm.com/ClientDist/polyfills.1f3f08edea812ee5.js:1:4968
+_@https://sports.nj.betmgm.com/ClientDist/polyfills.1f3f08edea812ee5.js:1:11638
+invokeTask@https://sports.nj.betmgm.com/ClientDist/polyfills.1f3f08edea812ee5.js:1:10695
+76657/m/this.invoke<@https://sports.nj.betmgm.com/ClientDist/polyfills.1f3f08edea812ee5.js:1:10566
+76657/je/d/m.args[0]@https://sports.nj.betmgm.com/ClientDist/polyfills.1f3f08edea812ee5.js:1:30352
+
+1702428741477	geckodriver	INFO	Listening on 127.0.0.1:35593
+1702428741849	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "52631" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilemTSgU7"
+*** You are running in headless mode.
+Gtk-Message: 19:52:21.876: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1702428742109	Marionette	INFO	Marionette enabled
+1702428742169	Marionette	INFO	Listening on port 35405
+WebDriver BiDi listening on ws://127.0.0.1:52631
+Read port: 35405
+1702428742331	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+[Parent 1064839, Main Thread] WARNING: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.6740" (uid=1000 pid=1064839 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2592 comm="/usr/bin/gnome-shell " label="unconfined")
+: 'glib warning', file /build/firefox/parts/firefox/build/toolkit/xre/nsSigHandlers.cpp:187
+
+** (firefox:1064839): WARNING **: 19:52:22.957: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.6740" (uid=1000 pid=1064839 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2592 comm="/usr/bin/gnome-shell " label="unconfined")
+
+DevTools listening on ws://127.0.0.1:52631/devtools/browser/c9e67e13-4799-474e-a6c5-3db7666a4c71
+1702428744775	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1702428744780	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1702428744792	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1702428744797	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1702428744800	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1702428744803	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1702428744807	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1702428744811	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1702428744814	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1702428744817	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+libEGL warning: egl: failed to create dri2 screen
+JavaScript warning: https://sportsbook.fanduel.com/JMCVuBG8/init.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.error: "update.locale" " file doesn't exist in either the application or GRE directories"
+1702428774268	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1702571435901	geckodriver	INFO	Listening on 127.0.0.1:36311
+1702571436147	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "47683" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileMKJzdx"
+*** You are running in headless mode.
+Gtk-Message: 11:30:36.172: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1702571436380	Marionette	INFO	Marionette enabled
+1702571436440	Marionette	INFO	Listening on port 41255
+Read port: 41255
+WebDriver BiDi listening on ws://127.0.0.1:47683
+1702571436491	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+[Parent 201362, Main Thread] WARNING: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.712" (uid=1000 pid=201362 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2222 comm="/usr/bin/gnome-shell " label="unconfined")
+: 'glib warning', file /build/firefox/parts/firefox/build/toolkit/xre/nsSigHandlers.cpp:187
+
+** (firefox:201362): WARNING **: 11:30:37.227: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.712" (uid=1000 pid=201362 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2222 comm="/usr/bin/gnome-shell " label="unconfined")
+
+DevTools listening on ws://127.0.0.1:47683/devtools/browser/ae97ec2f-dd51-4ce3-8c88-4c7fc13667a1
+JavaScript warning: https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js, line 19: unreachable code after return statement
+1702571441568	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1702571442216	Marionette	INFO	Stopped listening on port 41255
+JavaScript warning: https://classic.sportsbetting.ag/sportsbook/Scripts/nr-browser-apm.js, line 6: Script terminated by timeout at:
+i@https://classic.sportsbetting.ag/sportsbook/Scripts/nr-browser-apm.js:6:16435
+nrWrapper@https://classic.sportsbetting.ag/sportsbook/Scripts/nr-browser-apm.js:6:16381
+
+1702571443115	geckodriver	INFO	Listening on 127.0.0.1:35685
+1702571443489	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "54557" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilebeI4ns"
+*** You are running in headless mode.
+Gtk-Message: 11:30:43.513: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1702571443692	Marionette	INFO	Marionette enabled
+1702571443744	Marionette	INFO	Listening on port 34127
+WebDriver BiDi listening on ws://127.0.0.1:54557
+Read port: 34127
+1702571443879	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+[Parent 201790, Main Thread] WARNING: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.714" (uid=1000 pid=201790 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2222 comm="/usr/bin/gnome-shell " label="unconfined")
+: 'glib warning', file /build/firefox/parts/firefox/build/toolkit/xre/nsSigHandlers.cpp:187
+
+** (firefox:201790): WARNING **: 11:30:44.388: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.714" (uid=1000 pid=201790 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2222 comm="/usr/bin/gnome-shell " label="unconfined")
+
+DevTools listening on ws://127.0.0.1:54557/devtools/browser/c9c8832b-c491-4512-85da-207f9c91b2bf
+JavaScript warning: https://sportsbook.draftkings.com/8mfZSo/9/M/AvvzeeTmtnF8/w31hXpXzwQ/fSZnAQ/CE9TZxNM/dREB, line 1: unreachable code after return statement
+JavaScript warning: https://sportsbook.draftkings.com/_sec/cp_challenge/sec-cpt-4-1.js, line 1: unreachable code after return statement
+libEGL warning: egl: failed to create dri2 screen
+JavaScript warning: https://sportsbook.draftkings.com/8mfZSo/9/M/AvvzeeTmtnF8/w31hXpXzwQ/fSZnAQ/CE9TZxNM/dREB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sportsbook.draftkings.com/8mfZSo/9/M/AvvzeeTmtnF8/w31hXpXzwQ/fSZnAQ/CE9TZxNM/dREB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sportsbook.draftkings.com/8mfZSo/9/M/AvvzeeTmtnF8/w31hXpXzwQ/fSZnAQ/CE9TZxNM/dREB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sc-static.net/scevent.min.js, line 2: Script terminated by timeout at:
+m@https://sc-static.net/scevent.min.js:2:2788
+c@https://sc-static.net/scevent.min.js:2:6744
+
+1702571449537	Marionette	INFO	Stopped listening on port 34127
+JavaScript warning: https://sportsbook.draftkings.com/leagues/football/nfl, line 48: Script terminated by timeout at:
+nrWrapper@https://sportsbook.draftkings.com/leagues/football/nfl:48:15607
+
+1702571451068	geckodriver	INFO	Listening on 127.0.0.1:58991
+1702571451286	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "38921" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileERfGpO"
+*** You are running in headless mode.
+Gtk-Message: 11:30:51.311: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1702571451493	Marionette	INFO	Marionette enabled
+1702571451544	Marionette	INFO	Listening on port 36741
+WebDriver BiDi listening on ws://127.0.0.1:38921
+Read port: 36741
+1702571451703	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+[Parent 202327, Main Thread] WARNING: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.716" (uid=1000 pid=202327 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2222 comm="/usr/bin/gnome-shell " label="unconfined")
+: 'glib warning', file /build/firefox/parts/firefox/build/toolkit/xre/nsSigHandlers.cpp:187
+
+** (firefox:202327): WARNING **: 11:30:52.333: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.716" (uid=1000 pid=202327 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2222 comm="/usr/bin/gnome-shell " label="unconfined")
+
+DevTools listening on ws://127.0.0.1:38921/devtools/browser/f9d500e7-7077-4beb-bcb5-ca7712553f19
+libEGL warning: egl: failed to create dri2 screen
+JavaScript warning: https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1702571455290	Marionette	INFO	Stopped listening on port 36741
+JavaScript warning: https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js, line 1: Script terminated by timeout at:
+v@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2749988
+nt@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2745488
+at@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2747228
+51564/at/<@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2747416
+t@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2742122
+at@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2747359
+51564/at/<@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2747416
+t@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2742122
+at@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2747359
+51564/at/<@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2747416
+t@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2742122
+at@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2747359
+51564/at/<@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2747416
+t@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2742122
+at@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2747359
+51564/at/<@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2747416
+t@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2742122
+at@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2747359
+51564/at/<@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2747416
+t@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2742122
+at@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2747359
+d@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2775933
+evaluateDsl@https://sports.nj.betmgm.com/ClientDist/vendor.1507ddd549416f51.js:1:584263
+B@https://sports.nj.betmgm.com/ClientDist/vendor.1507ddd549416f51.js:1:583464
+74329/evaluateContent/Pt</</<@https://sports.nj.betmgm.com/ClientDist/vendor.1507ddd549416f51.js:1:583591
+next@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2550622
+_next@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2550306
+next@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2550001
+74520/o/</<@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2565013
+35678/o/this._next<@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2561203
+next@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2550001
+59877/next/<@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2547965
+o@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2583858
+next@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2547804
+74329/r/<@https://sports.nj.betmgm.com/ClientDist/vendor.1507ddd549416f51.js:1:580919
+next@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2550622
+_next@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2550306
+next@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2550001
+79736/o/</<@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2566760
+35678/o/this._next<@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2561203
+next@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2550001
+97766/s/</<@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2562361
+35678/o/this._next<@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2561203
+next@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2550001
+r@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2563039
+i@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2563140
+_execute@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2577546
+execute@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2577391
+flush@https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js:1:2578296
+76657/je/c</</A[0]@https://sports.nj.betmgm.com/ClientDist/polyfills.1f3f08edea812ee5.js:1:30640
+invokeTask@https://sports.nj.betmgm.com/ClientDist/polyfills.1f3f08edea812ee5.js:1:9611
+onInvokeTask@https://sports.nj.betmgm.com/ClientDist/vendor.1507ddd549416f51.js:1:255474
+invokeTask@https://sports.nj.betmgm.com/ClientDist/polyfills.1f3f08edea812ee5.js:1:9532
+runTask@https://sports.nj.betmgm.com/ClientDist/polyfills.1f3f08edea812ee5.js:1:4968
+invokeTask@https://sports.nj.betmgm.com/ClientDist/polyfills.1f3f08edea812ee5.js:1:10665
+76657/m/this.invoke<@https://sports.nj.betmgm.com/ClientDist/polyfills.1f3f08edea812ee5.js:1:10566
+76657/je/d/m.args[0]@https://sports.nj.betmgm.com/ClientDist/polyfills.1f3f08edea812ee5.js:1:30352
+
+1702571456183	geckodriver	INFO	Listening on 127.0.0.1:48415
+1702571456548	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "52559" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileDJzUOj"
+*** You are running in headless mode.
+Gtk-Message: 11:30:56.574: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1702571456789	Marionette	INFO	Marionette enabled
+1702571456839	Marionette	INFO	Listening on port 41439
+WebDriver BiDi listening on ws://127.0.0.1:52559
+Read port: 41439
+1702571456959	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+[Parent 202759, Main Thread] WARNING: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.718" (uid=1000 pid=202759 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2222 comm="/usr/bin/gnome-shell " label="unconfined")
+: 'glib warning', file /build/firefox/parts/firefox/build/toolkit/xre/nsSigHandlers.cpp:187
+
+** (firefox:202759): WARNING **: 11:30:57.464: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.718" (uid=1000 pid=202759 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2222 comm="/usr/bin/gnome-shell " label="unconfined")
+
+DevTools listening on ws://127.0.0.1:52559/devtools/browser/08a7fd2b-9375-4af9-9134-ad9ad7d89999
+JavaScript warning: https://sc-static.net/scevent.min.js, line 2: Script terminated by timeout at:
+m@https://sc-static.net/scevent.min.js:2:2788
+c@https://sc-static.net/scevent.min.js:2:6744
+
+libEGL warning: egl: failed to create dri2 screen
+JavaScript warning: https://sportsbook.fanduel.com/JMCVuBG8/init.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.error: "update.locale" " file doesn't exist in either the application or GRE directories"
+1702571486822	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1702571507330	geckodriver	INFO	Listening on 127.0.0.1:37121
+1702571507514	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "43891" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileaZPh9P"
+*** You are running in headless mode.
+Gtk-Message: 11:31:47.539: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1702571507719	Marionette	INFO	Marionette enabled
+1702571507772	Marionette	INFO	Listening on port 41871
+WebDriver BiDi listening on ws://127.0.0.1:43891
+Read port: 41871
+1702571507903	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+[Parent 203314, Main Thread] WARNING: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.720" (uid=1000 pid=203314 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2222 comm="/usr/bin/gnome-shell " label="unconfined")
+: 'glib warning', file /build/firefox/parts/firefox/build/toolkit/xre/nsSigHandlers.cpp:187
+
+** (firefox:203314): WARNING **: 11:31:48.418: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.720" (uid=1000 pid=203314 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2222 comm="/usr/bin/gnome-shell " label="unconfined")
+
+DevTools listening on ws://127.0.0.1:43891/devtools/browser/678b750e-7312-4767-8d57-04af7ad1e9fd
+JavaScript warning: https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js, line 19: unreachable code after return statement
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1702571515133	geckodriver	INFO	Listening on 127.0.0.1:37483
+1702571515258	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "58547" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileRuU7vF"
+*** You are running in headless mode.
+Gtk-Message: 11:31:55.283: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1702571515465	Marionette	INFO	Marionette enabled
+1702571515522	Marionette	INFO	Listening on port 43449
+WebDriver BiDi listening on ws://127.0.0.1:58547
+Read port: 43449
+1702571515652	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+[Parent 203660, Main Thread] WARNING: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.722" (uid=1000 pid=203660 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2222 comm="/usr/bin/gnome-shell " label="unconfined")
+: 'glib warning', file /build/firefox/parts/firefox/build/toolkit/xre/nsSigHandlers.cpp:187
+
+** (firefox:203660): WARNING **: 11:31:56.128: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.722" (uid=1000 pid=203660 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2222 comm="/usr/bin/gnome-shell " label="unconfined")
+
+DevTools listening on ws://127.0.0.1:58547/devtools/browser/ce8d7777-f122-41c0-9be8-c90fba0aa1f6
+JavaScript warning: https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js, line 19: unreachable code after return statement
+1702571520032	Marionette	INFO	Stopped listening on port 43449
+JavaScript warning: https://edge.fullstory.com/s/fs.js, line 4: Script terminated by timeout at:
+O/<@https://edge.fullstory.com/s/fs.js:4:9292
+
+1702571521302	geckodriver	INFO	Listening on 127.0.0.1:44143
+1702571521793	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "51841" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile4akyZc"
+*** You are running in headless mode.
+Gtk-Message: 11:32:01.818: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1702571522006	Marionette	INFO	Marionette enabled
+1702571522065	Marionette	INFO	Listening on port 34455
+WebDriver BiDi listening on ws://127.0.0.1:51841
+Read port: 34455
+1702571522202	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+[Parent 204063, Main Thread] WARNING: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.724" (uid=1000 pid=204063 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2222 comm="/usr/bin/gnome-shell " label="unconfined")
+: 'glib warning', file /build/firefox/parts/firefox/build/toolkit/xre/nsSigHandlers.cpp:187
+
+** (firefox:204063): WARNING **: 11:32:02.712: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.724" (uid=1000 pid=204063 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2222 comm="/usr/bin/gnome-shell " label="unconfined")
+
+DevTools listening on ws://127.0.0.1:51841/devtools/browser/505310d4-9ad6-460f-a7dc-881fc9ca1511
+JavaScript warning: https://sportsbook.draftkings.com/8mfZSo/9/M/AvvzeeTmtnF8/w31hXpXzwQ/fSZnAQ/CE9TZxNM/dREB, line 1: unreachable code after return statement
+JavaScript warning: https://sportsbook.draftkings.com/_sec/cp_challenge/sec-cpt-4-1.js, line 1: unreachable code after return statement
+libEGL warning: egl: failed to create dri2 screen
+JavaScript warning: https://sportsbook.draftkings.com/8mfZSo/9/M/AvvzeeTmtnF8/w31hXpXzwQ/fSZnAQ/CE9TZxNM/dREB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sportsbook.draftkings.com/8mfZSo/9/M/AvvzeeTmtnF8/w31hXpXzwQ/fSZnAQ/CE9TZxNM/dREB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sportsbook.draftkings.com/8mfZSo/9/M/AvvzeeTmtnF8/w31hXpXzwQ/fSZnAQ/CE9TZxNM/dREB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1702571526351	Marionette	INFO	Stopped listening on port 34455
+JavaScript warning: https://js.adsrvr.org/universal_pixel.1.1.0.js, line 1: Script terminated by timeout at:
+n@https://js.adsrvr.org/universal_pixel.1.1.0.js:1:296
+TTDCM/this.init@https://js.adsrvr.org/universal_pixel.1.1.0.js:1:477
+@https://match.adsrvr.org/track/upb/?adv=psxacxe&ref=https%3A%2F%2Fsportsbook.draftkings.com%2Fleagues%2Ffootball%2Fnfl&upid=p5iiifm&upv=1.1.0:11:23
+@https://match.adsrvr.org/track/upb/?adv=psxacxe&ref=https%3A%2F%2Fsportsbook.draftkings.com%2Fleagues%2Ffootball%2Fnfl&upid=p5iiifm&upv=1.1.0:12:15
+
+JavaScript warning: https://sportsbook.draftkings.com/leagues/football/nfl, line 48: Script terminated by timeout at:
+nrWrapper@https://sportsbook.draftkings.com/leagues/football/nfl:48:15607
+
+1702571529889	geckodriver	INFO	Listening on 127.0.0.1:39953
+1702571530105	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "37907" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilebku3cF"
+*** You are running in headless mode.
+Gtk-Message: 11:32:10.129: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1702571530314	Marionette	INFO	Marionette enabled
+1702571530369	Marionette	INFO	Listening on port 34105
+WebDriver BiDi listening on ws://127.0.0.1:37907
+Read port: 34105
+1702571530516	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+[Parent 204599, Main Thread] WARNING: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.726" (uid=1000 pid=204599 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2222 comm="/usr/bin/gnome-shell " label="unconfined")
+: 'glib warning', file /build/firefox/parts/firefox/build/toolkit/xre/nsSigHandlers.cpp:187
+
+** (firefox:204599): WARNING **: 11:32:11.049: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.726" (uid=1000 pid=204599 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2222 comm="/usr/bin/gnome-shell " label="unconfined")
+
+DevTools listening on ws://127.0.0.1:37907/devtools/browser/1d118248-b2f8-4b4d-afb1-f3db35498a03
+libEGL warning: egl: failed to create dri2 screen
+JavaScript warning: https://sports.nj.betmgm.com/ClientDist/main.9d8e692abfd1b2d8.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1702571534473	Marionette	INFO	Stopped listening on port 34105
+JavaScript warning: https://s.go-mpulse.net/boomerang/Y7GWT-NNGZ5-ZQ87J-PKAU9-X68KK, line 10: Script terminated by timeout at:
+c@https://s.go-mpulse.net/boomerang/Y7GWT-NNGZ5-ZQ87J-PKAU9-X68KK:10:43296
+
+1702571535313	geckodriver	INFO	Listening on 127.0.0.1:37119
+1702571535702	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "53725" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileZqXdXR"
+*** You are running in headless mode.
+Gtk-Message: 11:32:15.728: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1702571535907	Marionette	INFO	Marionette enabled
+1702571535957	Marionette	INFO	Listening on port 46759
+WebDriver BiDi listening on ws://127.0.0.1:53725
+Read port: 46759
+1702571536092	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+[Parent 205035, Main Thread] WARNING: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.728" (uid=1000 pid=205035 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2222 comm="/usr/bin/gnome-shell " label="unconfined")
+: 'glib warning', file /build/firefox/parts/firefox/build/toolkit/xre/nsSigHandlers.cpp:187
+
+** (firefox:205035): WARNING **: 11:32:16.659: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.728" (uid=1000 pid=205035 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2222 comm="/usr/bin/gnome-shell " label="unconfined")
+
+DevTools listening on ws://127.0.0.1:53725/devtools/browser/9fa90e51-033c-4c56-ac9b-8a60c2c971e4
+1702571539224	Marionette	INFO	Stopped listening on port 46759
+JavaScript error: https://cdn.quantummetric.com/qscripts/quantum-fanduel.js, line 421: TypeError: a is null
+JavaScript error: https://cdn.quantummetric.com/qscripts/quantum-fanduel.js, line 421: TypeError: a is null
+libEGL warning: egl: failed to create dri2 screen
+JavaScript warning: https://sportsbook.fanduel.com/JMCVuBG8/init.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1702657892292	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1703786655887	geckodriver	INFO	Listening on 127.0.0.1:34553
+1703786656014	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "56979" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileqx9oiC"
+*** You are running in headless mode.
+Gtk-Message: 13:04:16.039: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1703786656218	Marionette	INFO	Marionette enabled
+1703786656271	Marionette	INFO	Listening on port 43205
+WebDriver BiDi listening on ws://127.0.0.1:56979
+Read port: 43205
+1703786656406	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+[Parent 281404, Main Thread] WARNING: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.1195" (uid=1000 pid=281404 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2270 comm="/usr/bin/gnome-shell " label="unconfined")
+: 'glib warning', file /build/firefox/parts/firefox/build/toolkit/xre/nsSigHandlers.cpp:187
+
+** (firefox:281404): WARNING **: 13:04:16.934: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.1195" (uid=1000 pid=281404 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2270 comm="/usr/bin/gnome-shell " label="unconfined")
+
+DevTools listening on ws://127.0.0.1:56979/devtools/browser/03efac8e-ee82-44fc-8d76-2d3582e80d86
+JavaScript warning: https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js, line 19: unreachable code after return statement
+1703786660428	Marionette	INFO	Stopped listening on port 43205
+1703786661373	geckodriver	INFO	Listening on 127.0.0.1:32901
+1703786661733	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "40413" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile6ki5tW"
+*** You are running in headless mode.
+Gtk-Message: 13:04:21.757: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1703786661937	Marionette	INFO	Marionette enabled
+1703786661986	Marionette	INFO	Listening on port 41949
+WebDriver BiDi listening on ws://127.0.0.1:40413
+Read port: 41949
+1703786662112	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+[Parent 281802, Main Thread] WARNING: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.1197" (uid=1000 pid=281802 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2270 comm="/usr/bin/gnome-shell " label="unconfined")
+: 'glib warning', file /build/firefox/parts/firefox/build/toolkit/xre/nsSigHandlers.cpp:187
+
+** (firefox:281802): WARNING **: 13:04:22.582: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.1197" (uid=1000 pid=281802 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2270 comm="/usr/bin/gnome-shell " label="unconfined")
+
+DevTools listening on ws://127.0.0.1:40413/devtools/browser/51bf5546-50b3-4f47-9021-1f237882931d
+JavaScript warning: https://sportsbook.draftkings.com/c75e0Um0B/3_v8Hwm/GA/aOOathhkh2/XmE7QS8hAQ/YG51JX1M/K1gB, line 1: unreachable code after return statement
+JavaScript warning: https://sportsbook.draftkings.com/_sec/cp_challenge/sec-cpt-4-1.js, line 1: unreachable code after return statement
+libEGL warning: egl: failed to create dri2 screen
+JavaScript warning: https://sportsbook.draftkings.com/c75e0Um0B/3_v8Hwm/GA/aOOathhkh2/XmE7QS8hAQ/YG51JX1M/K1gB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sportsbook.draftkings.com/c75e0Um0B/3_v8Hwm/GA/aOOathhkh2/XmE7QS8hAQ/YG51JX1M/K1gB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sportsbook.draftkings.com/c75e0Um0B/3_v8Hwm/GA/aOOathhkh2/XmE7QS8hAQ/YG51JX1M/K1gB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sc-static.net/scevent.min.js, line 2: Script terminated by timeout at:
+@https://sc-static.net/scevent.min.js:2:22118
+Q/c/s/<@https://sc-static.net/scevent.min.js:2:4651
+m@https://sc-static.net/scevent.min.js:2:2805
+s@https://sc-static.net/scevent.min.js:2:4629
+m@https://sc-static.net/scevent.min.js:2:2805
+Q/c.send@https://sc-static.net/scevent.min.js:2:4937
+ki@https://sc-static.net/scevent.min.js:2:35529
+@https://sc-static.net/scevent.min.js:2:37916
+Q/c/s/<@https://sc-static.net/scevent.min.js:2:4651
+m@https://sc-static.net/scevent.min.js:2:2805
+s@https://sc-static.net/scevent.min.js:2:4629
+m@https://sc-static.net/scevent.min.js:2:2805
+Q/c.send@https://sc-static.net/scevent.min.js:2:4937
+Nn/</c/<@https://sc-static.net/scevent.min.js:2:6767
+m@https://sc-static.net/scevent.min.js:2:2805
+c@https://sc-static.net/scevent.min.js:2:6744
+
+1703786667531	Marionette	INFO	Stopped listening on port 41949
+JavaScript warning: https://sportsbook.draftkings.com/leagues/football/nfl, line 44: Script terminated by timeout at:
+nrWrapper@https://sportsbook.draftkings.com/leagues/football/nfl:44:15607
+
+1703786668744	geckodriver	INFO	Listening on 127.0.0.1:49897
+1703786669132	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "57363" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileID6AHt"
+*** You are running in headless mode.
+Gtk-Message: 13:04:29.157: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1703786669347	Marionette	INFO	Marionette enabled
+1703786669397	Marionette	INFO	Listening on port 42325
+WebDriver BiDi listening on ws://127.0.0.1:57363
+Read port: 42325
+1703786669529	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+[Parent 282359, Main Thread] WARNING: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.1199" (uid=1000 pid=282359 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2270 comm="/usr/bin/gnome-shell " label="unconfined")
+: 'glib warning', file /build/firefox/parts/firefox/build/toolkit/xre/nsSigHandlers.cpp:187
+
+** (firefox:282359): WARNING **: 13:04:30.064: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.1199" (uid=1000 pid=282359 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2270 comm="/usr/bin/gnome-shell " label="unconfined")
+
+DevTools listening on ws://127.0.0.1:57363/devtools/browser/e48bc3b8-ef32-4941-a08a-b1cc6e6fef26
+libEGL warning: egl: failed to create dri2 screen
+JavaScript warning: https://sports.nj.betmgm.com/ClientDist/main.88540b8bf7e3b168.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1703786673104	Marionette	INFO	Stopped listening on port 42325
+JavaScript warning: https://sports.nj.betmgm.com/ClientDist/main.88540b8bf7e3b168.js, line 1: Script terminated by timeout at:
+createOrUpdateWidgetComponent@https://sports.nj.betmgm.com/ClientDist/main.88540b8bf7e3b168.js:1:2270237
+74324/K/<@https://sports.nj.betmgm.com/ClientDist/main.88540b8bf7e3b168.js:1:2270122
+next@https://sports.nj.betmgm.com/ClientDist/main.88540b8bf7e3b168.js:1:2483241
+_next@https://sports.nj.betmgm.com/ClientDist/main.88540b8bf7e3b168.js:1:2482925
+next@https://sports.nj.betmgm.com/ClientDist/main.88540b8bf7e3b168.js:1:2482620
+74520/o/</<@https://sports.nj.betmgm.com/ClientDist/main.88540b8bf7e3b168.js:1:2497632
+35678/o/this._next<@https://sports.nj.betmgm.com/ClientDist/main.88540b8bf7e3b168.js:1:2493822
+next@https://sports.nj.betmgm.com/ClientDist/main.88540b8bf7e3b168.js:1:2482620
+emitAndClearBuffer@https://sports.nj.betmgm.com/ClientDist/main.88540b8bf7e3b168.js:1:246757
+86400/Pt/<@https://sports.nj.betmgm.com/ClientDist/main.88540b8bf7e3b168.js:1:246683
+next@https://sports.nj.betmgm.com/ClientDist/main.88540b8bf7e3b168.js:1:2483241
+_next@https://sports.nj.betmgm.com/ClientDist/main.88540b8bf7e3b168.js:1:2482925
+next@https://sports.nj.betmgm.com/ClientDist/main.88540b8bf7e3b168.js:1:2482620
+r@https://sports.nj.betmgm.com/ClientDist/main.88540b8bf7e3b168.js:1:2495658
+i@https://sports.nj.betmgm.com/ClientDist/main.88540b8bf7e3b168.js:1:2495759
+_execute@https://sports.nj.betmgm.com/ClientDist/main.88540b8bf7e3b168.js:1:2510165
+execute@https://sports.nj.betmgm.com/ClientDist/main.88540b8bf7e3b168.js:1:2510010
+flush@https://sports.nj.betmgm.com/ClientDist/main.88540b8bf7e3b168.js:1:2510915
+76657/pe/c</</L[0]@https://sports.nj.betmgm.com/ClientDist/polyfills.43843e82465e388e.js:1:28275
+invokeTask@https://sports.nj.betmgm.com/ClientDist/polyfills.43843e82465e388e.js:1:7275
+onInvokeTask@https://sports.nj.betmgm.com/ClientDist/vendor.93611622e490a231.js:1:289403
+invokeTask@https://sports.nj.betmgm.com/ClientDist/polyfills.43843e82465e388e.js:1:7196
+runTask@https://sports.nj.betmgm.com/ClientDist/polyfills.43843e82465e388e.js:1:2640
+invokeTask@https://sports.nj.betmgm.com/ClientDist/polyfills.43843e82465e388e.js:1:8326
+76657/m/this.invoke<@https://sports.nj.betmgm.com/ClientDist/polyfills.43843e82465e388e.js:1:8227
+76657/pe/d/m.args[0]@https://sports.nj.betmgm.com/ClientDist/polyfills.43843e82465e388e.js:1:27987
+
+1703786673988	geckodriver	INFO	Listening on 127.0.0.1:47397
+1703786674363	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "45245" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilej9bg2W"
+*** You are running in headless mode.
+Gtk-Message: 13:04:34.389: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1703786674566	Marionette	INFO	Marionette enabled
+1703786674616	Marionette	INFO	Listening on port 38797
+WebDriver BiDi listening on ws://127.0.0.1:45245
+Read port: 38797
+1703786674749	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+[Parent 282842, Main Thread] WARNING: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.1201" (uid=1000 pid=282842 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2270 comm="/usr/bin/gnome-shell " label="unconfined")
+: 'glib warning', file /build/firefox/parts/firefox/build/toolkit/xre/nsSigHandlers.cpp:187
+
+** (firefox:282842): WARNING **: 13:04:35.336: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.1201" (uid=1000 pid=282842 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2270 comm="/usr/bin/gnome-shell " label="unconfined")
+
+DevTools listening on ws://127.0.0.1:45245/devtools/browser/90b807e1-e265-4728-bcb1-133ba54c3461
+JavaScript warning: https://sc-static.net/scevent.min.js, line 2: Script terminated by timeout at:
+m@https://sc-static.net/scevent.min.js:2:2788
+c@https://sc-static.net/scevent.min.js:2:6744
+
+1703786681574	Marionette	INFO	Stopped listening on port 38797
+JavaScript warning: https://sportsbook.fanduel.com/static/js/vendor.56688637a110b34c7c0e.js, line 2: Script terminated by timeout at:
+r@https://sportsbook.fanduel.com/static/js/vendor.56688637a110b34c7c0e.js:2:1336074
+
+1703786682421	geckodriver	INFO	Listening on 127.0.0.1:35219
+1703786682809	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "47059" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileuhd0Go"
+*** You are running in headless mode.
+Gtk-Message: 13:04:42.835: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1703786683010	Marionette	INFO	Marionette enabled
+1703786683059	Marionette	INFO	Listening on port 33643
+WebDriver BiDi listening on ws://127.0.0.1:47059
+Read port: 33643
+1703786683191	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+[Parent 283445, Main Thread] WARNING: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.1207" (uid=1000 pid=283445 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2270 comm="/usr/bin/gnome-shell " label="unconfined")
+: 'glib warning', file /build/firefox/parts/firefox/build/toolkit/xre/nsSigHandlers.cpp:187
+
+** (firefox:283445): WARNING **: 13:04:43.668: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.1207" (uid=1000 pid=283445 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2270 comm="/usr/bin/gnome-shell " label="unconfined")
+
+DevTools listening on ws://127.0.0.1:47059/devtools/browser/fd247658-ace8-44bf-9456-ff27a1f2552c
+1703786686215	Marionette	INFO	Stopped listening on port 33643
+1703957559846	geckodriver	INFO	Listening on 127.0.0.1:49825
+1703957560137	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "38597" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilerKe1GD"
+*** You are running in headless mode.
+Gtk-Message: 12:32:40.165: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1703957560442	Marionette	INFO	Marionette enabled
+1703957560509	Marionette	INFO	Listening on port 45779
+WebDriver BiDi listening on ws://127.0.0.1:38597
+Read port: 45779
+1703957560700	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+[Parent 776034, Main Thread] WARNING: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.3637" (uid=1000 pid=776034 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2270 comm="/usr/bin/gnome-shell " label="unconfined")
+: 'glib warning', file /build/firefox/parts/firefox/build/toolkit/xre/nsSigHandlers.cpp:187
+
+** (firefox:776034): WARNING **: 12:32:41.295: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.3637" (uid=1000 pid=776034 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2270 comm="/usr/bin/gnome-shell " label="unconfined")
+
+DevTools listening on ws://127.0.0.1:38597/devtools/browser/6ad16b5f-f37c-4477-92ee-0780a15b22ff
+JavaScript warning: https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js, line 19: unreachable code after return statement
+1703957563826	Marionette	INFO	Stopped listening on port 45779
+1703957564739	geckodriver	INFO	Listening on 127.0.0.1:36003
+1703957565102	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "57923" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile1K3THN"
+*** You are running in headless mode.
+Gtk-Message: 12:32:45.128: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1703957565316	Marionette	INFO	Marionette enabled
+1703957565367	Marionette	INFO	Listening on port 38809
+WebDriver BiDi listening on ws://127.0.0.1:57923
+Read port: 38809
+1703957565502	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+[Parent 776450, Main Thread] WARNING: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.3639" (uid=1000 pid=776450 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2270 comm="/usr/bin/gnome-shell " label="unconfined")
+: 'glib warning', file /build/firefox/parts/firefox/build/toolkit/xre/nsSigHandlers.cpp:187
+
+** (firefox:776450): WARNING **: 12:32:45.998: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.3639" (uid=1000 pid=776450 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2270 comm="/usr/bin/gnome-shell " label="unconfined")
+
+DevTools listening on ws://127.0.0.1:57923/devtools/browser/2d6b1867-3c13-4c49-9043-605223b98ed1
+JavaScript warning: https://sportsbook.draftkings.com/VJlWBNGQqI/f6nn/zyMClm/V7L5mwNttN/PQEuH2M/G0/wXIisKaXYB, line 1: unreachable code after return statement
+JavaScript warning: https://sportsbook.draftkings.com/_sec/cp_challenge/sec-cpt-4-1.js, line 1: unreachable code after return statement
+libEGL warning: egl: failed to create dri2 screen
+JavaScript warning: https://sportsbook.draftkings.com/VJlWBNGQqI/f6nn/zyMClm/V7L5mwNttN/PQEuH2M/G0/wXIisKaXYB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sportsbook.draftkings.com/VJlWBNGQqI/f6nn/zyMClm/V7L5mwNttN/PQEuH2M/G0/wXIisKaXYB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sportsbook.draftkings.com/VJlWBNGQqI/f6nn/zyMClm/V7L5mwNttN/PQEuH2M/G0/wXIisKaXYB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://apps.rokt.com/wsdk/controller/index.7a80977aff050a6a0b30.js, line 1: Script terminated by timeout at:
+r/</</i</<@https://apps.rokt.com/wsdk/controller/index.7a80977aff050a6a0b30.js:1:1145
+r/</</i<@https://apps.rokt.com/wsdk/controller/index.7a80977aff050a6a0b30.js:1:881
+next@https://apps.rokt.com/wsdk/controller/index.7a80977aff050a6a0b30.js:1:349
+a@https://apps.rokt.com/wsdk/controller/index.7a80977aff050a6a0b30.js:1:815
+r/</</i</<@https://apps.rokt.com/wsdk/controller/index.7a80977aff050a6a0b30.js:1:1145
+r/</</i<@https://apps.rokt.com/wsdk/controller/index.7a80977aff050a6a0b30.js:1:881
+next@https://apps.rokt.com/wsdk/controller/index.7a80977aff050a6a0b30.js:1:349
+i@https://apps.rokt.com/wsdk/controller/index.7a80977aff050a6a0b30.js:1:4683
+
+JavaScript warning: https://sc-static.net/scevent.min.js, line 2: Script terminated by timeout at:
+m@https://sc-static.net/scevent.min.js:2:2788
+c@https://sc-static.net/scevent.min.js:2:6744
+
+1703957570917	Marionette	INFO	Stopped listening on port 38809
+JavaScript warning: https://sportsbook.draftkings.com/leagues/football/nfl, line 45: Script terminated by timeout at:
+nrWrapper@https://sportsbook.draftkings.com/leagues/football/nfl:45:15607
+
+1703957572173	geckodriver	INFO	Listening on 127.0.0.1:50069
+1703957572542	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "51411" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileHM3CzM"
+*** You are running in headless mode.
+Gtk-Message: 12:32:52.568: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1703957572756	Marionette	INFO	Marionette enabled
+1703957572810	Marionette	INFO	Listening on port 35369
+WebDriver BiDi listening on ws://127.0.0.1:51411
+Read port: 35369
+1703957572959	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+[Parent 776991, Main Thread] WARNING: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.3641" (uid=1000 pid=776991 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2270 comm="/usr/bin/gnome-shell " label="unconfined")
+: 'glib warning', file /build/firefox/parts/firefox/build/toolkit/xre/nsSigHandlers.cpp:187
+
+** (firefox:776991): WARNING **: 12:32:53.519: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.3641" (uid=1000 pid=776991 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2270 comm="/usr/bin/gnome-shell " label="unconfined")
+
+DevTools listening on ws://127.0.0.1:51411/devtools/browser/df7879c0-bf1f-4426-b38c-c30276bc7241
+libEGL warning: egl: failed to create dri2 screen
+JavaScript warning: https://sports.nj.betmgm.com/ClientDist/main.88540b8bf7e3b168.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1703957576970	Marionette	INFO	Stopped listening on port 35369
+JavaScript warning: https://s.go-mpulse.net/boomerang/Y7GWT-NNGZ5-ZQ87J-PKAU9-X68KK, line 10: Script terminated by timeout at:
+c@https://s.go-mpulse.net/boomerang/Y7GWT-NNGZ5-ZQ87J-PKAU9-X68KK:10:43296
+
+1703957577864	geckodriver	INFO	Listening on 127.0.0.1:58919
+1703957578228	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "56943" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilel3NveL"
+*** You are running in headless mode.
+Gtk-Message: 12:32:58.254: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1703957578452	Marionette	INFO	Marionette enabled
+1703957578507	Marionette	INFO	Listening on port 33715
+WebDriver BiDi listening on ws://127.0.0.1:56943
+Read port: 33715
+1703957578632	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+[Parent 777439, Main Thread] WARNING: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.3643" (uid=1000 pid=777439 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2270 comm="/usr/bin/gnome-shell " label="unconfined")
+: 'glib warning', file /build/firefox/parts/firefox/build/toolkit/xre/nsSigHandlers.cpp:187
+
+** (firefox:777439): WARNING **: 12:32:59.210: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.3643" (uid=1000 pid=777439 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2270 comm="/usr/bin/gnome-shell " label="unconfined")
+
+DevTools listening on ws://127.0.0.1:56943/devtools/browser/d5ebd513-a4bb-44d2-bf2b-c3cf618728d8
+1703957583685	Marionette	INFO	Stopped listening on port 33715
+JavaScript warning: https://sc-static.net/scevent.min.js, line 2: Script terminated by timeout at:
+m@https://sc-static.net/scevent.min.js:2:2788
+c@https://sc-static.net/scevent.min.js:2:6744
+
+JavaScript warning: https://sportsbook.fanduel.com/static/js/react-vendor.edef654bc129498c8884.js, line 2: Script terminated by timeout at:
+t@https://sportsbook.fanduel.com/static/js/react-vendor.edef654bc129498c8884.js:2:154468
+w/UT/zr/<@https://sportsbook.fanduel.com/static/js/react-vendor.edef654bc129498c8884.js:2:166991
+Fe@https://sportsbook.fanduel.com/static/js/react-vendor.edef654bc129498c8884.js:2:245217
+w/UT/zr/<@https://sportsbook.fanduel.com/static/js/react-vendor.edef654bc129498c8884.js:2:165776
+zr@https://sportsbook.fanduel.com/static/js/react-vendor.edef654bc129498c8884.js:2:165804
+Gt@https://sportsbook.fanduel.com/static/js/react-vendor.edef654bc129498c8884.js:2:153882
+Xt@https://sportsbook.fanduel.com/static/js/react-vendor.edef654bc129498c8884.js:2:153108
+r@https://sportsbook.fanduel.com/static/js/vendor.56688637a110b34c7c0e.js:2:1336213
+
+1703957584912	geckodriver	INFO	Listening on 127.0.0.1:49511
+1703957585272	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "56425" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofiles0ipWY"
+*** You are running in headless mode.
+Gtk-Message: 12:33:05.300: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1703957585546	Marionette	INFO	Marionette enabled
+1703957585597	Marionette	INFO	Listening on port 37857
+WebDriver BiDi listening on ws://127.0.0.1:56425
+Read port: 37857
+1703957585754	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+[Parent 777920, Main Thread] WARNING: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.3645" (uid=1000 pid=777920 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2270 comm="/usr/bin/gnome-shell " label="unconfined")
+: 'glib warning', file /build/firefox/parts/firefox/build/toolkit/xre/nsSigHandlers.cpp:187
+
+** (firefox:777920): WARNING **: 12:33:06.438: Failed to call GetIdletime(): GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.3645" (uid=1000 pid=777920 comm="/snap/firefox/3504/usr/lib/firefox/firefox --mario" label="snap.firefox.geckodriver (enforce)") interface="org.gnome.Mutter.IdleMonitor" member="GetIdletime" error name="(unset)" requested_reply="0" destination=":1.37" (uid=1000 pid=2270 comm="/usr/bin/gnome-shell " label="unconfined")
+
+DevTools listening on ws://127.0.0.1:56425/devtools/browser/043265d1-3a99-4994-9a0a-61b3cb746e9a
+1703957589004	Marionette	INFO	Stopped listening on port 37857
+JavaScript warning: https://www.bovada.lv/assets/js/vendor.f656d63e74795f08b33c.js, line 2: Script terminated by timeout at:
+a/n.args[0]@https://www.bovada.lv/assets/js/vendor.f656d63e74795f08b33c.js:2:773949
+
+1704476229663	geckodriver	INFO	Listening on 127.0.0.1:50327
+1704476230033	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "51801" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile1LuGfE"
+*** You are running in headless mode.
+Gtk-Message: 12:37:10.060: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1704476230230	Marionette	INFO	Marionette enabled
+1704476230279	Marionette	INFO	Listening on port 41629
+WebDriver BiDi listening on ws://127.0.0.1:51801
+Read port: 41629
+1704476230406	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+DevTools listening on ws://127.0.0.1:51801/devtools/browser/1dc4bd7b-140d-499f-b018-7f8fcb4c5c2c
+JavaScript warning: https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js, line 19: unreachable code after return statement
+1704476233912	Marionette	INFO	Stopped listening on port 41629
+1704476234669	geckodriver	INFO	Listening on 127.0.0.1:40705
+1704476235062	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "41709" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileb47xMD"
+*** You are running in headless mode.
+Gtk-Message: 12:37:15.085: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1704476235258	Marionette	INFO	Marionette enabled
+1704476235306	Marionette	INFO	Listening on port 34983
+WebDriver BiDi listening on ws://127.0.0.1:41709
+Read port: 34983
+1704476235430	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+DevTools listening on ws://127.0.0.1:41709/devtools/browser/1c5ea4ec-dc7a-4931-9097-cd7b4ce27688
+JavaScript warning: https://sportsbook.draftkings.com/gFCj9_9NCbjnUn3jjk9XpfTg/EJDabSLGbrtaEa/RV89Lg/UzslT/3sLQkg, line 1: unreachable code after return statement
+JavaScript warning: https://sportsbook.draftkings.com/_sec/cp_challenge/sec-cpt-4-1.js, line 1: unreachable code after return statement
+libEGL warning: egl: failed to create dri2 screen
+libEGL warning: egl: failed to create dri2 screen
+libEGL warning: egl: failed to create dri2 screen
+JavaScript warning: https://sportsbook.draftkings.com/gFCj9_9NCbjnUn3jjk9XpfTg/EJDabSLGbrtaEa/RV89Lg/UzslT/3sLQkg, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sportsbook.draftkings.com/gFCj9_9NCbjnUn3jjk9XpfTg/EJDabSLGbrtaEa/RV89Lg/UzslT/3sLQkg, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sportsbook.draftkings.com/gFCj9_9NCbjnUn3jjk9XpfTg/EJDabSLGbrtaEa/RV89Lg/UzslT/3sLQkg, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sc-static.net/scevent.min.js, line 2: Script terminated by timeout at:
+m@https://sc-static.net/scevent.min.js:2:2788
+c@https://sc-static.net/scevent.min.js:2:6744
+
+1704476240777	Marionette	INFO	Stopped listening on port 34983
+JavaScript warning: https://sportsbook.draftkings.com/leagues/football/nfl, line 44: Script terminated by timeout at:
+nrWrapper@https://sportsbook.draftkings.com/leagues/football/nfl:44:15607
+
+1704476242043	geckodriver	INFO	Listening on 127.0.0.1:57653
+1704476242417	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "39413" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile9rUN3z"
+*** You are running in headless mode.
+Gtk-Message: 12:37:22.441: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1704476242612	Marionette	INFO	Marionette enabled
+1704476242660	Marionette	INFO	Listening on port 34879
+WebDriver BiDi listening on ws://127.0.0.1:39413
+Read port: 34879
+1704476242789	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+DevTools listening on ws://127.0.0.1:39413/devtools/browser/360dd370-33f8-4b29-9c88-0f6a54f7761b
+libEGL warning: egl: failed to create dri2 screen
+libEGL warning: egl: failed to create dri2 screen
+libEGL warning: egl: failed to create dri2 screen
+JavaScript warning: https://sports.nj.betmgm.com/ClientDist/main.88540b8bf7e3b168.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1704476246128	Marionette	INFO	Stopped listening on port 34879
+1704476246986	geckodriver	INFO	Listening on 127.0.0.1:54525
+1704476247377	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "43785" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilejX7MHA"
+*** You are running in headless mode.
+Gtk-Message: 12:37:27.401: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1704476247574	Marionette	INFO	Marionette enabled
+1704476247623	Marionette	INFO	Listening on port 39007
+WebDriver BiDi listening on ws://127.0.0.1:43785
+Read port: 39007
+1704476247751	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+DevTools listening on ws://127.0.0.1:43785/devtools/browser/2e0063b0-db54-4828-9125-67c2dcdc24c2
+JavaScript warning: https://sc-static.net/scevent.min.js, line 2: Script terminated by timeout at:
+m@https://sc-static.net/scevent.min.js:2:2788
+c@https://sc-static.net/scevent.min.js:2:6744
+
+1704476251688	Marionette	INFO	Stopped listening on port 39007
+JavaScript warning: https://sportsbook.fanduel.com/static/js/vendor.51765e583484ba61dc3d.js, line 2: Script terminated by timeout at:
+r@https://sportsbook.fanduel.com/static/js/vendor.51765e583484ba61dc3d.js:2:1335202
+
+1704476252518	geckodriver	INFO	Listening on 127.0.0.1:54773
+1704476252893	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "48991" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileRT0xpd"
+*** You are running in headless mode.
+Gtk-Message: 12:37:32.918: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1704476253089	Marionette	INFO	Marionette enabled
+1704476253137	Marionette	INFO	Listening on port 40929
+WebDriver BiDi listening on ws://127.0.0.1:48991
+Read port: 40929
+1704476253264	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+DevTools listening on ws://127.0.0.1:48991/devtools/browser/31635b31-bae7-4d6f-a4cd-cfced8d435ec
+1704476256276	Marionette	INFO	Stopped listening on port 40929
+1704575921644	geckodriver	INFO	Listening on 127.0.0.1:51165
+1704575922032	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "42785" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilezAIP9N"
+*** You are running in headless mode.
+Gtk-Message: 16:18:42.056: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1704575922233	Marionette	INFO	Marionette enabled
+1704575922281	Marionette	INFO	Listening on port 41947
+WebDriver BiDi listening on ws://127.0.0.1:42785
+Read port: 41947
+1704575922406	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+DevTools listening on ws://127.0.0.1:42785/devtools/browser/8abea649-738a-4cdc-b63d-bcc33d664cf0
+JavaScript warning: https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js, line 19: unreachable code after return statement
+1704575925950	Marionette	INFO	Stopped listening on port 41947
+1704575926771	geckodriver	INFO	Listening on 127.0.0.1:43299
+1704575927166	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "45237" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileG03Xoy"
+*** You are running in headless mode.
+Gtk-Message: 16:18:47.189: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1704575927361	Marionette	INFO	Marionette enabled
+1704575927409	Marionette	INFO	Listening on port 43121
+WebDriver BiDi listening on ws://127.0.0.1:45237
+Read port: 43121
+1704575927534	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+DevTools listening on ws://127.0.0.1:45237/devtools/browser/ff86da42-b840-4d96-81ae-7139b4d34e26
+JavaScript warning: https://sportsbook.draftkings.com/Zhu7tUi2H/l1DxygU3/w/u11OGNXh4r/DQdKdDY/O2JjPG/E7Pis, line 1: unreachable code after return statement
+JavaScript warning: https://sportsbook.draftkings.com/_sec/cp_challenge/sec-cpt-4-1.js, line 1: unreachable code after return statement
+libEGL warning: egl: failed to create dri2 screen
+libEGL warning: egl: failed to create dri2 screen
+libEGL warning: egl: failed to create dri2 screen
+JavaScript warning: https://sportsbook.draftkings.com/Zhu7tUi2H/l1DxygU3/w/u11OGNXh4r/DQdKdDY/O2JjPG/E7Pis, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sportsbook.draftkings.com/Zhu7tUi2H/l1DxygU3/w/u11OGNXh4r/DQdKdDY/O2JjPG/E7Pis, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://sportsbook.draftkings.com/Zhu7tUi2H/l1DxygU3/w/u11OGNXh4r/DQdKdDY/O2JjPG/E7Pis, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://apps.rokt.com/wsdk/controller/index.7a80977aff050a6a0b30.js, line 1: Script terminated by timeout at:
+c@https://apps.rokt.com/wsdk/controller/index.7a80977aff050a6a0b30.js:1:1038
+r/</</i</<@https://apps.rokt.com/wsdk/controller/index.7a80977aff050a6a0b30.js:1:1123
+r/</</i<@https://apps.rokt.com/wsdk/controller/index.7a80977aff050a6a0b30.js:1:881
+next@https://apps.rokt.com/wsdk/controller/index.7a80977aff050a6a0b30.js:1:349
+i@https://apps.rokt.com/wsdk/controller/index.7a80977aff050a6a0b30.js:1:4683
+
+JavaScript warning: https://sc-static.net/scevent.min.js, line 2: Script terminated by timeout at:
+m@https://sc-static.net/scevent.min.js:2:2788
+c@https://sc-static.net/scevent.min.js:2:6744
+
+1704575932329	Marionette	INFO	Stopped listening on port 43121
+JavaScript warning: https://sportsbook.draftkings.com/leagues/football/nfl, line 44: Script terminated by timeout at:
+nrWrapper@https://sportsbook.draftkings.com/leagues/football/nfl:44:15607
+
+1704575933596	geckodriver	INFO	Listening on 127.0.0.1:54949
+1704575933951	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "39687" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileYg6Tsl"
+*** You are running in headless mode.
+Gtk-Message: 16:18:53.975: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1704575934148	Marionette	INFO	Marionette enabled
+1704575934196	Marionette	INFO	Listening on port 41163
+WebDriver BiDi listening on ws://127.0.0.1:39687
+Read port: 41163
+1704575934322	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+DevTools listening on ws://127.0.0.1:39687/devtools/browser/ad8aa3de-4759-4bc7-9b60-7b357aacaf73
+libEGL warning: egl: failed to create dri2 screen
+libEGL warning: egl: failed to create dri2 screen
+libEGL warning: egl: failed to create dri2 screen
+JavaScript warning: https://sports.nj.betmgm.com/ClientDist/main.88540b8bf7e3b168.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1704575937629	Marionette	INFO	Stopped listening on port 41163
+JavaScript warning: https://sports.nj.betmgm.com/ClientDist/vendor.93611622e490a231.js, line 1: Script terminated by timeout at:
+shouldReevaluate@https://sports.nj.betmgm.com/ClientDist/vendor.93611622e490a231.js:1:592291
+74329/evaluateExpression/Ji</</<@https://sports.nj.betmgm.com/ClientDist/vendor.93611622e490a231.js:1:590546
+74520/o/</<@https://sports.nj.betmgm.com/ClientDist/main.88540b8bf7e3b168.js:1:2497615
+35678/o/this._next<@https://sports.nj.betmgm.com/ClientDist/main.88540b8bf7e3b168.js:1:2493822
+next@https://sports.nj.betmgm.com/ClientDist/main.88540b8bf7e3b168.js:1:2482620
+59877/next/<@https://sports.nj.betmgm.com/ClientDist/main.88540b8bf7e3b168.js:1:2480584
+o@https://sports.nj.betmgm.com/ClientDist/main.88540b8bf7e3b168.js:1:2516477
+next@https://sports.nj.betmgm.com/ClientDist/main.88540b8bf7e3b168.js:1:2480423
+74329/o/<@https://sports.nj.betmgm.com/ClientDist/vendor.93611622e490a231.js:1:587587
+next@https://sports.nj.betmgm.com/ClientDist/main.88540b8bf7e3b168.js:1:2483241
+_next@https://sports.nj.betmgm.com/ClientDist/main.88540b8bf7e3b168.js:1:2482925
+next@https://sports.nj.betmgm.com/ClientDist/main.88540b8bf7e3b168.js:1:2482620
+79736/o/</<@https://sports.nj.betmgm.com/ClientDist/main.88540b8bf7e3b168.js:1:2499379
+35678/o/this._next<@https://sports.nj.betmgm.com/ClientDist/main.88540b8bf7e3b168.js:1:2493822
+next@https://sports.nj.betmgm.com/ClientDist/main.88540b8bf7e3b168.js:1:2482620
+97766/s/</<@https://sports.nj.betmgm.com/ClientDist/main.88540b8bf7e3b168.js:1:2494980
+35678/o/this._next<@https://sports.nj.betmgm.com/ClientDist/main.88540b8bf7e3b168.js:1:2493822
+next@https://sports.nj.betmgm.com/ClientDist/main.88540b8bf7e3b168.js:1:2482620
+r@https://sports.nj.betmgm.com/ClientDist/main.88540b8bf7e3b168.js:1:2495658
+i@https://sports.nj.betmgm.com/ClientDist/main.88540b8bf7e3b168.js:1:2495759
+_execute@https://sports.nj.betmgm.com/ClientDist/main.88540b8bf7e3b168.js:1:2510165
+execute@https://sports.nj.betmgm.com/ClientDist/main.88540b8bf7e3b168.js:1:2510010
+flush@https://sports.nj.betmgm.com/ClientDist/main.88540b8bf7e3b168.js:1:2510915
+76657/pe/c</</L[0]@https://sports.nj.betmgm.com/ClientDist/polyfills.43843e82465e388e.js:1:28275
+invokeTask@https://sports.nj.betmgm.com/ClientDist/polyfills.43843e82465e388e.js:1:7275
+onInvokeTask@https://sports.nj.betmgm.com/ClientDist/vendor.93611622e490a231.js:1:289403
+invokeTask@https://sports.nj.betmgm.com/ClientDist/polyfills.43843e82465e388e.js:1:7196
+runTask@https://sports.nj.betmgm.com/ClientDist/polyfills.43843e82465e388e.js:1:2640
+invokeTask@https://sports.nj.betmgm.com/ClientDist/polyfills.43843e82465e388e.js:1:8326
+76657/m/this.invoke<@https://sports.nj.betmgm.com/ClientDist/polyfills.43843e82465e388e.js:1:8227
+76657/pe/d/m.args[0]@https://sports.nj.betmgm.com/ClientDist/polyfills.43843e82465e388e.js:1:27987
+
+1704575938589	geckodriver	INFO	Listening on 127.0.0.1:52293
+1704575938965	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "34137" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile6s0vhR"
+*** You are running in headless mode.
+Gtk-Message: 16:18:58.991: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1704575939182	Marionette	INFO	Marionette enabled
+1704575939231	Marionette	INFO	Listening on port 39863
+WebDriver BiDi listening on ws://127.0.0.1:34137
+Read port: 39863
+1704575939357	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+DevTools listening on ws://127.0.0.1:34137/devtools/browser/87d0befc-0800-4f74-895d-301186318f4b
+JavaScript warning: https://sc-static.net/scevent.min.js, line 2: Script terminated by timeout at:
+m@https://sc-static.net/scevent.min.js:2:2788
+c@https://sc-static.net/scevent.min.js:2:6744
+
+1704575943496	Marionette	INFO	Stopped listening on port 39863
+JavaScript warning: https://sportsbook.fanduel.com/static/js/vendor.51765e583484ba61dc3d.js, line 2: Script terminated by timeout at:
+r@https://sportsbook.fanduel.com/static/js/vendor.51765e583484ba61dc3d.js:2:1335202
+
+1704575944421	geckodriver	INFO	Listening on 127.0.0.1:54931
+1704575944807	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... ss" "--remote-debugging-port" "48159" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileWAIRNr"
+*** You are running in headless mode.
+Gtk-Message: 16:19:04.830: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1704575945006	Marionette	INFO	Marionette enabled
+1704575945052	Marionette	INFO	Listening on port 46493
+WebDriver BiDi listening on ws://127.0.0.1:48159
+Read port: 46493
+1704575945206	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+DevTools listening on ws://127.0.0.1:48159/devtools/browser/ae4ced18-1acc-45fd-b324-e9fd4d573451
+1704575947924	Marionette	INFO	Stopped listening on port 46493
