@@ -146,10 +146,10 @@ def makeTeamDocuments():
 		season.document(f"team_{team}").set(teamdict[team])
 
 def nextDay(mm, dd):
-	if mm in [10, 12, 13, 15] and dd <= 30: return (mm, dd+1)
-	elif mm in [10, 12, 13, 15] and dd == 31: return (mm+1, 1)
-	elif mm in [11, 16] and dd <= 29: return (mm, dd+1)
-	elif mm in [11, 16] and dd == 30: return (mm+1, 1)
+	if mm in [10, 12, 13, 15, 17] and dd <= 30: return (mm, dd+1)
+	elif mm in [10, 12, 13, 15, 17] and dd == 31: return (mm+1, 1)
+	elif mm in [11, 18] and dd <= 29: return (mm, dd+1)
+	elif mm in [11, 18] and dd == 30: return (mm+1, 1)
 	elif mm == 14 and dd <= 27: return (mm, dd+1)
 	elif (mm, dd) == (14, 28) and int(CurrentSeason[3:])%4 != 0: return (15, 1)
 	elif (mm, dd) == (14, 28) and int(CurrentSeason[3:])%4 == 0: return (14, 29)

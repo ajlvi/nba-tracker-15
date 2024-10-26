@@ -70,7 +70,12 @@ export class CalendarComponent implements OnInit {
     if (option === 1) {
       let day = this.todays_date;
       for (let j = 0; j <= 30; j++) {
-        day = this.common.previous_day(day);
+        if ( day == environment.season_start) {
+          day = environment.season_start
+        }
+        else {
+          day = this.common.previous_day(day);
+        }
       }
       this.common.calendarEndDateSub.next(day);
     } else {

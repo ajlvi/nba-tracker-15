@@ -18,7 +18,7 @@ def getspans(lines):
 	return everyother([s for s in spans if spanstrip(lines[s]).isdigit()])
 
 def get_headers(lines):
-	heads = [i for i in range(len(lines)) if '<div class="cmg_game_container' in lines[i]]
+	heads = [i for i in range(len(lines)) if 'covers-CoversScoreboard-gameBox-Status' in lines[i]]
 	return heads
 
 def game_index(line):
@@ -91,55 +91,128 @@ def gethomescore(gb):
 #	homescore = gethomescore(gb)
 #	return (numb, awayteam, hometeam, awayscore, homescore, odds)
 
+def getdata_fromhead_2024(head, lines, scores):
+	#will return [#, AWAY, HOME, ASC, HSC, LINE]
+	i=0
+	while "<article" not in lines[head-i]:
+		i += 1
+	# step one -- teams and game number. can be done from pre-block <article> tag.
+	article_line = lines[head-i]
+	game_no = re.findall(r'id="nba-([\d]+)', article_line)
+	assert len(game_no) > 0
+	numb = int(game_no[0])
+	away_regex = r'data-away-team-shortname=([\w]+)'
+	home_regex = r'data-home-team-shortname=([\w]+)'
+	away_teams = re.findall(away_regex, article_line)
+	home_teams = re.findall(home_regex, article_line)
+	assert len(away_teams) > 0
+	assert len(home_teams) > 0
+	away = away_teams[0].upper()
+	home = home_teams[0].upper()
+	away_display = article_line.split("data-away-team-displayname=")[1].split("data")[0].strip().title()
+	home_display = article_line.split("data-home-team-displayname=")[1].split("data")[0].strip().title()
 
-def getdata_fromhead(head, lines, scores):
-	#will return [#, AWAY, HOME, ASC, HSC, LINE]	
-	data_adjust = 2 if "matchup_game_box" in lines[head+2] else 1
-	numb = game_index(lines[head+data_adjust])
+	# step two -- line. needs to be done relative to the home team
+	# if pregame, we can find odds-data pre-game
+	i=0
+	while "odds-data pre-game" not in lines[head+i] and "<article" not in lines[head+i]:
+		i += 1
+	if "odds-data pre-game" in lines[head+i]:
+		line_regex = r'covers-box">([+-][\d.]+)'
+		lines_raw = re.findall(line_regex, lines[head+i+6])
+		assert len(lines_raw) > 0
+		awayline = lines_raw[0]
+		line = eval(awayline)
+	else:
+		assert "<article" in lines[head+i]
+		i=0
+		while "covers-CoversScoreboard-gameBox-Summary" not in lines[head+i]:
+			i += 1
+		summary_line_regex = 'spread of <strong>([+-][\d]+)'
+		line_to_winner = re.findall(summary_line_regex, lines[head+i+1])
+		assert len(line_to_winner) > 0
+		preliminary_line = line_to_winner[0]
+		try:
+			assert away_display in lines[head+i+1] or home_display in lines[head+i+1]
+		except AssertionError:
+			print(f"Neither {away_display} or {home_display} are in {lines[head+i+1]}")
+		if away_display in lines[head+i+1]:
+			line = -1 * eval(preliminary_line)
+		else:
+			line = eval(preliminary_line)
+
+	# step three -- game score, or time if the game hasn't happened yet.
+	seen_data_away = 0
+	i=0
+	while seen_data_away < 4 and "<article" not in lines[head+i]:
+		if "data-away" in lines[head+i]: seen_data_away += 1
+		i += 1
+	if "data-away" in lines[head+i] and seen_data_away >= 4:
+		score_regex = r'data-away="([\d]+)" data-home="([\d]+)"'
+		score_groups = re.findall(score_regex, lines[head+i])
+		assert len(score_groups) >= 1 and len(score_groups[0]) >= 2
+		awayscore, homescore = int(score_groups[0][0]), int(score_groups[0][1])
+		return (numb, away, home, awayscore, homescore, line)
+	else:
+		assert "<article" in lines[head+i]
+		assert "preGame-time" in lines[head+1]
+		time_regex = r'preGame-time">([^<]*)</span>'
+		times = re.findall(time_regex,lines[head+1])
+		assert len(times) > 0
+		game_time_local = times[0]
+		javascript_time = setTime(game_time_local)
+		return (numb, away, home, int(javascript_time), 0, line)
+		
+
+
+# def getdata_fromhead(head, lines, scores):
+# 	#will return [#, AWAY, HOME, ASC, HSC, LINE]	
+# 	data_adjust = 2 if "matchup_game_box" in lines[head+2] else 1
+# 	numb = game_index(lines[head+data_adjust])
 	
-	time = 0
-	idx = 0
-	while "cmg_team_name" not in lines[head+idx-1]:
-		idx += 1
-		if "cmg_game_time" in lines[head+idx-1]:
-			time = setTime(lines[head+idx])
+# 	time = 0
+# 	idx = 0
+# 	while "cmg_team_name" not in lines[head+idx-1]:
+# 		idx += 1
+# 		if "cmg_game_time" in lines[head+idx-1]:
+# 			time = setTime(lines[head+idx])
 					
-	awayteam = teamdict[lines[head+idx].strip()]
+# 	awayteam = teamdict[lines[head+idx].strip()]
 	
-	idx += 1
-	while "cmg_team_name" not in lines[head+idx-1]:
-		idx += 1
-		if "Postponed" in lines[head+idx]: return None
-		if "cmg_game_time" in lines[head+idx-1]:
-			time = setTime(lines[head+idx])
+# 	idx += 1
+# 	while "cmg_team_name" not in lines[head+idx-1]:
+# 		idx += 1
+# 		if "Postponed" in lines[head+idx]: return None
+# 		if "cmg_game_time" in lines[head+idx-1]:
+# 			time = setTime(lines[head+idx])
 		
-	try:
-		hometeam = teamdict[lines[head+idx+2].strip()]
-	except KeyError: #seems like there's a blank line if the game hasn't started
-		hometeam = teamdict[lines[head+idx+1].strip()]
+# 	try:
+# 		hometeam = teamdict[lines[head+idx+2].strip()]
+# 	except KeyError: #seems like there's a blank line if the game hasn't started
+# 		hometeam = teamdict[lines[head+idx+1].strip()]
 
-	hometeam = "@" + hometeam
-	assert hometeam != "@"
-#	print awayteam, hometeam
+# 	hometeam = "@" + hometeam
+# 	assert hometeam != "@"
+# #	print awayteam, hometeam
 
-	startSearch = 0
-	while startSearch < 10 and "game-odd" not in lines[head+startSearch]: 
-		if "game-odd" not in lines[head+startSearch]: startSearch += 1
+# 	startSearch = 0
+# 	while startSearch < 10 and "game-odd" not in lines[head+startSearch]: 
+# 		if "game-odd" not in lines[head+startSearch]: startSearch += 1
 		
-	gb = lines[head+startSearch]
-	try: assert "game-odd" in gb
-	except AssertionError:
-		print(head, "odds missing")
-		for i in range(-10, 10): print(f"{i} {lines[head+i][:50].strip()}")
-		raise AssertionError 
-	odds = getodds(gb)
-	if odds == '': odds = input(f"Manually provide odds for {awayteam}@{hometeam}: ")
+# 	gb = lines[head+startSearch]
+# 	try: assert "game-odd" in gb
+# 	except AssertionError:
+# 		print(head, "odds missing")
+# 		for i in range(-10, 10): print(f"{i} {lines[head+i][:50].strip()}")
+# 		raise AssertionError 
+# 	odds = getodds(gb)
+# 	if odds == '': odds = input(f"Manually provide odds for {awayteam}@{hometeam}: ")
 
-	if scores == "n": return (numb, awayteam, hometeam, time, 0, odds)
+# 	if scores == "n": return (numb, awayteam, hometeam, time, 0, odds)
 
-	awayscore = getawayscore(gb)
-	homescore = gethomescore(gb)
-	return (numb, awayteam, hometeam, awayscore, homescore, odds)
+# 	awayscore = getawayscore(gb)
+# 	homescore = gethomescore(gb)
+# 	return (numb, awayteam, hometeam, awayscore, homescore, odds)
 
 def score(game):
 	if game[3] > game[4]: #away team won
@@ -160,14 +233,18 @@ def makeTXTs(games, day, month, yesno):
 	mo = month + 12 if month < 10 else month
 	outfile = open(f'{DataPath}/{CurrentSeason[1:]}/lines/%02d%02d.txt' %(mo, day), 'w')
 	for game in games:
-		home, away = game[2], game[1]
+		home, away = teamdict[game[2]], teamdict[game[1]]
 		odds = float(game[5])
 		if odds < 0: #home team favored
-			noline = "%s\t%s\t%s\t%d" %(home, game[5], away, int(game[3]))
-			withline = "%s\t%s\t%s\t%s" %(home, game[5], away, score(game))
+			noline = f"@{home}\t{game[5]}\t{away}\t{game[3]}"
+			withline = f"@{home}\t{game[5]}\t{away}\t{score(game)}"
+#			noline = "%s\t%s\t%s\t%d" %(home, game[5], away, int(game[3]))
+#			withline = "%s\t%s\t%s\t%s" %(home, game[5], away, score(game))
 		else: 
-			noline = "%s\t%s\t%s\t%d" %(away, "-"+game[5], home, int(game[3]))
-			withline = "%s\t%s\t%s\t%s" %(away, "-"+game[5], home, score(game))
+			noline = f"{away}\t-{game[5]}\t@{home}\t{game[3]}"
+			withline = f"{away}\t-{game[5]}\t@{home}\t{score(game)}"
+#			noline = "%s\t%s\t%s\t%d" %(away, "-"+game[5], home, int(game[3]))
+#			withline = "%s\t%s\t%s\t%s" %(away, "-"+game[5], home, score(game))
 		if yesno == "y":
 			outfile.write(withline)
 		else:
@@ -178,11 +255,12 @@ def makeTXTs(games, day, month, yesno):
 
 def listedDay(lines):
 	#reports what the source thinks today's date is.
-	datepicker = [line for line in lines if "active_navigation_item" in line and "data-date" in line]
-	assert len(datepicker) == 1; dateline = datepicker[0]
-	dateregex = r'active_navigation_item" data-date="([\d]+)-([\d]+)-([\d]+)'
-	found_date = re.findall(dateregex, dateline)[0]
-	return int(found_date[1]), int(found_date[2])
+	datesearch = [i for i in range(len(lines)) if "navigation-anchor active isDailySport" in lines[i]]
+	assert len(datesearch) == 1; dateline = lines[datesearch[0]+2]
+	dateregex = r'date">([A-Za-z]*) ([0-9]*)</div>'
+	found_month, found_day = re.findall(dateregex, dateline)[0]
+	mon_to_num = {"Oct": 10, "Nov": 11, "Dec": 12, "Jan": 13, "Feb": 14, "Mar": 15, "Apr": 16}
+	return int(mon_to_num[found_month]), int(found_day)
 
 def main(mo, da, yesno):
 	global year; year = 2000 + int(CurrentSeason[1:3])
@@ -191,7 +269,7 @@ def main(mo, da, yesno):
 	if mo > 12:
 		month -= 12
 		year += 1
-	url = "http://www.covers.com/Sports/NBA/Matchups?selectedDate=%d-%02d-%02d"\
+	url = "https://www.covers.com/Sports/NBA/Matchups?selectedDate=%d-%02d-%02d"\
 		  %(year, month, day)
 	print(url)
 	page = urlopen(url)
@@ -207,8 +285,8 @@ def main(mo, da, yesno):
 #			print(data)
 #			games.append(data)
 		headers = get_headers(lines)
-		for head in headers:
-			data = getdata_fromhead(head, lines, yesno)
+		for head in headers[1:]:
+			data = getdata_fromhead_2024(head, lines, yesno)
 			print(data)
 			games.append(data)
 		games = [g for g in games if g]
